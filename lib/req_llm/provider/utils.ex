@@ -143,7 +143,7 @@ defmodule ReqLLM.Provider.Utils do
       {k, v} -> {k, v}
     end)
   end
- 
+
   @sensitive_query_params ~w(key api_key apikey access_token token)
 
   @doc """
