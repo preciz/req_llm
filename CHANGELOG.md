@@ -580,3 +580,74 @@ This is the first stable 1.0 release of ReqLLM, marking production readiness wit
 [1.0.0-rc.3]: https://github.com/agentjido/req_llm/releases/tag/v1.0.0-rc.3
 [1.0.0-rc.2]: https://github.com/agentjido/req_llm/releases/tag/v1.0.0-rc.2
 [1.0.0-rc.1]: https://github.com/agentjido/req_llm/releases/tag/v1.0.0-rc.1
+
+<!-- changelog -->
+
+## [v1.1.0](https://github.com/agentjido/req_llm/compare/v1.0.0...v1.1.0) (2025-12-21)
+
+
+
+
+### Features:
+
+* preserve cache_control metadata in OpenAI content encoding (#291) by Itay Adler
+
+* add load_dotenv config option to control .env file loading (#287) by mikehostetler
+
+* Support inline JSON credentials for Google Vertex AI (#260) by shelvick
+
+* anthropic: Add message caching support for conversation prefixes (#281) by shelvick
+
+* anthropic: Add message caching support for conversation prefixes by shelvick
+
+* anthropic: Add offset support to message caching by shelvick
+
+* vertex: Add Google Search grounding support for Gemini models (#284) by shelvick
+
+* vertex: Add Google Search grounding support for Gemini models by shelvick
+
+* add AI PR review workflow by mikehostetler
+
+* change to typedstruct (#256) by JoeriDijkstra
+
+* Add Google Context Caching support for Gemini models (#193) by neilberkman
+
+* Add Google Vertex Gemini support by Neil Berkman
+
+* Add credential fallback for fixture recording (#218) by neilberkman
+
+* Integrate llm_db for model metadata (v1.1.0) (#212) by mikehostetler
+
+* req_llm: accept LLMDB.Model; remove runtime fields from Model struct by mikehostetler
+
+* allow task_type with google embeddings by Kasun Vithanage
+
+* add StreamResponse.process_stream/2 for real-time callbacks (#178) by Edgar Gomes
+
+### Bug Fixes:
+
+* Propagate streaming errors to process_stream result (#286) by mikehostetler
+
+* Add anthropic_cache_messages to Bedrock and Vertex schemas by shelvick
+
+* bedrock: Remove incorrect Converse API requirement for inference profiles by shelvick
+
+* vertex: Extract google_grounding from nested provider_options by shelvick
+
+* vertex: Remove incorrect camelCase transformation for grounding tools by shelvick
+
+* increase default timeout for OpenAI reasoning models (#252) by mikehostetler
+
+* merge consecutive tool results into single user message (#243) (#250) by mikehostetler
+
+* respect existing env vars when loading .env (#239) (#249) by mikehostetler
+
+* typespec on object generation to allow zoi schemas (#208) by Kasun Vithanage
+
+* typespec for zoi schemas on object generation by Kasun Vithanage
+
+### Refactoring:
+
+* req_llm: move max_retries to request options by mikehostetler
+
+* req_llm: delegate model metadata to LLMDB; keep provider registry by mikehostetler
