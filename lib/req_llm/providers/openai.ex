@@ -151,6 +151,10 @@ defmodule ReqLLM.Providers.OpenAI do
       type: {:list, :any},
       doc:
         "Tool execution results for Responses API tool resume flow (list of %{call_id, output})"
+    ],
+    service_tier: [
+      type: {:or, [:atom, :string]},
+      doc: "Service tier for request prioritization ('auto', 'default', 'flex' or 'priority')"
     ]
   ]
 
@@ -291,7 +295,8 @@ defmodule ReqLLM.Providers.OpenAI do
             :provider_options,
             :api_mod,
             :max_completion_tokens,
-            :reasoning_effort
+            :reasoning_effort,
+            :service_tier
           ]
 
       timeout = get_timeout_for_model(api_mod, processed_opts)

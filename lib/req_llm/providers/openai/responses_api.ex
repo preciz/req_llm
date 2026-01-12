@@ -292,6 +292,7 @@ defmodule ReqLLM.Providers.OpenAI.ResponsesAPI do
 
     tool_choice = encode_tool_choice(opts_map[:tool_choice])
     reasoning = encode_reasoning_effort(opts_map[:reasoning_effort])
+    service_tier = opts_map[:service_tier] || provider_opts[:service_tier]
 
     text_format = encode_text_format(provider_opts[:response_format])
 
@@ -304,6 +305,7 @@ defmodule ReqLLM.Providers.OpenAI.ResponsesAPI do
       |> maybe_put_string("reasoning", reasoning)
       |> maybe_put_string("tools", tools)
       |> maybe_put_string("tool_choice", tool_choice)
+      |> maybe_put_string("service_tier", service_tier)
       |> maybe_put_string("text", text_format)
 
     if previous_response_id do
