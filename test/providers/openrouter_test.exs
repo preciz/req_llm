@@ -335,6 +335,50 @@ defmodule ReqLLM.Providers.OpenRouterTest do
       assert List.last(response.context.messages).role == :assistant
     end
 
+    test "prepare_request for :object with openrouter_structured_output_mode: :json_schema uses native schema" do
+      {:ok, model} = ReqLLM.model("openrouter:openai/gpt-4")
+      context = context_fixture()
+      {:ok, schema} = ReqLLM.Schema.compile(name: [type: :string])
+
+      opts = [
+        compiled_schema: schema,
+        provider_options: [openrouter_structured_output_mode: :json_schema]
+      ]
+
+      {:ok, request} = OpenRouter.prepare_request(:object, model, context, opts)
+
+      # Verify no tools
+      refute Map.has_key?(request.options, :tools)
+
+      # Verify response_format has json_schema
+      assert %{
+               type: "json_schema",
+               json_schema: %{
+                 strict: true,
+                 name: "structured_output",
+                 schema: _
+               }
+             } = request.options[:response_format]
+    end
+
+    test "prepare_request for :object falls back to tools when mode is not :json_schema" do
+      {:ok, model} = ReqLLM.model("openrouter:openai/gpt-4")
+      context = context_fixture()
+      {:ok, schema} = ReqLLM.Schema.compile(name: [type: :string])
+
+      opts = [compiled_schema: schema]
+
+      {:ok, request} = OpenRouter.prepare_request(:object, model, context, opts)
+
+      # Verify tools are used
+      assert Map.has_key?(request.options, :tools)
+
+      assert request.options[:tool_choice] == %{
+               type: "function",
+               function: %{name: "structured_output"}
+             }
+    end
+
     test "decode_response handles streaming responses" do
       # Create mock streaming chunks
       stream_chunks = [
