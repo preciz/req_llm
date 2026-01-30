@@ -143,7 +143,8 @@ defmodule ReqLLM.Providers.OpenRouter do
 
         opts
         |> Keyword.put(:provider_options, updated_provider_opts)
-        |> Keyword.put(:operation, :object)
+        |> Keyword.delete(:tools)
+        |> Keyword.delete(:tool_choice)
       else
         structured_output_tool =
           ReqLLM.Tool.new!(
@@ -153,17 +154,17 @@ defmodule ReqLLM.Providers.OpenRouter do
             callback: fn _args -> {:ok, "structured output generated"} end
           )
 
-        opts_with_tool =
-          opts
-          |> Keyword.update(:tools, [structured_output_tool], &[structured_output_tool | &1])
-          |> Keyword.put(:tool_choice, %{type: "function", function: %{name: "structured_output"}})
+        opts
+        |> Keyword.update(:tools, [structured_output_tool], &[structured_output_tool | &1])
+        |> Keyword.put(:tool_choice, %{type: "function", function: %{name: "structured_output"}})
+        |> Keyword.delete(:response_format)
+      end
 
-        # Adjust max_tokens for structured output with OpenRouter-specific minimums
-        case Keyword.get(opts_with_tool, :max_tokens) do
-          nil -> Keyword.put(opts_with_tool, :max_tokens, 4096)
-          tokens when tokens < 200 -> Keyword.put(opts_with_tool, :max_tokens, 200)
-          _tokens -> opts_with_tool
-        end
+    opts =
+      case Keyword.get(opts, :max_tokens) do
+        nil -> Keyword.put(opts, :max_tokens, 4096)
+        tokens when tokens < 200 -> Keyword.put(opts, :max_tokens, 200)
+        _tokens -> opts
       end
 
     opts = Keyword.put(opts, :operation, :object)
