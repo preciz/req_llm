@@ -203,23 +203,19 @@ defmodule ReqLLM.Providers.Azure.Anthropic do
     model_id = ReqLLM.ModelId.normalize(model_id, "azure-anthropic")
     anthropic_model = LLMDB.Model.new!(%{id: model_id, provider: :anthropic})
 
-    case Anthropic.Response.decode_response(body, anthropic_model) do
-      {:ok, response} ->
-        input_context = opts[:context] || %ReqLLM.Context{messages: []}
-        merged_response = ReqLLM.Context.merge_response(input_context, response)
+    {:ok, response} = Anthropic.Response.decode_response(body, anthropic_model)
 
-        final_response =
-          if opts[:operation] == :object do
-            AdapterHelpers.extract_and_set_object(merged_response)
-          else
-            merged_response
-          end
+    input_context = opts[:context] || %ReqLLM.Context{messages: []}
+    merged_response = ReqLLM.Context.merge_response(input_context, response)
 
-        {:ok, final_response}
+    final_response =
+      if opts[:operation] == :object do
+        AdapterHelpers.extract_and_set_object(merged_response)
+      else
+        merged_response
+      end
 
-      error ->
-        error
-    end
+    {:ok, final_response}
   end
 
   @doc """

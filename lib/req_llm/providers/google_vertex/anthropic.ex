@@ -118,25 +118,21 @@ defmodule ReqLLM.Providers.GoogleVertex.Anthropic do
     anthropic_model = LLMDB.Model.new!(%{id: model_id, provider: :anthropic})
 
     # Delegate to native Anthropic response decoding
-    case Anthropic.Response.decode_response(body, anthropic_model) do
-      {:ok, response} ->
-        # Merge with input context to preserve conversation history
-        input_context = opts[:context] || %ReqLLM.Context{messages: []}
-        merged_response = ReqLLM.Context.merge_response(input_context, response)
+    {:ok, response} = Anthropic.Response.decode_response(body, anthropic_model)
 
-        # For :object operation, extract structured output from tool call
-        final_response =
-          if opts[:operation] == :object do
-            AdapterHelpers.extract_and_set_object(merged_response)
-          else
-            merged_response
-          end
+    # Merge with input context to preserve conversation history
+    input_context = opts[:context] || %ReqLLM.Context{messages: []}
+    merged_response = ReqLLM.Context.merge_response(input_context, response)
 
-        {:ok, final_response}
+    # For :object operation, extract structured output from tool call
+    final_response =
+      if opts[:operation] == :object do
+        AdapterHelpers.extract_and_set_object(merged_response)
+      else
+        merged_response
+      end
 
-      error ->
-        error
-    end
+    {:ok, final_response}
   end
 
   @doc """
