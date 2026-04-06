@@ -39,6 +39,7 @@ defmodule ReqLLM.Provider.Generated.ValidProviders do
     :modelscope,
     :moonshotai,
     :moonshotai_cn,
+    :minimax,
     :morph,
     :nebius,
     :nvidia,
