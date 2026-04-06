@@ -133,7 +133,7 @@ defmodule ReqLLM.Providers.OpenRouter do
     provider_opts = Keyword.get(opts, :provider_options, [])
     compiled_schema = Keyword.fetch!(opts, :compiled_schema)
 
-    opts =
+    {opts, prompt} =
       if Keyword.get(provider_opts, :openrouter_structured_output_mode) == :json_schema do
         json_schema_map = ReqLLM.Schema.to_json(compiled_schema.schema)
 
@@ -151,10 +151,19 @@ defmodule ReqLLM.Providers.OpenRouter do
           |> Keyword.put(:response_format, json_schema_payload)
           |> Keyword.delete(:openrouter_structured_output_mode)
 
-        opts
-        |> Keyword.put(:provider_options, updated_provider_opts)
-        |> Keyword.delete(:tools)
-        |> Keyword.delete(:tool_choice)
+        updated_opts =
+          opts
+          |> Keyword.put(:provider_options, updated_provider_opts)
+          |> Keyword.delete(:tools)
+          |> Keyword.delete(:tool_choice)
+
+        instruction =
+          "You must respond with ONLY valid JSON matching this schema: #{Jason.encode!(json_schema_map)}. Do NOT wrap the JSON in markdown blocks like ```json. Output ONLY the raw JSON object."
+
+        instruction_msg = ReqLLM.Context.system(instruction)
+        updated_prompt = %{prompt | messages: [instruction_msg | prompt.messages]}
+
+        {updated_opts, updated_prompt}
       else
         structured_output_tool =
           ReqLLM.Tool.new!(
@@ -164,10 +173,13 @@ defmodule ReqLLM.Providers.OpenRouter do
             callback: fn _args -> {:ok, "structured output generated"} end
           )
 
-        opts
-        |> Keyword.update(:tools, [structured_output_tool], &[structured_output_tool | &1])
-        |> Keyword.put(:tool_choice, %{type: "function", function: %{name: "structured_output"}})
-        |> Keyword.delete(:response_format)
+        updated_opts =
+          opts
+          |> Keyword.update(:tools, [structured_output_tool], &[structured_output_tool | &1])
+          |> Keyword.put(:tool_choice, %{type: "function", function: %{name: "structured_output"}})
+          |> Keyword.delete(:response_format)
+
+        {updated_opts, prompt}
       end
 
     opts =
