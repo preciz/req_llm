@@ -88,6 +88,17 @@ defmodule ReqLLM.Providers.Azure do
         deployment: "deepseek-v3"
       )
 
+      # Azure OpenAI v1 GA API (auto-detected from /openai/v1 path).
+      # No api-version parameter; deployment name is sent in the request body.
+      # See https://learn.microsoft.com/azure/ai-services/openai/api-version-lifecycle
+      ReqLLM.generate_text(
+        "azure:gpt-5.3-chat",
+        "Hello!",
+        api_key: "your-api-key",
+        base_url: "https://my-resource.openai.azure.com/openai/v1",
+        deployment: "gpt-5.3-chat"
+      )
+
   ## Examples
 
       # Basic usage
@@ -683,7 +694,7 @@ defmodule ReqLLM.Providers.Azure do
     formatter = get_formatter(model_id, model)
 
     path = get_chat_endpoint_path(model_id, model, deployment, api_version, base_url)
-    url = "#{base_url}#{path}"
+    url = join_url(base_url, path)
 
     Logger.debug(
       "[Azure attach_stream] model_family=#{model_family}, url=#{url}, formatter=#{inspect(formatter)}"
@@ -1123,18 +1134,24 @@ defmodule ReqLLM.Providers.Azure do
   end
 
   # Builds the endpoint path based on model type, family, and endpoint format.
-  # Supports two Azure endpoint formats:
+  # Supports three Azure endpoint formats:
   # - Traditional (cognitiveservices.azure.com): /deployments/{deployment}/chat/completions
   # - Foundry (services.ai.azure.com): /models/chat/completions (model in body)
+  # - v1 GA (/openai/v1 path): /chat/completions or /responses (no api-version, model in body)
   # Special cases:
   # - Responses API models: /responses (model in body)
   # - Claude: /v1/messages (model in body)
   defp get_chat_endpoint_path(model_id, model, deployment, api_version, base_url)
        when is_struct(model) do
-    if uses_responses_api?(model) do
-      "/responses?api-version=#{api_version}"
-    else
-      get_chat_endpoint_path_by_family(model_id, deployment, api_version, base_url)
+    cond do
+      uses_v1_ga_format?(base_url) and uses_responses_api?(model) ->
+        "/responses"
+
+      uses_responses_api?(model) ->
+        "/responses?api-version=#{api_version}"
+
+      true ->
+        get_chat_endpoint_path_by_family(model_id, deployment, api_version, base_url)
     end
   end
 
@@ -1147,24 +1164,36 @@ defmodule ReqLLM.Providers.Azure do
         "/v1/messages"
 
       _ ->
-        if uses_foundry_format?(base_url) do
-          # Azure AI Foundry: model specified in request body
-          "/models/chat/completions?api-version=#{api_version}"
-        else
-          # Azure OpenAI (traditional): deployment in URL determines model
-          "/deployments/#{deployment}/chat/completions?api-version=#{api_version}"
+        cond do
+          uses_v1_ga_format?(base_url) ->
+            # Azure OpenAI v1 GA: no api-version, model in body
+            "/chat/completions"
+
+          uses_foundry_format?(base_url) ->
+            # Azure AI Foundry: model specified in request body
+            "/models/chat/completions?api-version=#{api_version}"
+
+          true ->
+            # Azure OpenAI (traditional): deployment in URL determines model
+            "/deployments/#{deployment}/chat/completions?api-version=#{api_version}"
         end
     end
   end
 
   # Builds the embedding endpoint path based on endpoint format.
   defp get_embedding_endpoint_path(deployment, api_version, base_url) do
-    if uses_foundry_format?(base_url) do
-      # Azure AI Foundry: model specified in request body
-      "/models/embeddings?api-version=#{api_version}"
-    else
-      # Azure OpenAI (traditional): deployment in URL determines model
-      "/deployments/#{deployment}/embeddings?api-version=#{api_version}"
+    cond do
+      uses_v1_ga_format?(base_url) ->
+        # Azure OpenAI v1 GA: no api-version, model in body
+        "/embeddings"
+
+      uses_foundry_format?(base_url) ->
+        # Azure AI Foundry: model specified in request body
+        "/models/embeddings?api-version=#{api_version}"
+
+      true ->
+        # Azure OpenAI (traditional): deployment in URL determines model
+        "/deployments/#{deployment}/embeddings?api-version=#{api_version}"
     end
   end
 
@@ -1246,12 +1275,30 @@ defmodule ReqLLM.Providers.Azure do
 
   def uses_foundry_format?(_), do: false
 
-  # Adds the model field to request body when using Foundry format.
-  # Traditional Azure OpenAI format doesn't need model in body (deployment in URL determines it).
-  # Foundry format requires model in body since URL is generic /models/chat/completions.
+  # Detects if the base_url targets the Azure OpenAI v1 GA API.
+  # v1 GA URLs have `/openai/v1` in the path. They drop the `api-version`
+  # query parameter and require `model` in the request body (deployment name).
+  # See https://learn.microsoft.com/azure/ai-services/openai/api-version-lifecycle
+  @doc false
+  def uses_v1_ga_format?(base_url) when is_binary(base_url) do
+    case URI.parse(base_url) do
+      %URI{path: nil} ->
+        false
+
+      %URI{path: path} ->
+        String.contains?(path, "/openai/v1")
+    end
+  end
+
+  def uses_v1_ga_format?(_), do: false
+
+  # Adds the model field to request body when the URL doesn't carry the
+  # deployment. Required for Foundry (/models/...) and v1 GA (/openai/v1/...).
+  # Traditional Azure OpenAI format puts the deployment in the URL path so
+  # the body must NOT include a model field.
   defp maybe_add_model_for_foundry(body, deployment, base_url)
        when is_map(body) and is_binary(deployment) and deployment != "" do
-    if uses_foundry_format?(base_url) do
+    if uses_foundry_format?(base_url) or uses_v1_ga_format?(base_url) do
       Map.put(body, "model", deployment)
     else
       body
@@ -1259,4 +1306,12 @@ defmodule ReqLLM.Providers.Azure do
   end
 
   defp maybe_add_model_for_foundry(body, _deployment, _base_url), do: body
+
+  # Joins a base URL and a path without producing a double-slash when the
+  # caller passes a trailing-slash base URL (e.g. ".../openai/v1/").
+  # Path is always expected to start with "/"; we strip duplicate leading
+  # slashes after the base URL has been trimmed.
+  defp join_url(base_url, path) when is_binary(base_url) and is_binary(path) do
+    String.trim_trailing(base_url, "/") <> path
+  end
 end

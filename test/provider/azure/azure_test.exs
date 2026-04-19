@@ -1659,6 +1659,143 @@ defmodule ReqLLM.Providers.AzureTest do
     end
   end
 
+  describe "Azure OpenAI v1 GA format detection" do
+    test "detects v1 GA format from /openai/v1 path" do
+      assert Azure.uses_v1_ga_format?("https://my-resource.openai.azure.com/openai/v1")
+      assert Azure.uses_v1_ga_format?("https://my-resource.openai.azure.com/openai/v1/")
+
+      assert Azure.uses_v1_ga_format?("https://my-resource.services.ai.azure.com/openai/v1")
+    end
+
+    test "does not detect v1 GA format for traditional /openai path" do
+      refute Azure.uses_v1_ga_format?("https://my-resource.openai.azure.com/openai")
+      refute Azure.uses_v1_ga_format?("https://my-resource.services.ai.azure.com")
+      refute Azure.uses_v1_ga_format?("https://example.com")
+    end
+
+    test "handles edge cases safely" do
+      refute Azure.uses_v1_ga_format?(nil)
+      refute Azure.uses_v1_ga_format?("")
+      refute Azure.uses_v1_ga_format?("not-a-url")
+      refute Azure.uses_v1_ga_format?(12_345)
+    end
+
+    test "uses /chat/completions path with no api-version for v1 GA" do
+      model = traditional_openai_model()
+
+      {:ok, request} =
+        Azure.prepare_request(
+          :chat,
+          model,
+          "Hello",
+          deployment: "gpt-4o",
+          base_url: "https://my-resource.openai.azure.com/openai/v1",
+          api_key: "test-key"
+        )
+
+      url_string = URI.to_string(request.url)
+      assert url_string =~ "/chat/completions"
+      refute url_string =~ "api-version="
+      refute url_string =~ "/deployments/"
+    end
+
+    test "adds model to request body for v1 GA format" do
+      model = traditional_openai_model()
+
+      {:ok, request} =
+        Azure.prepare_request(
+          :chat,
+          model,
+          "Hello",
+          deployment: "gpt-4o-deployment",
+          base_url: "https://my-resource.openai.azure.com/openai/v1",
+          api_key: "test-key"
+        )
+
+      body = get_json_body(request)
+      assert body["model"] == "gpt-4o-deployment"
+    end
+
+    test "uses /embeddings path with no api-version for v1 GA" do
+      model = %LLMDB.Model{
+        id: "text-embedding-3-small",
+        provider: :azure,
+        capabilities: %{embeddings: true}
+      }
+
+      {:ok, request} =
+        Azure.prepare_request(
+          :embedding,
+          model,
+          "Hello",
+          deployment: "my-embedding-deployment",
+          base_url: "https://my-resource.openai.azure.com/openai/v1",
+          api_key: "test-key"
+        )
+
+      url_string = URI.to_string(request.url)
+      assert url_string =~ "/embeddings"
+      refute url_string =~ "api-version="
+      refute url_string =~ "/deployments/"
+    end
+
+    test "streaming uses /chat/completions with no api-version for v1 GA" do
+      model = traditional_openai_model()
+      context = ReqLLM.Context.new([ReqLLM.Context.user("Hello")])
+
+      {:ok, finch_request} =
+        Azure.attach_stream(
+          model,
+          context,
+          [
+            api_key: "test-api-key",
+            deployment: "gpt-4o-deployment",
+            base_url: "https://my-resource.openai.azure.com/openai/v1"
+          ],
+          :req_llm_finch
+        )
+
+      url_string =
+        case finch_request do
+          %{path: path, query: query} when is_binary(query) and query != "" ->
+            path <> "?" <> query
+
+          %{path: path} ->
+            path
+        end
+
+      assert url_string =~ "/chat/completions"
+      refute url_string =~ "api-version="
+      refute url_string =~ "/deployments/"
+    end
+
+    test "streaming handles trailing-slash base URL without producing //" do
+      model = traditional_openai_model()
+      context = ReqLLM.Context.new([ReqLLM.Context.user("Hello")])
+
+      {:ok, finch_request} =
+        Azure.attach_stream(
+          model,
+          context,
+          [
+            api_key: "test-api-key",
+            deployment: "gpt-4o-deployment",
+            # Trailing slash, as documented in the moduledoc usage example.
+            base_url: "https://my-resource.openai.azure.com/openai/v1/"
+          ],
+          :req_llm_finch
+        )
+
+      path =
+        case finch_request do
+          %{path: p} -> p
+        end
+
+      refute path =~ "//", "expected single-slash path, got: #{inspect(path)}"
+      assert path =~ "/openai/v1/chat/completions"
+    end
+  end
+
   defp traditional_openai_model do
     %LLMDB.Model{
       id: "gpt-4o",
