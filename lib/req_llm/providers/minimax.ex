@@ -180,13 +180,38 @@ defmodule ReqLLM.Providers.Minimax do
   defp extract_reasoning_details(body) when is_map(body) do
     with %{"choices" => [first_choice | _]} <- body,
          %{"message" => %{"reasoning_details" => details}} when is_list(details) <- first_choice do
-      if Enum.all?(details, &is_map/1), do: details
+      details
+      |> Enum.with_index()
+      |> Enum.map(&normalize_reasoning_detail/1)
     else
       _ -> nil
     end
   end
 
   defp extract_reasoning_details(_body), do: nil
+
+  defp normalize_reasoning_detail({raw, fallback_index}) when is_map(raw) do
+    %ReqLLM.Message.ReasoningDetails{
+      text: raw["text"],
+      signature: raw["id"],
+      encrypted?: false,
+      provider: :minimax,
+      format: raw["format"] || "minimax-response-v1",
+      index: raw["index"] || fallback_index,
+      provider_data: Map.drop(raw, ["text", "id", "format", "index"])
+    }
+  end
+
+  defp normalize_reasoning_detail({raw, fallback_index}) do
+    %ReqLLM.Message.ReasoningDetails{
+      text: inspect(raw),
+      encrypted?: false,
+      provider: :minimax,
+      format: "minimax-response-v1",
+      index: fallback_index,
+      provider_data: %{}
+    }
+  end
 
   defp attach_reasoning_details_to_response(resp, nil), do: resp
   defp attach_reasoning_details_to_response(resp, []), do: resp

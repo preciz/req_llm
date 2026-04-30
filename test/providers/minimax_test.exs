@@ -194,8 +194,15 @@ defmodule ReqLLM.Providers.MinimaxTest do
 
       {_req, decoded_resp} = Minimax.decode_response({mock_req, mock_resp})
 
-      assert decoded_resp.body.message.reasoning_details == reasoning_details
-      assert List.last(decoded_resp.body.context.messages).reasoning_details == reasoning_details
+      assert [%ReqLLM.Message.ReasoningDetails{} = detail] =
+               decoded_resp.body.message.reasoning_details
+
+      assert detail.text == "Thinking"
+      assert detail.provider == :minimax
+      assert detail.format == "minimax-response-v1"
+      assert detail.index == 0
+      assert detail.provider_data == %{"type" => "reasoning.text"}
+      assert List.last(decoded_resp.body.context.messages).reasoning_details == [detail]
     end
   end
 
