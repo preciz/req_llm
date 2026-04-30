@@ -66,7 +66,14 @@ defmodule ReqLLM.Providers.Minimax do
   @impl ReqLLM.Provider
   def translate_options(_operation, _model, opts) do
     warnings = []
-    opts = Keyword.put_new(opts, :reasoning_split, true)
+
+    opts =
+      opts
+      |> Keyword.put_new(:reasoning_split, true)
+      |> Keyword.put_new(
+        :receive_timeout,
+        Application.get_env(:req_llm, :thinking_timeout, 300_000)
+      )
 
     {max_tokens, opts} = Keyword.pop(opts, :max_tokens)
 
@@ -132,6 +139,13 @@ defmodule ReqLLM.Providers.Minimax do
     )
   end
 
+  @impl ReqLLM.Provider
+  def decode_stream_event(event, model) do
+    event
+    |> ReqLLM.Provider.Defaults.default_decode_stream_event(model)
+    |> Enum.map(&normalize_stream_chunk/1)
+  end
+
   defp unsupported_operation(operation) do
     supported_operations = [:chat, :object]
 
@@ -180,15 +194,31 @@ defmodule ReqLLM.Providers.Minimax do
   defp extract_reasoning_details(body) when is_map(body) do
     with %{"choices" => [first_choice | _]} <- body,
          %{"message" => %{"reasoning_details" => details}} when is_list(details) <- first_choice do
-      details
-      |> Enum.with_index()
-      |> Enum.map(&normalize_reasoning_detail/1)
+      normalize_reasoning_details(details)
     else
       _ -> nil
     end
   end
 
   defp extract_reasoning_details(_body), do: nil
+
+  defp normalize_stream_chunk(%ReqLLM.StreamChunk{type: :meta, metadata: metadata} = chunk) do
+    case metadata do
+      %{reasoning_details: details} when is_list(details) ->
+        %{chunk | metadata: %{metadata | reasoning_details: normalize_reasoning_details(details)}}
+
+      _ ->
+        chunk
+    end
+  end
+
+  defp normalize_stream_chunk(chunk), do: chunk
+
+  defp normalize_reasoning_details(details) do
+    details
+    |> Enum.with_index()
+    |> Enum.map(&normalize_reasoning_detail/1)
+  end
 
   defp normalize_reasoning_detail({raw, fallback_index}) when is_map(raw) do
     %ReqLLM.Message.ReasoningDetails{
