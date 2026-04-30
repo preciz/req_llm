@@ -36,6 +36,7 @@ defmodule ReqLLM.Provider.Generated.ValidProviders do
     :lmstudio,
     :lucidquery,
     :mistral,
+    :minimax,
     :modelscope,
     :moonshotai,
     :moonshotai_cn,

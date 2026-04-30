@@ -632,6 +632,10 @@ defmodule ReqLLM do
     model(mistral_inline_model_attrs(model_id))
   end
 
+  defp resolve_provider_model_fallback(:minimax, model_id, _original_error) do
+    model(minimax_inline_model_attrs(model_id))
+  end
+
   defp resolve_provider_model_fallback(provider, model_id, _original_error) do
     case ReqLLM.provider(provider) do
       {:ok, _provider_module} ->
@@ -709,6 +713,18 @@ defmodule ReqLLM do
 
   defp mistral_embedding_model?(model_id) when is_binary(model_id) do
     String.contains?(model_id, "embed")
+  end
+
+  defp minimax_inline_model_attrs(model_id) do
+    %{
+      provider: :minimax,
+      id: model_id,
+      model: model_id,
+      provider_model_id: model_id,
+      capabilities: %{chat: true, tools: %{enabled: true}},
+      limits: %{context: 204_800, output: 2048},
+      extra: %{wire: %{protocol: "openai_chat"}}
+    }
   end
 
   defp normalize_inline_model_attrs(attrs) do
