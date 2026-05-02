@@ -1,0 +1,120 @@
+{
+  "model_spec": "minimax:MiniMax-M2.7-highspeed",
+  "provider": "minimax",
+  "request": {
+    "body": {
+      "b64": "eyJtYXhfY29tcGxldGlvbl90b2tlbnMiOjEwMjQsIm1lc3NhZ2VzIjpbeyJjb250ZW50IjoiUmVzcG9uZCB3aXRoIGEgc2luZ2xlIHdvcmQgJ0hpJy4iLCJyb2xlIjoidXNlciJ9XSwibW9kZWwiOiJNaW5pTWF4LU0yLjctaGlnaHNwZWVkIiwicmVhc29uaW5nX3NwbGl0Ijp0cnVlLCJzdHJlYW0iOmZhbHNlLCJ0ZW1wZXJhdHVyZSI6MC4wfQ=="
+    },
+    "canonical_json": {
+      "max_completion_tokens": 1024,
+      "messages": [
+        {
+          "content": "Respond with a single word 'Hi'.",
+          "role": "user"
+        }
+      ],
+      "model": "MiniMax-M2.7-highspeed",
+      "reasoning_split": true,
+      "stream": false,
+      "temperature": 0.0
+    },
+    "headers": {
+      "accept-encoding": [
+        "gzip"
+      ],
+      "authorization": "[REDACTED:authorization]",
+      "content-type": [
+        "application/json"
+      ],
+      "user-agent": [
+        "req/0.5.17"
+      ]
+    },
+    "method": "post",
+    "url": "https://api.minimax.io/v1/chat/completions"
+  },
+  "response": {
+    "body": {
+      "base_resp": {
+        "status_code": 0,
+        "status_msg": ""
+      },
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "audio_content": "",
+            "content": "Hi",
+            "name": "MiniMax AI",
+            "reasoning_content": "The user says \"Respond with a single word 'Hi'.\" They want a single word \"Hi\". So answer \"Hi\". That's straightforward. No content issues. There's no conflict with policy. So we respond with a single word \"Hi\".",
+            "reasoning_details": [
+              {
+                "format": "MiniMax-response-v1",
+                "id": "reasoning-text-1",
+                "index": 0,
+                "text": "The user says \"Respond with a single word 'Hi'.\" They want a single word \"Hi\". So answer \"Hi\". That's straightforward. No content issues. There's no conflict with policy. So we respond with a single word \"Hi\".",
+                "type": "reasoning.text"
+              }
+            ],
+            "role": "assistant"
+          }
+        }
+      ],
+      "created": 1777714183,
+      "id": "0644f7078255958cb06b702fd4b93cdf",
+      "input_sensitive": false,
+      "input_sensitive_type": 0,
+      "model": "MiniMax-M2.7-highspeed",
+      "object": "chat.completion",
+      "output_sensitive": false,
+      "output_sensitive_int": 0,
+      "output_sensitive_type": 0,
+      "usage": {
+        "completion_tokens": 54,
+        "completion_tokens_details": {
+          "reasoning_tokens": 53
+        },
+        "prompt_tokens": 49,
+        "total_characters": 0,
+        "total_tokens": 103
+      }
+    },
+    "headers": {
+      "alb_receive_time": [
+        "1777714183.651"
+      ],
+      "alb_request_id": [
+        "8f38906b19a6b5e10610d2c63d23eb91e85a5386"
+      ],
+      "connection": [
+        "keep-alive"
+      ],
+      "content-type": [
+        "application/json; charset=utf-8"
+      ],
+      "date": [
+        "Sat, 02 May 2026 09:29:44 GMT"
+      ],
+      "minimax-request-id": [
+        "898681b06503b34e3719a0513eb6920a"
+      ],
+      "trace-id": [
+        "0644f7078255958cb06b702fd4b93cdf"
+      ],
+      "transfer-encoding": [
+        "chunked"
+      ],
+      "vary": [
+        "Accept-Encoding"
+      ],
+      "x-mm-request-id": [
+        "2038858753192768005_17777141837tzedu"
+      ],
+      "x-session-id": [
+        "5d99918a8d33758bd2d6f6fc1183a419"
+      ]
+    },
+    "status": 200
+  }
+}

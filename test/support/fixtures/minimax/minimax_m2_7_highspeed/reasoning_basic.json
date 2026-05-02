@@ -1,0 +1,120 @@
+{
+  "model_spec": "minimax:MiniMax-M2.7-highspeed",
+  "provider": "minimax",
+  "request": {
+    "body": {
+      "b64": "eyJtYXhfY29tcGxldGlvbl90b2tlbnMiOjUwMDAsIm1lc3NhZ2VzIjpbeyJjb250ZW50IjoiU29sdmUgMTIqNyBhbmQgc2hvdyB5b3VyIGludGVybmFsIHRoaW5raW5nIChicmllZikuIiwicm9sZSI6InVzZXIifV0sIm1vZGVsIjoiTWluaU1heC1NMi43LWhpZ2hzcGVlZCIsInJlYXNvbmluZ19zcGxpdCI6dHJ1ZSwic3RyZWFtIjpmYWxzZSwidGVtcGVyYXR1cmUiOjEuMH0="
+    },
+    "canonical_json": {
+      "max_completion_tokens": 5000,
+      "messages": [
+        {
+          "content": "Solve 12*7 and show your internal thinking (brief).",
+          "role": "user"
+        }
+      ],
+      "model": "MiniMax-M2.7-highspeed",
+      "reasoning_split": true,
+      "stream": false,
+      "temperature": 1.0
+    },
+    "headers": {
+      "accept-encoding": [
+        "gzip"
+      ],
+      "authorization": "[REDACTED:authorization]",
+      "content-type": [
+        "application/json"
+      ],
+      "user-agent": [
+        "req/0.5.17"
+      ]
+    },
+    "method": "post",
+    "url": "https://api.minimax.io/v1/chat/completions"
+  },
+  "response": {
+    "body": {
+      "base_resp": {
+        "status_code": 0,
+        "status_msg": ""
+      },
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "audio_content": "",
+            "content": "Sure! To compute \\(12 \\times 7\\):\n\n1. Break 12 into \\(10 + 2\\).\n2. Multiply each part by 7:\n   - \\(10 \\times 7 = 70\\)\n   - \\(2 \\times 7 = 14\\)\n3. Add the results: \\(70 + 14 = 84\\).\n\nSo, \\(12 \\times 7 = 84\\).",
+            "name": "MiniMax AI",
+            "reasoning_content": "The user asks: \"Solve 12*7 and show your internal thinking (brief).\" The user wants to see the internal reasoning, presumably the steps to compute 12*7. They request internal thinking; the instructions are to produce a brief explanation. The user request is benign, no policy violation. The assistant can comply: compute 12*7 = 84, show a brief internal reasoning: e.g., 10*7=70, 2*7=14, sum = 84. So answer accordingly.\n\nI should follow the instruction: answer with a brief explanation, showing internal thinking. The system doesn't restrict anything. So I can comply.\n\nThus: 12*7 = 84.\n\nWe can give a brief explanation: break down 12 into 10+2, multiply each by 7, sum.\n\nThus final answer: 84.\n\nPotential extra: \"12*7 = (10+2)*7 = 70+14 = 84\". That's enough. Ensure it is brief.",
+            "reasoning_details": [
+              {
+                "format": "MiniMax-response-v1",
+                "id": "reasoning-text-1",
+                "index": 0,
+                "text": "The user asks: \"Solve 12*7 and show your internal thinking (brief).\" The user wants to see the internal reasoning, presumably the steps to compute 12*7. They request internal thinking; the instructions are to produce a brief explanation. The user request is benign, no policy violation. The assistant can comply: compute 12*7 = 84, show a brief internal reasoning: e.g., 10*7=70, 2*7=14, sum = 84. So answer accordingly.\n\nI should follow the instruction: answer with a brief explanation, showing internal thinking. The system doesn't restrict anything. So I can comply.\n\nThus: 12*7 = 84.\n\nWe can give a brief explanation: break down 12 into 10+2, multiply each by 7, sum.\n\nThus final answer: 84.\n\nPotential extra: \"12*7 = (10+2)*7 = 70+14 = 84\". That's enough. Ensure it is brief.",
+                "type": "reasoning.text"
+              }
+            ],
+            "role": "assistant"
+          }
+        }
+      ],
+      "created": 1777714191,
+      "id": "0644f70f035a5f8371e4f7e3ca4d8e89",
+      "input_sensitive": false,
+      "input_sensitive_type": 0,
+      "model": "MiniMax-M2.7-highspeed",
+      "object": "chat.completion",
+      "output_sensitive": false,
+      "output_sensitive_int": 0,
+      "output_sensitive_type": 0,
+      "usage": {
+        "completion_tokens": 296,
+        "completion_tokens_details": {
+          "reasoning_tokens": 211
+        },
+        "prompt_tokens": 54,
+        "total_characters": 0,
+        "total_tokens": 350
+      }
+    },
+    "headers": {
+      "alb_receive_time": [
+        "1777714191.928"
+      ],
+      "alb_request_id": [
+        "6c00c26082c7fdc4f375e0969661a66c378ee2c8"
+      ],
+      "connection": [
+        "keep-alive"
+      ],
+      "content-type": [
+        "application/json; charset=utf-8"
+      ],
+      "date": [
+        "Sat, 02 May 2026 09:29:58 GMT"
+      ],
+      "minimax-request-id": [
+        "4191855266a083dd91c7d6731af07c75"
+      ],
+      "trace-id": [
+        "0644f70f035a5f8371e4f7e3ca4d8e89"
+      ],
+      "transfer-encoding": [
+        "chunked"
+      ],
+      "vary": [
+        "Accept-Encoding"
+      ],
+      "x-mm-request-id": [
+        "2038858753192768005_1777714191tzwp65"
+      ],
+      "x-session-id": [
+        "ab43970d9a3d89eb4cd0b9e306d61d8d"
+      ]
+    },
+    "status": 200
+  }
+}

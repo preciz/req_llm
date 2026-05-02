@@ -1,0 +1,143 @@
+{
+  "model_spec": "minimax:MiniMax-M2.5",
+  "provider": "minimax",
+  "request": {
+    "body": {
+      "b64": "eyJtYXhfY29tcGxldGlvbl90b2tlbnMiOjI2MjE0LCJtZXNzYWdlcyI6W3siY29udGVudCI6IlRlbGwgbWUgYSBqb2tlIGFib3V0IGNhdHMiLCJyb2xlIjoidXNlciJ9XSwibW9kZWwiOiJNaW5pTWF4LU0yLjUiLCJyZWFzb25pbmdfc3BsaXQiOnRydWUsInN0cmVhbSI6ZmFsc2UsInRlbXBlcmF0dXJlIjowLjAsInRvb2xzIjpbeyJmdW5jdGlvbiI6eyJkZXNjcmlwdGlvbiI6IkdldCBjdXJyZW50IHdlYXRoZXIgaW5mb3JtYXRpb24gZm9yIGEgbG9jYXRpb24iLCJuYW1lIjoiZ2V0X3dlYXRoZXIiLCJwYXJhbWV0ZXJzIjp7ImFkZGl0aW9uYWxQcm9wZXJ0aWVzIjpmYWxzZSwicHJvcGVydGllcyI6eyJsb2NhdGlvbiI6eyJ0eXBlIjoic3RyaW5nIn19LCJyZXF1aXJlZCI6WyJsb2NhdGlvbiJdLCJ0eXBlIjoib2JqZWN0In19LCJ0eXBlIjoiZnVuY3Rpb24ifV19"
+    },
+    "canonical_json": {
+      "max_completion_tokens": 26214,
+      "messages": [
+        {
+          "content": "Tell me a joke about cats",
+          "role": "user"
+        }
+      ],
+      "model": "MiniMax-M2.5",
+      "reasoning_split": true,
+      "stream": false,
+      "temperature": 0.0,
+      "tools": [
+        {
+          "function": {
+            "description": "Get current weather information for a location",
+            "name": "get_weather",
+            "parameters": {
+              "additionalProperties": false,
+              "properties": {
+                "location": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "location"
+              ],
+              "type": "object"
+            }
+          },
+          "type": "function"
+        }
+      ]
+    },
+    "headers": {
+      "accept-encoding": [
+        "gzip"
+      ],
+      "authorization": "[REDACTED:authorization]",
+      "content-type": [
+        "application/json"
+      ],
+      "user-agent": [
+        "req/0.5.17"
+      ]
+    },
+    "method": "post",
+    "url": "https://api.minimax.io/v1/chat/completions"
+  },
+  "response": {
+    "body": {
+      "base_resp": {
+        "status_code": 0,
+        "status_msg": ""
+      },
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "audio_content": "",
+            "content": "Here's a cat joke for you:\n\nWhy don't cats play poker in the jungle?\n\nBecause there are too many cheetahs! 🐆\n\nWant another one? Why did the cat sit on the computer? To keep an eye on the mouse! 😄",
+            "name": "MiniMax AI",
+            "reasoning_details": [
+              {
+                "format": "MiniMax-response-v1",
+                "id": "reasoning-text-1",
+                "index": 0,
+                "text": "The user is asking for a joke about cats. This is a simple request that doesn't require any tools. I can just tell a cat joke from my knowledge.\n",
+                "type": "reasoning.text"
+              }
+            ],
+            "role": "assistant"
+          }
+        }
+      ],
+      "created": 1777714126,
+      "id": "0644f6ce6c547d3077f6c562d6c354c3",
+      "input_sensitive": false,
+      "input_sensitive_type": 0,
+      "model": "MiniMax-M2.5",
+      "object": "chat.completion",
+      "output_sensitive": false,
+      "output_sensitive_int": 0,
+      "output_sensitive_type": 0,
+      "usage": {
+        "completion_tokens": 87,
+        "completion_tokens_details": {
+          "reasoning_tokens": 37
+        },
+        "prompt_tokens": 200,
+        "prompt_tokens_details": {
+          "cached_tokens": 48
+        },
+        "total_characters": 0,
+        "total_tokens": 287
+      }
+    },
+    "headers": {
+      "alb_receive_time": [
+        "1777714126.711"
+      ],
+      "alb_request_id": [
+        "db03f261ae9180b57ff19d7317ea95cb80753488"
+      ],
+      "connection": [
+        "keep-alive"
+      ],
+      "content-type": [
+        "application/json; charset=utf-8"
+      ],
+      "date": [
+        "Sat, 02 May 2026 09:28:47 GMT"
+      ],
+      "minimax-request-id": [
+        "3fbbe3184b0cc0c015dce02a23df4cc5"
+      ],
+      "trace-id": [
+        "0644f6ce6c547d3077f6c562d6c354c3"
+      ],
+      "transfer-encoding": [
+        "chunked"
+      ],
+      "vary": [
+        "Accept-Encoding"
+      ],
+      "x-mm-request-id": [
+        "2038858753192768005_1777714127ie9yh8"
+      ],
+      "x-session-id": [
+        "170ba894199322f079aecc6861963704"
+      ]
+    },
+    "status": 200
+  }
+}

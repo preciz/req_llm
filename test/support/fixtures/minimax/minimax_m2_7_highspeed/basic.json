@@ -1,0 +1,120 @@
+{
+  "model_spec": "minimax:MiniMax-M2.7-highspeed",
+  "provider": "minimax",
+  "request": {
+    "body": {
+      "b64": "eyJtYXhfY29tcGxldGlvbl90b2tlbnMiOjIwMDAsIm1lc3NhZ2VzIjpbeyJjb250ZW50IjoiSGVsbG8gd29ybGQhIiwicm9sZSI6InVzZXIifV0sIm1vZGVsIjoiTWluaU1heC1NMi43LWhpZ2hzcGVlZCIsInJlYXNvbmluZ19zcGxpdCI6dHJ1ZSwic3RyZWFtIjpmYWxzZSwidGVtcGVyYXR1cmUiOjAuMH0="
+    },
+    "canonical_json": {
+      "max_completion_tokens": 2000,
+      "messages": [
+        {
+          "content": "Hello world!",
+          "role": "user"
+        }
+      ],
+      "model": "MiniMax-M2.7-highspeed",
+      "reasoning_split": true,
+      "stream": false,
+      "temperature": 0.0
+    },
+    "headers": {
+      "accept-encoding": [
+        "gzip"
+      ],
+      "authorization": "[REDACTED:authorization]",
+      "content-type": [
+        "application/json"
+      ],
+      "user-agent": [
+        "req/0.5.17"
+      ]
+    },
+    "method": "post",
+    "url": "https://api.minimax.io/v1/chat/completions"
+  },
+  "response": {
+    "body": {
+      "base_resp": {
+        "status_code": 0,
+        "status_msg": ""
+      },
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "audio_content": "",
+            "content": "Hello! 👋 How can I help you today?",
+            "name": "MiniMax AI",
+            "reasoning_content": "The user says \"Hello world!\" This is a typical greeting. I need to respond appropriately. There's no disallowed content. The user wants a greeting.\n\nI should respond with a friendly greeting and maybe ask how I can help. It's straightforward.\n\nThe system message instructs me to be a helpful assistant. The user says \"Hello world!\" That's a typical greeting. So respond in a friendly manner.\n\nPotential response: \"Hello! How can I help you today?\" Or \"Hi there! Welcome.\" Something friendly.\n\nNo need for anything else.\n\nThus final answer: greeting.\n\n",
+            "reasoning_details": [
+              {
+                "format": "MiniMax-response-v1",
+                "id": "reasoning-text-1",
+                "index": 0,
+                "text": "The user says \"Hello world!\" This is a typical greeting. I need to respond appropriately. There's no disallowed content. The user wants a greeting.\n\nI should respond with a friendly greeting and maybe ask how I can help. It's straightforward.\n\nThe system message instructs me to be a helpful assistant. The user says \"Hello world!\" That's a typical greeting. So respond in a friendly manner.\n\nPotential response: \"Hello! How can I help you today?\" Or \"Hi there! Welcome.\" Something friendly.\n\nNo need for anything else.\n\nThus final answer: greeting.\n\n",
+                "type": "reasoning.text"
+              }
+            ],
+            "role": "assistant"
+          }
+        }
+      ],
+      "created": 1777714107,
+      "id": "0644f6bbe696fa4260186be2d5ebb370",
+      "input_sensitive": false,
+      "input_sensitive_type": 0,
+      "model": "MiniMax-M2.7-highspeed",
+      "object": "chat.completion",
+      "output_sensitive": false,
+      "output_sensitive_int": 0,
+      "output_sensitive_type": 0,
+      "usage": {
+        "completion_tokens": 128,
+        "completion_tokens_details": {
+          "reasoning_tokens": 117
+        },
+        "prompt_tokens": 44,
+        "total_characters": 0,
+        "total_tokens": 172
+      }
+    },
+    "headers": {
+      "alb_receive_time": [
+        "1777714107.729"
+      ],
+      "alb_request_id": [
+        "171d2ff96f4fd581035c6bbc6547d68f67c3077d"
+      ],
+      "connection": [
+        "keep-alive"
+      ],
+      "content-type": [
+        "application/json; charset=utf-8"
+      ],
+      "date": [
+        "Sat, 02 May 2026 09:28:31 GMT"
+      ],
+      "minimax-request-id": [
+        "ac59ed3c080e3af240ac4f3faf5d75cb"
+      ],
+      "trace-id": [
+        "0644f6bbe696fa4260186be2d5ebb370"
+      ],
+      "transfer-encoding": [
+        "chunked"
+      ],
+      "vary": [
+        "Accept-Encoding"
+      ],
+      "x-mm-request-id": [
+        "2038858753192768005_1777714107ihu4ue"
+      ],
+      "x-session-id": [
+        "a6908346a7c871a919125c443372344b"
+      ]
+    },
+    "status": 200
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "model_spec": "minimax:MiniMax-M2.5-highspeed",
+  "provider": "minimax",
+  "request": {
+    "body": {
+      "b64": "eyJtYXhfY29tcGxldGlvbl90b2tlbnMiOjUwMDAsIm1lc3NhZ2VzIjpbeyJjb250ZW50IjoiU29sdmUgMTIqNyBhbmQgc2hvdyB5b3VyIGludGVybmFsIHRoaW5raW5nIChicmllZikuIiwicm9sZSI6InVzZXIifV0sIm1vZGVsIjoiTWluaU1heC1NMi41LWhpZ2hzcGVlZCIsInJlYXNvbmluZ19zcGxpdCI6dHJ1ZSwic3RyZWFtIjpmYWxzZSwidGVtcGVyYXR1cmUiOjEuMH0="
+    },
+    "canonical_json": {
+      "max_completion_tokens": 5000,
+      "messages": [
+        {
+          "content": "Solve 12*7 and show your internal thinking (brief).",
+          "role": "user"
+        }
+      ],
+      "model": "MiniMax-M2.5-highspeed",
+      "reasoning_split": true,
+      "stream": false,
+      "temperature": 1.0
+    },
+    "headers": {
+      "accept-encoding": [
+        "gzip"
+      ],
+      "authorization": "[REDACTED:authorization]",
+      "content-type": [
+        "application/json"
+      ],
+      "user-agent": [
+        "req/0.5.17"
+      ]
+    },
+    "method": "post",
+    "url": "https://api.minimax.io/v1/chat/completions"
+  },
+  "response": {
+    "body": {
+      "base_resp": {
+        "status_code": 0,
+        "status_msg": ""
+      },
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "audio_content": "",
+            "content": "Sure!  \n\n**Internal reasoning (brief):**  \n\\(12 \\times 7 = (10 + 2) \\times 7 = 10 \\times 7 + 2 \\times 7 = 70 + 14 = 84.\\)\n\n**Result:** \\(12 \\times 7 = 84.\\)",
+            "name": "MiniMax AI",
+            "reasoning_content": "The user wants: \"Solve 12*7 and show your internal thinking (brief).\" This is a straightforward multiplication request. No policy violation. It's safe. So answer with the result, showing internal thinking briefly. Could respond: \"12 * 7 = 84. I multiplied 12 by 7, maybe breaking 12 * 5 = 60, plus 12 * 2 = 24, sum 84.\" That satisfies. Provide brief internal thought: \"12 * 7 = (10+2)*7 = 70 + 14 = 84\". Ok.\n\nBut also note internal reasoning should be included. It's basically the assistant's reasoning. That is fine. So answer accordingly.",
+            "reasoning_details": [
+              {
+                "format": "MiniMax-response-v1",
+                "id": "reasoning-text-1",
+                "index": 0,
+                "text": "The user wants: \"Solve 12*7 and show your internal thinking (brief).\" This is a straightforward multiplication request. No policy violation. It's safe. So answer with the result, showing internal thinking briefly. Could respond: \"12 * 7 = 84. I multiplied 12 by 7, maybe breaking 12 * 5 = 60, plus 12 * 2 = 24, sum 84.\" That satisfies. Provide brief internal thought: \"12 * 7 = (10+2)*7 = 70 + 14 = 84\". Ok.\n\nBut also note internal reasoning should be included. It's basically the assistant's reasoning. That is fine. So answer accordingly.",
+                "type": "reasoning.text"
+              }
+            ],
+            "role": "assistant"
+          }
+        }
+      ],
+      "created": 1777714109,
+      "id": "0644f6bdbe6c710ef3605ec62bb92e78",
+      "input_sensitive": false,
+      "input_sensitive_type": 0,
+      "model": "MiniMax-M2.5-highspeed",
+      "object": "chat.completion",
+      "output_sensitive": false,
+      "output_sensitive_int": 0,
+      "output_sensitive_type": 0,
+      "usage": {
+        "completion_tokens": 216,
+        "completion_tokens_details": {
+          "reasoning_tokens": 148
+        },
+        "prompt_tokens": 54,
+        "total_characters": 0,
+        "total_tokens": 270
+      }
+    },
+    "headers": {
+      "alb_receive_time": [
+        "1777714109.853"
+      ],
+      "alb_request_id": [
+        "ad3037bc3dad3edfcd7c44210081a0055dd8ba50"
+      ],
+      "connection": [
+        "keep-alive"
+      ],
+      "content-type": [
+        "application/json; charset=utf-8"
+      ],
+      "date": [
+        "Sat, 02 May 2026 09:28:33 GMT"
+      ],
+      "minimax-request-id": [
+        "575a374b84c135a6217340cff3b6cbab"
+      ],
+      "trace-id": [
+        "0644f6bdbe6c710ef3605ec62bb92e78"
+      ],
+      "transfer-encoding": [
+        "chunked"
+      ],
+      "vary": [
+        "Accept-Encoding"
+      ],
+      "x-mm-request-id": [
+        "2038858753192768005_17777141093red69"
+      ],
+      "x-session-id": [
+        "fc80174e54220984480990f57917bc17"
+      ]
+    },
+    "status": 200
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "model_spec": "minimax:MiniMax-M2.7",
+  "provider": "minimax",
+  "request": {
+    "body": {
+      "b64": "eyJtYXhfY29tcGxldGlvbl90b2tlbnMiOjMwMDAsIm1lc3NhZ2VzIjpbeyJjb250ZW50IjoiV3JpdGUgYSB2ZXJ5IGxvbmcgc3RvcnkgYWJvdXQgZHJhZ29ucyBhbmQgYWR2ZW50dXJlcyIsInJvbGUiOiJ1c2VyIn1dLCJtb2RlbCI6Ik1pbmlNYXgtTTIuNyIsInJlYXNvbmluZ19zcGxpdCI6dHJ1ZSwic3RyZWFtIjpmYWxzZSwidGVtcGVyYXR1cmUiOjAuNX0="
+    },
+    "canonical_json": {
+      "max_completion_tokens": 3000,
+      "messages": [
+        {
+          "content": "Write a very long story about dragons and adventures",
+          "role": "user"
+        }
+      ],
+      "model": "MiniMax-M2.7",
+      "reasoning_split": true,
+      "stream": false,
+      "temperature": 0.5
+    },
+    "headers": {
+      "accept-encoding": [
+        "gzip"
+      ],
+      "authorization": "[REDACTED:authorization]",
+      "content-type": [
+        "application/json"
+      ],
+      "user-agent": [
+        "req/0.5.17"
+      ]
+    },
+    "method": "post",
+    "url": "https://api.minimax.io/v1/chat/completions"
+  },
+  "response": {
+    "body": {
+      "base_resp": {
+        "status_code": 0,
+        "status_msg": ""
+      },
+      "choices": [
+        {
+          "finish_reason": "length",
+          "index": 0,
+          "message": {
+            "audio_content": "",
+            "content": "**Title: The Ember‐Song of Aethoria – A Tale of Dragons & Adventures**\n\n---\n\n## Prologue: The Age of Fire and Song  \n\n*Long before the first human kingdoms rose from the mists of the Sunlit Plains, the sky was alive with the thunderous wingbeats of the Great Dragons. They were the Keepers of the Sun, guardians of the molten heart that pulsed beneath the world. In that age, the dragons sang a low, resonant hymn that could mend cracked mountains, coax rivers to flow, and turn barren lands into verdant fields. Men, then, lived in awe, offering tribute and song to the great beasts, for they understood that without the dragons, the world would slip into a cold, endless night.*\n\n*But as centuries turned to millennia, the dragon‑song grew quieter. Some say the dragons grew tired of the mortals’ petty quarrels; others whisper that a shadow rose from the deep, a darkness that devoured the very fire within the dragons’ throats. Whatever the cause, the great dragons retreated to the Ember Peaks, to the molten caverns of the Great Rift, leaving the world to fend for itself. The kingdom of Aethoria split into many shards—each vying for the last embers of dragon magic.*\n\n*In the shadows of these forgotten ages, a legend was born: the *Ember of Ages*, a crystal said to contain the very last flicker of the dragon‑song, lost somewhere beyond the Thornwood and guarded by a dragon who would never consent to mortal hands. To retrieve it, the hero must win the trust of the dragons, walk the path of fire, and face the darkness that seeks to snuff out the last light.*\n\n*This is the story of that hero—Aelric of the Vale of Mist—and his epic quest to awaken the ancient songs, restore balance, and forge a new pact between mortals and dragons.*\n\n---\n\n## Chapter 1 – The Boy Who Dreamed of Wings  \n\nAelric was barely twelve when he first saw a dragon.\n\nIt was a crisp morning in the village of Willowdale, a cluster of thatched cottages perched on the edge of the Moonlit Sea. The sky was a sheet of polished silver, and the wind carried the scent of salt and pine. Aelric was helping his mother, Sera, mend nets by the dock when a shadow fell across the water. He looked up and gasped.\n\nHigh above, a massive silhouette cut the sky, its wingspan stretching like a living sail of midnight blue. The creature glided with effortless grace, its scales flashing like opals under the rising sun. A low, rumbling breath escaped its nostrils—**the scent of molten iron**, Aelric thought, as if a forge had opened its mouth.\n\nThe dragon veered north, towards the Ember Peaks, its tail trailing a ribbon of amber fire that vanished in the distance. The villagers fell silent, eyes wide. Sera dropped her net, her hand trembling. “Dragon,” she whispered, “the old songs speak of them as omens of change.”\n\nFrom that day on, Aelric could not shake the image of that winged wonder from his mind. He began to spend his nights on the hilltop, watching the horizon for any flicker of fire. He sketched crude drawings of draconic shapes in the margins of his schoolbooks, and his teachers scolded him for “wasting parchment on fantasies.” Yet his curiosity burned brighter than any fire.\n\nOne day, an old wanderer named **Morghan**, a one‑time dragon‑rider of the now‑defunct Order of the Scales, arrived at Willowdale. He bore a scar across his cheek, a silver circlet etched with runes, and a staff topped with a crystal that pulsed faintly—*the very same crystal that had once held a shard of dragon‑song*. Morghan was searching for a young soul brave enough to accompany him on a pilgrimage to the Ember Peaks, seeking the lost Ember.\n\nHe found Aelric in the library, buried in a dusty tome of legends. “You stare at the sky like a moth to a flame,” Morghan said with a chuckle. “I could use a pair of young eyes that still believe in fire.”\n\nAelric’s heart pounded. “Will you teach me to ride a dragon?” he asked, eyes shining.\n\nMorghan’s smile faded. “Ride? No, not yet. But I can teach you the *language* of dragons—how to speak with fire, to feel the earth’s heartbeat, to understand the songs that bind the world. Will you accept that?”\n\nAelric nodded without hesitation. And so began his apprenticeship, a journey that would take him far beyond the familiar fields of Willowdale and into a world teeming with wonder, danger, and the promise of destiny.\n\n---\n\n## Chapter 2 – The Call of the Ember  \n\nMorghan led Aelric through the **Thornwood**, a forest of twisted oaks and bristling thorns that seemed to whisper secrets to those who dared to listen. The trees were ancient, their bark etched with glowing runes that pulsed in time with the rhythm of the earth. “These are the **Sentinel Stones**, remnants of the first dragon riders,” Morghan explained. “They ward the forest against those who seek to harm the dragons.”\n\nAs they walked, the air grew thick with the scent of **ember‑blossoms**, tiny orange flowers that glowed like miniature suns. Aelric felt a strange warmth rise in his chest, a pull toward something he could not name. “Do you feel it?” Morghan asked, his voice low. “The Ember is calling us.”\n\nThe path grew steeper, winding up a ridge that overlooked a valley of **lava rivers**. The heat was oppressive, but Aelric’s skin tingled as if touched by a thousand tiny flames. He pulled out his staff, which Morghan had given him—a **staff of Aether**, carved from the heartwood of an ancient dragon‑tree. The crystal at its tip glimmered, resonating with the heat.\n\nAt the valley’s heart rose a massive stone archway, inscribed with symbols of fire and wind. Beyond it lay the **Great Rift**, a yawning chasm that spat molten lava into the sky, forming a permanent crown of flame. The Rift was said to be the birthplace of dragons, where the first of the Great Fire Serpents hatched from the molten core of the world.\n\nMorghan halted, his expression grave. “The Ember is hidden in the heart of the Rift, guarded by **Kael**, the last of the Golden Dragons. He is ancient beyond measure, his scales shining like molten gold, his eyes reflecting the fires of countless suns.”\n\nAelric’s breath caught. “Will he let us pass?”\n\nMorghan shook his head slowly. “Kael will not grant passage to anyone who does not first prove their worth by walking the *Trial of Flames*—a path through the lava fields that burns away impurity, leaving only the true heart of a dragon‑seeker.”\n\nWith those words, they descended into the Rift. The heat was blinding; the stone walls glowed crimson. Aelric’s staff emitted a low hum, shielding him and Morghan from the worst of the blaze. Yet the Trial was not merely physical. Along the winding lava tunnels, they encountered **shadows**—manifestations of doubt, fear, and sorrow that hissed and clawed at their minds.\n\nAelric faced his own shadow: a vision of his mother dying of cold, the village of Willowdale ablaze, and his own body turned to ash. “You cannot save everyone,” the shadow whispered. “You are no dragon.”\n\nHe clenched the staff, recalling the memory of the dragon he had seen in his childhood, its majestic flight, and the promise he made to himself to protect those he loved. “I may not be a dragon,” Aelric replied, his voice steady, “but I can be a bridge between worlds.”\n\nA surge of warmth erupted from the crystal, and the shadow dissolved into sparks of golden light. The lava beneath his feet shifted, forming a stone bridge that led them safely across.\n\n---\n\n## Chapter 3 – The Whispering Woods & the Dragon's Lair  \n\nWhen they emerged on the far side of the Rift, they stood before a clearing bathed in emerald light. The **Whispering Woods** stretched before them, where the trees sang in a language older than words. The leaves rustled with a sound that resembled **draconic chirps**, and the very ground seemed to breathe.\n\nMorghan paused, his eyes scanning the treeline. “These woods are the domain of the **Silverscale** dragons, a clan of wind‑and‑ice serpents who have chosen to remain neutral in the war between fire and darkness. Their leader, **Arielle**, is a dragon of immense wisdom and a lover of music.”\n\nThey traveled for three days, surviving on the forest’s bounty: **thorn‑berries** that burst with sweet juice, **iron‑moss** that provided sustenance, and **river‑water** that glittered with a faint luminescence. On the second night, they heard a low, melodic humming—a tune that seemed to echo from the very bark of the trees.\n\nThe humming grew louder, and the forest opened to reveal a **clearing of crystal lake**, its surface as smooth as glass. In its center rose a **glittering island** of translucent stone, upon which perched a massive **silver dragon** with eyes like moonlit opals. Her wings were translucent, catching the light and refracting it into a kaleidoscope of colors.\n\n“Welcome, seekers of the Ember,” Arielle’s voice resonated in their minds, a gentle wind that carried the scent of pine. “You have survived the flames. Now you must hear the song of the Silver Scales.”\n\nMorghan knelt, bowing his head. “Great Arielle, we seek the Ember to restore balance. Our world suffers from the darkness that devours the dragon‑song.”\n\nArielle’s eyes flickered. “I sense your intent is pure, yet the Ember is guarded not only by Kael but by the **Shattered Covenant**, an ancient pact that binds the dragons to an oath of non‑interference. To break it, you must convince the dragon clans to awaken their ancestral memory.”\n\nShe unfurled a **scroll of ancient parchment**, its ink shimmering like molten gold. It bore the **Runic Law of the Covenant**: “",
+            "name": "MiniMax AI",
+            "reasoning_details": [
+              {
+                "format": "MiniMax-response-v1",
+                "id": "reasoning-text-1",
+                "index": 0,
+                "text": "The user asks: \"Write a very long story about dragons and adventures\". This is a request for creative writing: a story. There's no disallowed content. It's a fairly long story about dragons and adventures. We can produce a large story. No policy violations. We'll comply.\n\nBut we must consider that the user wants a very long story, presumably perhaps multiple chapters. So we can write something elaborate, with multiple characters, arcs, subplots. Provide a vivid fantasy setting. The content: dragons as creatures, maybe in a world with magic, etc. The story can be about a protagonist, perhaps a young hero, traveling, meeting dragons, having adventures, etc.\n\nWe need to ensure to meet the request, produce a substantial text, perhaps thousands of words, or at least very long. Could be multiple chapters. The user didn't specify length, but \"very long\" suggests a fairly extensive narrative. We should deliver in a single reply, but with chapters. We'll give a clear structure: Title, Prologue, Chapters, Epilogue. We'll aim for maybe 5-6K words? Let's aim for about 10-12k words to be safe. Must ensure it's not too repetitive but includes many details.\n\nThe story about dragons and adventures. We'll incorporate various types of dragons, their lore, human interactions, conflict, moral choices, etc. We'll embed world-building. Let's start.\n\nWe'll need to incorporate characters: protagonist (maybe a young boy named Aelric), his mentor, a dragon rider, etc. The setting: the continent of Aethoria, broken into kingdoms, the dragon realm, the mountains of Ember, the Great Rift. We'll give a map, perhaps via description. The protagonist seeks to find the lost Dragonfire Ember, to restore balance, etc. We'll incorporate various adventures: crossing the Thornwood, battling a wyvern horde, confronting a dragon king, etc. We'll include a love interest maybe. We can have moral dilemmas: dragons are wise but also dangerous.\n\nWe must ensure we follow policy: no disallowed content. It's all fine.\n\nNow, proceed to write a detailed, vivid story.\n\nWe need to avoid copyrighted text; we will write original content.\n\nWe must keep a consistent style: a fantasy narrative. We'll give a good narrative voice.\n\nWe can break into chapters to maintain readability. Let's start with a prologue in a mythical style: \"Long ago, in the world of Aethoria, dragons were the keepers of the Sun...\"\n\nProceed with Chapter 1: The Boy Who Dreamed of Wings.\n\nProceed with Chapter 2: The Call of the Ember.\n\nProceed with Chapter 3: The Whispering Woods.\n\nProceed with Chapter 4: The Fire Within.\n\nProceed with Chapter 5: The Dragon's Lair.\n\nProceed with Chapter 6: The Shattered Covenant.\n\nProceed with Chapter 7: The Dragon's Rift.\n\nProceed with Chapter 8: The Battle of the Ember Peaks.\n\nProceed with Chapter 9: The Dawn of the New Age.\n\nEpilogue.\n\nWe can also embed subplots: a secret order of dragon riders called \"The Scales of Aeon\", a villain: the warlord Malachar, etc.\n\nWe can include magical systems: the Aetherial flow, dragons have innate fire.\n\nAlright, let's write the story. We'll aim for maybe 5000-7000 words, with each chapter roughly 800-1200 words. That would be fairly long. We'll produce a story of about 7000-8000 words to satisfy \"very long\". We'll also use descriptive language.\n\nWe need to maintain coherence across the story. Let's keep track of key events: Aelric's discovery of dragon scale, meeting with a bronze dragon named Kael; his quest to find the Lost Ember; his battle with Malachar; his eventual forging of a new pact; the resolution.\n\nWe'll need to embed world-building details: the geography (the Great Rift, the Ember Peaks, the Sunlit Plains, the Moonlit Sea). Use names for languages maybe.\n\nAlright, time to write. We'll structure with headings.\n\nProceed.\n\n\n",
+                "type": "reasoning.text"
+              }
+            ],
+            "role": "assistant"
+          }
+        }
+      ],
+      "created": 1777714110,
+      "id": "0644f6be1dc64e428d41069e4d3fbf2a",
+      "input_sensitive": false,
+      "input_sensitive_type": 0,
+      "model": "MiniMax-M2.7",
+      "object": "chat.completion",
+      "output_sensitive": false,
+      "output_sensitive_int": 0,
+      "output_sensitive_type": 0,
+      "usage": {
+        "completion_tokens": 3000,
+        "completion_tokens_details": {
+          "reasoning_tokens": 989
+        },
+        "prompt_tokens": 47,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_characters": 0,
+        "total_tokens": 3047
+      }
+    },
+    "headers": {
+      "alb_receive_time": [
+        "1777714110.398"
+      ],
+      "alb_request_id": [
+        "9b3a4e765e5d716a5b06b26619a20bd2cacf3387"
+      ],
+      "connection": [
+        "keep-alive"
+      ],
+      "content-type": [
+        "application/json; charset=utf-8"
+      ],
+      "date": [
+        "Sat, 02 May 2026 09:29:26 GMT"
+      ],
+      "minimax-request-id": [
+        "d8ffe8214275a96b2160198f5e0d8c5f"
+      ],
+      "trace-id": [
+        "0644f6be1dc64e428d41069e4d3fbf2a"
+      ],
+      "transfer-encoding": [
+        "chunked"
+      ],
+      "vary": [
+        "Accept-Encoding"
+      ],
+      "x-mm-request-id": [
+        "2038858753192768005_1777714166yni4ra"
+      ],
+      "x-session-id": [
+        "647f0f31649e9da5a3cfde143939fcff"
+      ]
+    },
+    "status": 200
+  }
+}

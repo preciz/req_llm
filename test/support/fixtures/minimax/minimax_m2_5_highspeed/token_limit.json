@@ -1,0 +1,120 @@
+{
+  "model_spec": "minimax:MiniMax-M2.5-highspeed",
+  "provider": "minimax",
+  "request": {
+    "body": {
+      "b64": "eyJtYXhfY29tcGxldGlvbl90b2tlbnMiOjMwMDAsIm1lc3NhZ2VzIjpbeyJjb250ZW50IjoiV3JpdGUgYSB2ZXJ5IGxvbmcgc3RvcnkgYWJvdXQgZHJhZ29ucyBhbmQgYWR2ZW50dXJlcyIsInJvbGUiOiJ1c2VyIn1dLCJtb2RlbCI6Ik1pbmlNYXgtTTIuNS1oaWdoc3BlZWQiLCJyZWFzb25pbmdfc3BsaXQiOnRydWUsInN0cmVhbSI6ZmFsc2UsInRlbXBlcmF0dXJlIjowLjV9"
+    },
+    "canonical_json": {
+      "max_completion_tokens": 3000,
+      "messages": [
+        {
+          "content": "Write a very long story about dragons and adventures",
+          "role": "user"
+        }
+      ],
+      "model": "MiniMax-M2.5-highspeed",
+      "reasoning_split": true,
+      "stream": false,
+      "temperature": 0.5
+    },
+    "headers": {
+      "accept-encoding": [
+        "gzip"
+      ],
+      "authorization": "[REDACTED:authorization]",
+      "content-type": [
+        "application/json"
+      ],
+      "user-agent": [
+        "req/0.5.17"
+      ]
+    },
+    "method": "post",
+    "url": "https://api.minimax.io/v1/chat/completions"
+  },
+  "response": {
+    "body": {
+      "base_resp": {
+        "status_code": 0,
+        "status_msg": ""
+      },
+      "choices": [
+        {
+          "finish_reason": "length",
+          "index": 0,
+          "message": {
+            "audio_content": "",
+            "content": "**The Dragon’s Odyssey – A Long Tale of Courage, Wonder, and the Bonds That Shatter Mountains**\n\n---\n\n# Prologue – The Age of Fire and Song\n\nLong before the first stone of the great citadel of Valdris was laid, the world was ruled by the dragons. Their wings blotted out the sun as they soared across the endless skies, their breath turning clouds into molten gold. The dragons spoke in thunder and sang in the crackle of fire, and the peoples of the earth lived in awe of them. Some bowed, some fled, and some—those who were brave enough—sought to understand.\n\nIn that ancient age, a council of five great dragons—each a keeper of an element—met beneath the Roots of the World Tree. They forged the *Aetheric Covenant*, a pact that bound dragonkind to protect the fragile balance of nature, to guide the rise of humanity, and to keep the world safe from the void that lurked beyond the horizon. The Covenant was sealed with a single, shimmering crystal—the Dragonfire Amulet—which contained the essence of all five elements. Whoever bore it could speak to dragons, calm their fury, or awaken them from a millennia‑long slumber.\n\nWhen the first great war between the gods and the abyss erupted, the dragons, bound by the Covenant, turned their fire against the darkness. The battle raged for a hundred years. In the end, the abyss was sealed, but the cost was catastrophic. The Dragonfire Amulet shattered, and its fragments were scattered across the world, each fragment embedded in a hidden sanctuary guarded by ancient magic. The dragons, exhausted, retreated to high mountains and deep caverns, their songs fading into legend.\n\nCenturies passed. Kingdoms rose, fell, and rose again. The fragments of the Amulet became myth, whispered about in taverns and scribbled in the margins of old manuscripts. The world forgot the true nature of dragons, and they became beasts of terror and treasure, hunted for their scales and hoards. Yet the Covenant still held, a promise written in fire, waiting for the one who would dare to mend what was broken.\n\n---\n\n# Chapter 1 – The Scribe of Valdris\n\nThe kingdom of Valdris stretched across the rolling hills of the River Lind, its capital a shining jewel of marble towers and bustling market squares. In the heart of the capital, the Hall of Histories held the greatest collection of scrolls and codices in the known world. It was here that a young woman named **Elara** spent her days, copying ancient texts, deciphering half‑blotted ink, and listening to the whispers of the past.\n\nElara was of average height, with hair the color of midnight and eyes that reflected the amber light of oil lamps. She wore simple robes of faded blue, and her fingers were perpetually stained with ink. Her mind, however, was anything but ordinary. She possessed an insatiable curiosity, a love for riddles, and an uncanny ability to sense the hidden currents of magic—an ability she had never spoken of aloud.\n\nOne rainy evening, while sorting through a chest of crumbling parchment, Elara uncovered a scroll so old that it crumbled at the slightest touch. Carefully, she unrolled it, her breath catching as the words emerged:\n\n> *\"When the twin moons align and the dragon’s roar shakes the mountain’s bone, the heir of the Covenant shall rise. With the crystal of five elements in hand, they shall bind the sky to the earth, and the world shall know peace once more.\"*\n\nThe scroll bore the seal of the **Order of the Dragonfire**, an ancient brotherhood of scholars who had once tended to the dragons. Their headquarters, the *Cobalt Tower*, had been abandoned for generations, its doors sealed by a spell of silence. Yet, the words of the prophecy sparked a fire within Elara that could not be extinguished.\n\nShe knew the prophecy might be the key to understanding the resurgence of dragon attacks that had plagued the kingdom’s borderlands. For months, reports had flooded the kingdom: **Zephyran**, a colossal dragon of midnight black, had awakened from a centuries‑long slumber in the **Mount of Whispers**, and its roar had shattered windows, toppled towers, and sent villages into panic. The king, **Aldric the Stern**, demanded a solution—slay the beast or find a way to appease it.\n\nElara, guided by a restless spirit of adventure, made a decision that would change her life forever: she would seek the fragments of the Dragonfire Amulet, for she believed the prophecy was calling her to restore the Covenant. She confided her plan to her closest friend, **Jorin**, a grizzled veteran of the king’s guard with a scar across his cheek and a heart of gold. Jorin, though skeptical of prophecy, admired Elara’s courage and promised to accompany her.\n\nTogether they recruited two unlikely allies: **Mira**, a swift‑footed thief whose dark past was as tangled as the vines of the Whispering Woods, and **Aldric the Younger**, a reclusive sorcerer who claimed to have once spoken with a dragon in his youth. With a motley crew assembled, Elara set forth on a journey that would take them across the kingdom, through treacherous lands, and into the very heart of dragon‑kind.\n\n---\n\n# Chapter 2 – The Whispering Woods\n\nThe first leg of their quest led them to the **Whispering Woods**, an ancient forest where the trees were said to speak in hushed tones. The forest was thick, its canopy so dense that sunlight barely filtered through, creating an eternal twilight that made the path hard to follow. The group moved in single file, Elara at the front, her lantern casting a warm glow on the twisted roots and moss‑covered stones.\n\n“Listen,” Mira whispered, her ears pricked to the faint rustle of leaves. “There’s something… singing.”\n\nA low, melodic hum rose from the underbrush, growing louder with each step. The trees themselves seemed to sway, their branches intertwining as if to form a natural archway. At the center of the clearing stood a **Silver Oak**, its trunk so massive that it dwarfed the surrounding foliage. Carved into its bark was a sigil that Elara recognized from the old texts: the symbol of the **Guardian of the Forest**, a dragon of the earth element, bound to protect the forest’s secret.\n\nAs the group approached, a **voice** resonated within their minds, not heard but felt, as if the wind itself carried words. It was deep, resonant, and ancient.\n\n> “Seeker of the Shattered, you have entered my domain. To pass, you must prove your worth. Answer this riddle, and the path shall open.”\n\nA riddle formed in the air, the words shimmering like fireflies:\n\n> “I am the breath of the mountain, the roar that shakes the stone. I am the fire that never burns, the light that casts no shadow. What am I?”\n\nThe companions exchanged glances. Jorin shrugged, his sword clanking softly against his armor. Mira’s eyes narrowed, thinking of her past. Aldric the Younger stroked his beard, eyes twinkling with hidden knowledge. Elara’s mind raced. She thought of the old scrolls, of the dragon’s roar, of the echo that reverberated through the mountains.\n\nShe spoke, her voice steady, “The answer is **the wind**. The wind is the breath of the mountain, the roar that shakes stone, the fire that never burns, the light that casts no shadow. It is unseen yet everywhere.”\n\nA moment of silence followed. Then the trees rustled, and a **gentle gust** swept through, lifting the canopy just enough for a beam of sunlight to strike the Silver Oak. The sigil glowed, and a **doorway** of light opened in the trunk, revealing a hidden passage that led deeper into the forest.\n\nThey stepped through, the doorway sealing behind them, and found themselves in a **lush glade** where a small **pond** reflected the twin moons above. The water was crystal clear, and at its center lay a **shimmering crystal**, the first fragment of the Dragonfire Amulet—the **Fragment of Earth**.\n\nElara reached out, her hand trembling. As soon as her fingers brushed the crystal, it pulsed with a warm light, sinking into her palm as if recognizing her intent. A surge of energy coursed through her, and for a brief instant, she heard a distant **roar**—Zephyran’s call, echoing through the mountains, reminding her that the quest had only just begun.\n\n---\n\n# Chapter 3 – The Mountain of Storms\n\nFrom the Whispering Woods, the group traveled north, toward the **Mount of Storms**, a jagged peak that rose above the clouds, its summit perpetually shrouded in thunderous clouds that crackled with lightning. Legends told that the dragon **Tempestus**, a storm‑breathing dragon, nested there, guarding the **Fragment of Lightning**, another piece of the shattered Amulet.\n\nThe journey was arduous. The path wound through **highland plateaus** where biting winds howled like wolves, and **avalanches** threatened to sweep them away. They faced **giant stone golems** that rose from the cliffs, remnants of an ancient dwarven defense system, now animated by the lingering magic of the storm. Jorin’s sword sang as it clashed with the stone, sparks flying in the cold air. Mira’s quick reflexes allowed her to dodge the massive fists of the golems, while Aldric the Younger conjured **barriers of wind** to protect the group.\n\nWhen they finally reached the summit, the **storm** above roared with such fury that the very air seemed to vibrate. A massive **cave** mouth yawned before them, its entrance framed by **icicles** that glittered like diamonds. Inside, a low, rhythmic **thunder** rolled, and a voice that sounded like claps of thunder boomed:\n\n> “Mortal, you have reached the lair of the storm. Turn back, or face the fury of the skies.”\n\nElara stepped forward, the Earth fragment glowing at her chest. “Great Tempestus, we do not come to take by force. We seek the Fragment of Lightning to mend the Covenant that once bound dragon and human. We wish for peace.”\n\nA **bolt of",
+            "name": "MiniMax AI",
+            "reasoning_content": "The user asks: \"Write a very long story about dragons and adventures\". The user wants a long story about dragons and adventures. No policy conflict. It's allowed content. Provide a story. It's okay to be creative. Must not contain disallowed content. The story can be long, but we must be careful about length. Should be safe for all audiences. Should not violate any policy. Provide a story.\n\nThe request: \"Write a very long story about dragons and adventures\". So we must produce a story that is fairly long. Possibly many paragraphs, with a detailed narrative. The story should be about dragons and adventures. We need to incorporate various adventure elements, characters, setting, conflict, climax, resolution.\n\nPotential issues: There's no disallowed content. However, ensure we do not produce extremely long output that could cause issues. The user explicitly asks for \"very long story\". I can generate a fairly long story, but maybe not extremely massive. The guidelines say the response must be safe. It can be many paragraphs. Should not exceed context length. I'm not sure the exact length of \"very long\". It's subjective. I'll try to produce a story that's long, maybe about several thousand words. That is okay. Let's produce a story with multiple sections, chapters, a detailed plot, and rich descriptions.\n\nWe'll include an introduction: Setting, protagonist, world. Then a series of adventures: The protagonist, maybe a young knight or a curious child, encountering dragons, forming alliances, etc. Also include moral lessons.\n\nWe'll adopt a narrative style: third-person omniscient, or some perspective. We'll ensure the story is consistent and engaging. Also ensure we include description of dragon species, habitats, abilities, perhaps some world-building.\n\nWe'll ensure we don't include any disallowed content (like explicit violence, graphic gore). We can include some mild conflict but not extremely graphic. It's okay to mention battle but not extremely graphic. Use mild language.\n\nGiven the instruction is \"Write a very long story about dragons and adventures\", we can produce a story that is essentially a novella length. We can provide a story that covers multiple chapters. We'll structure it like a story with chapters.\n\nWe'll produce a text that is fairly large: perhaps ~3000-4000 words, which is quite long but not too huge. We'll ensure to have a coherent story with subplots, climax, resolution.\n\nLet's start.\n\nWe will adopt a story about a young woman named Elara, who lives in a kingdom threatened by a great dragon. She sets out on an adventure, meets allies, learns about ancient dragon lore, and eventually saves the kingdom.\n\nMake it long: incorporate details about the world, its geography, history, characters: a wise wizard, a brave knight, a mischievous thief, a dragon named Zephyran. Include a quest for a lost artifact that can control dragons, etc.\n\nWe'll embed some subplots: internal conflict, betrayal, love.\n\nWe'll have a final resolution: The dragons and humans live in harmony.\n\nWill ensure no disallowed content: no extremist content, no hate, no graphic gore. We'll avoid describing gore in too much detail. Use mild language.\n\nWrite a fairly long story. Let's produce it now.\n\nWill be careful with formatting: Use paragraphs and maybe headings for chapters.\n\nWill include a descriptive narrative: details, dialogues, etc.\n\nWill attempt to produce maybe 3500-4000 words.\n\nWe'll proceed.\n\nNote: Should we include explicit mentions of certain topics? No. It's fine.\n\nWill incorporate the following storyline:\n\n- Prologue: Ancient world of dragons, the fall of an empire, dragon eggs sealed away.\n\n- Chapter 1: The kingdom of Valdris, protagonist Elara, her role as a scribe, discovering a prophecy.\n\n- Chapter 2: The awakening of a dragon, conflict.\n\n- Chapter 3: The quest to find the Dragonfire Amulet, allies join.\n\n- Chapter 4: Challenges: enchanted forest, mountain of the storm, the dragon's lair.\n\n- Chapter 5: Confrontation with the antagonist, a rogue mage.\n\n- Chapter 6: Resolution: The amulet's power, redemption, bond between humans and dragons.\n\n- Epilogue: The new era.\n\nAdd dialogues, characters.\n\nWill keep it balanced.\n\nProceed.\n\n",
+            "reasoning_details": [
+              {
+                "format": "MiniMax-response-v1",
+                "id": "reasoning-text-1",
+                "index": 0,
+                "text": "The user asks: \"Write a very long story about dragons and adventures\". The user wants a long story about dragons and adventures. No policy conflict. It's allowed content. Provide a story. It's okay to be creative. Must not contain disallowed content. The story can be long, but we must be careful about length. Should be safe for all audiences. Should not violate any policy. Provide a story.\n\nThe request: \"Write a very long story about dragons and adventures\". So we must produce a story that is fairly long. Possibly many paragraphs, with a detailed narrative. The story should be about dragons and adventures. We need to incorporate various adventure elements, characters, setting, conflict, climax, resolution.\n\nPotential issues: There's no disallowed content. However, ensure we do not produce extremely long output that could cause issues. The user explicitly asks for \"very long story\". I can generate a fairly long story, but maybe not extremely massive. The guidelines say the response must be safe. It can be many paragraphs. Should not exceed context length. I'm not sure the exact length of \"very long\". It's subjective. I'll try to produce a story that's long, maybe about several thousand words. That is okay. Let's produce a story with multiple sections, chapters, a detailed plot, and rich descriptions.\n\nWe'll include an introduction: Setting, protagonist, world. Then a series of adventures: The protagonist, maybe a young knight or a curious child, encountering dragons, forming alliances, etc. Also include moral lessons.\n\nWe'll adopt a narrative style: third-person omniscient, or some perspective. We'll ensure the story is consistent and engaging. Also ensure we include description of dragon species, habitats, abilities, perhaps some world-building.\n\nWe'll ensure we don't include any disallowed content (like explicit violence, graphic gore). We can include some mild conflict but not extremely graphic. It's okay to mention battle but not extremely graphic. Use mild language.\n\nGiven the instruction is \"Write a very long story about dragons and adventures\", we can produce a story that is essentially a novella length. We can provide a story that covers multiple chapters. We'll structure it like a story with chapters.\n\nWe'll produce a text that is fairly large: perhaps ~3000-4000 words, which is quite long but not too huge. We'll ensure to have a coherent story with subplots, climax, resolution.\n\nLet's start.\n\nWe will adopt a story about a young woman named Elara, who lives in a kingdom threatened by a great dragon. She sets out on an adventure, meets allies, learns about ancient dragon lore, and eventually saves the kingdom.\n\nMake it long: incorporate details about the world, its geography, history, characters: a wise wizard, a brave knight, a mischievous thief, a dragon named Zephyran. Include a quest for a lost artifact that can control dragons, etc.\n\nWe'll embed some subplots: internal conflict, betrayal, love.\n\nWe'll have a final resolution: The dragons and humans live in harmony.\n\nWill ensure no disallowed content: no extremist content, no hate, no graphic gore. We'll avoid describing gore in too much detail. Use mild language.\n\nWrite a fairly long story. Let's produce it now.\n\nWill be careful with formatting: Use paragraphs and maybe headings for chapters.\n\nWill include a descriptive narrative: details, dialogues, etc.\n\nWill attempt to produce maybe 3500-4000 words.\n\nWe'll proceed.\n\nNote: Should we include explicit mentions of certain topics? No. It's fine.\n\nWill incorporate the following storyline:\n\n- Prologue: Ancient world of dragons, the fall of an empire, dragon eggs sealed away.\n\n- Chapter 1: The kingdom of Valdris, protagonist Elara, her role as a scribe, discovering a prophecy.\n\n- Chapter 2: The awakening of a dragon, conflict.\n\n- Chapter 3: The quest to find the Dragonfire Amulet, allies join.\n\n- Chapter 4: Challenges: enchanted forest, mountain of the storm, the dragon's lair.\n\n- Chapter 5: Confrontation with the antagonist, a rogue mage.\n\n- Chapter 6: Resolution: The amulet's power, redemption, bond between humans and dragons.\n\n- Epilogue: The new era.\n\nAdd dialogues, characters.\n\nWill keep it balanced.\n\nProceed.\n\n",
+                "type": "reasoning.text"
+              }
+            ],
+            "role": "assistant"
+          }
+        }
+      ],
+      "created": 1777714117,
+      "id": "0644f6c5847ae07d150bd7cc7c563719",
+      "input_sensitive": false,
+      "input_sensitive_type": 0,
+      "model": "MiniMax-M2.5-highspeed",
+      "object": "chat.completion",
+      "output_sensitive": false,
+      "output_sensitive_int": 0,
+      "output_sensitive_type": 0,
+      "usage": {
+        "completion_tokens": 3000,
+        "completion_tokens_details": {
+          "reasoning_tokens": 865
+        },
+        "prompt_tokens": 50,
+        "total_characters": 0,
+        "total_tokens": 3050
+      }
+    },
+    "headers": {
+      "alb_receive_time": [
+        "1777714117.834"
+      ],
+      "alb_request_id": [
+        "c305d6b8677c2482d4a32519cec108d62ffdd3db"
+      ],
+      "connection": [
+        "keep-alive"
+      ],
+      "content-type": [
+        "application/json; charset=utf-8"
+      ],
+      "date": [
+        "Sat, 02 May 2026 09:29:42 GMT"
+      ],
+      "minimax-request-id": [
+        "133f209ac1f932d5970b8c428673dd6c"
+      ],
+      "trace-id": [
+        "0644f6c5847ae07d150bd7cc7c563719"
+      ],
+      "transfer-encoding": [
+        "chunked"
+      ],
+      "vary": [
+        "Accept-Encoding"
+      ],
+      "x-mm-request-id": [
+        "2038858753192768005_1777714117i4rc0c"
+      ],
+      "x-session-id": [
+        "32a6056b340585b724013b12f054c8f9"
+      ]
+    },
+    "status": 200
+  }
+}

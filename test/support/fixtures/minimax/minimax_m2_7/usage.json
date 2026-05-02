@@ -1,0 +1,115 @@
+{
+  "model_spec": "minimax:MiniMax-M2.7",
+  "provider": "minimax",
+  "request": {
+    "body": {
+      "b64": "eyJtYXhfY29tcGxldGlvbl90b2tlbnMiOjEwLCJtZXNzYWdlcyI6W3siY29udGVudCI6IkhpIHRoZXJlISIsInJvbGUiOiJ1c2VyIn1dLCJtb2RlbCI6Ik1pbmlNYXgtTTIuNyIsInJlYXNvbmluZ19zcGxpdCI6dHJ1ZSwic3RyZWFtIjpmYWxzZSwidGVtcGVyYXR1cmUiOjAuMH0="
+    },
+    "canonical_json": {
+      "max_completion_tokens": 10,
+      "messages": [
+        {
+          "content": "Hi there!",
+          "role": "user"
+        }
+      ],
+      "model": "MiniMax-M2.7",
+      "reasoning_split": true,
+      "stream": false,
+      "temperature": 0.0
+    },
+    "headers": {
+      "accept-encoding": [
+        "gzip"
+      ],
+      "authorization": "[REDACTED:authorization]",
+      "content-type": [
+        "application/json"
+      ],
+      "user-agent": [
+        "req/0.5.17"
+      ]
+    },
+    "method": "post",
+    "url": "https://api.minimax.io/v1/chat/completions"
+  },
+  "response": {
+    "body": {
+      "base_resp": {
+        "status_code": 0,
+        "status_msg": ""
+      },
+      "choices": [
+        {
+          "finish_reason": "length",
+          "index": 0,
+          "message": {
+            "audio_content": "",
+            "name": "MiniMax AI",
+            "reasoning_details": [
+              {
+                "format": "MiniMax-response-v1",
+                "id": "reasoning-text-1",
+                "index": 0,
+                "text": "The user is saying \"Hi there!\" which is",
+                "type": "reasoning.text"
+              }
+            ],
+            "role": "assistant"
+          }
+        }
+      ],
+      "created": 1777714184,
+      "id": "0644f7083a17e9b8149cc0e5cdb08c96",
+      "input_sensitive": false,
+      "input_sensitive_type": 0,
+      "model": "MiniMax-M2.7",
+      "object": "chat.completion",
+      "output_sensitive": false,
+      "output_sensitive_int": 0,
+      "output_sensitive_type": 0,
+      "usage": {
+        "completion_tokens": 10,
+        "completion_tokens_details": {
+          "reasoning_tokens": 10
+        },
+        "prompt_tokens": 24,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_characters": 0,
+        "total_tokens": 34
+      }
+    },
+    "headers": {
+      "alb_receive_time": [
+        "1777714184.551"
+      ],
+      "alb_request_id": [
+        "4c37749e0bd9ae0de61986ce86e754f96d24ea62"
+      ],
+      "connection": [
+        "keep-alive"
+      ],
+      "content-type": [
+        "application/json; charset=utf-8"
+      ],
+      "date": [
+        "Sat, 02 May 2026 09:29:48 GMT"
+      ],
+      "minimax-request-id": [
+        "f29fa3f7ab178b1dffdc25b7010b1dee"
+      ],
+      "trace-id": [
+        "0644f7083a17e9b8149cc0e5cdb08c96"
+      ],
+      "x-mm-request-id": [
+        "2038858753192768005_1777714188dqc0v3"
+      ],
+      "x-session-id": [
+        "2c6b7799392e2fac744d9371049c5505"
+      ]
+    },
+    "status": 200
+  }
+}

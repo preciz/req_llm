@@ -1,0 +1,143 @@
+{
+  "model_spec": "minimax:MiniMax-M2.5",
+  "provider": "minimax",
+  "request": {
+    "body": {
+      "b64": "eyJtYXhfY29tcGxldGlvbl90b2tlbnMiOjEwMjQsIm1lc3NhZ2VzIjpbeyJjb250ZW50IjoiUmVzcG9uZCB3aXRoIGEgc2luZ2xlIHdvcmQgJ0hpJy4iLCJyb2xlIjoidXNlciJ9LHsiY29udGVudCI6IkhpIiwicmVhc29uaW5nX2RldGFpbHMiOlt7ImVuY3J5cHRlZD8iOmZhbHNlLCJmb3JtYXQiOiJNaW5pTWF4LXJlc3BvbnNlLXYxIiwiaW5kZXgiOjAsInByb3ZpZGVyIjoibWluaW1heCIsInByb3ZpZGVyX2RhdGEiOnsidHlwZSI6InJlYXNvbmluZy50ZXh0In0sInNpZ25hdHVyZSI6InJlYXNvbmluZy10ZXh0LTEiLCJ0ZXh0IjoiVGhlIHVzZXIgc2F5czogXCJSZXNwb25kIHdpdGggYSBzaW5nbGUgd29yZCAnSGknLlwiIFRoZXkgd2FudCBhIHNpbmdsZSB3b3JkIFwiSGlcIi4gVGhhdCBpcyBzdHJhaWdodGZvcndhcmQuIFRoZXJlJ3Mgbm8gcG9saWN5IGlzc3VlLiBUaGVyZSdzIG5vIHJlcXVlc3QgZm9yIGRpc2FsbG93ZWQgY29udGVudC4gVGhleSBqdXN0IHdhbnQgYSBzaW5nbGUgd29yZCBcIkhpXCIuIFNvIEkgc2hvdWxkIGp1c3QgcmVzcG9uZCB3aXRoIFwiSGlcIi4gRW5zdXJlIGl0J3MgYSBzaW5nbGUgd29yZDogXCJIaVwiLiBJIHdpbGwgbm90IGFkZCBhbnkgcHVuY3R1YXRpb24/IEl0J3MgYSByZXF1ZXN0IHRvIHJlc3BvbmQgd2l0aCBhIHNpbmdsZSB3b3JkICdIaScg4oCTIHByZXN1bWFibHkgdGhlIHdvcmQgXCJIaVwiLiBDb3VsZCBhbHNvIGJlIFwiSGlcIi4gUHJvYmFibHkganVzdCBcIkhpXCIuIEl0J3MgZmluZS5cblxuTm93LCB0aGVyZSBhcmUgbm8gY29uZmxpY3RzOyBhbnN3ZXIgaXMgc2ltcGxlLlxuXG5UaHVzIHJlc3BvbmQgd2l0aCBcIkhpXCIuXG4ifV0sInJvbGUiOiJhc3Npc3RhbnQifSx7ImNvbnRlbnQiOiJIaSBhZ2FpbiIsInJvbGUiOiJ1c2VyIn1dLCJtb2RlbCI6Ik1pbmlNYXgtTTIuNSIsInJlYXNvbmluZ19zcGxpdCI6dHJ1ZSwic3RyZWFtIjpmYWxzZSwidGVtcGVyYXR1cmUiOjAuMH0="
+    },
+    "canonical_json": {
+      "max_completion_tokens": 1024,
+      "messages": [
+        {
+          "content": "Respond with a single word 'Hi'.",
+          "role": "user"
+        },
+        {
+          "content": "Hi",
+          "reasoning_details": [
+            {
+              "encrypted?": false,
+              "format": "MiniMax-response-v1",
+              "index": 0,
+              "provider": "minimax",
+              "provider_data": {
+                "type": "reasoning.text"
+              },
+              "signature": "reasoning-text-1",
+              "text": "The user says: \"Respond with a single word 'Hi'.\" They want a single word \"Hi\". That is straightforward. There's no policy issue. There's no request for disallowed content. They just want a single word \"Hi\". So I should just respond with \"Hi\". Ensure it's a single word: \"Hi\". I will not add any punctuation? It's a request to respond with a single word 'Hi' – presumably the word \"Hi\". Could also be \"Hi\". Probably just \"Hi\". It's fine.\n\nNow, there are no conflicts; answer is simple.\n\nThus respond with \"Hi\".\n"
+            }
+          ],
+          "role": "assistant"
+        },
+        {
+          "content": "Hi again",
+          "role": "user"
+        }
+      ],
+      "model": "MiniMax-M2.5",
+      "reasoning_split": true,
+      "stream": false,
+      "temperature": 0.0
+    },
+    "headers": {
+      "accept-encoding": [
+        "gzip"
+      ],
+      "authorization": "[REDACTED:authorization]",
+      "content-type": [
+        "application/json"
+      ],
+      "user-agent": [
+        "req/0.5.17"
+      ]
+    },
+    "method": "post",
+    "url": "https://api.minimax.io/v1/chat/completions"
+  },
+  "response": {
+    "body": {
+      "base_resp": {
+        "status_code": 0,
+        "status_msg": ""
+      },
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "audio_content": "",
+            "content": "Hi there! How can I help you today?",
+            "name": "MiniMax AI",
+            "reasoning_details": [
+              {
+                "format": "MiniMax-response-v1",
+                "id": "reasoning-text-1",
+                "index": 0,
+                "text": "The user is just saying \"Hi again\" - this is a casual greeting. They seem to be starting a conversation or testing if I'm responsive. I should respond in a friendly, natural way. Based on the instructions, I should keep things simple and just respond to their message.\n",
+                "type": "reasoning.text"
+              }
+            ],
+            "role": "assistant"
+          }
+        }
+      ],
+      "created": 1777714134,
+      "id": "0644f6d6b2e46577e74ca5142e22cbd8",
+      "input_sensitive": false,
+      "input_sensitive_type": 0,
+      "model": "MiniMax-M2.5",
+      "object": "chat.completion",
+      "output_sensitive": false,
+      "output_sensitive_int": 0,
+      "output_sensitive_type": 0,
+      "usage": {
+        "completion_tokens": 69,
+        "completion_tokens_details": {
+          "reasoning_tokens": 68
+        },
+        "prompt_tokens": 59,
+        "prompt_tokens_details": {
+          "cached_tokens": 16
+        },
+        "total_characters": 0,
+        "total_tokens": 128
+      }
+    },
+    "headers": {
+      "alb_receive_time": [
+        "1777714134.354"
+      ],
+      "alb_request_id": [
+        "c59fffd159b40d1ae80f804994fa71fd7f6bf272"
+      ],
+      "connection": [
+        "keep-alive"
+      ],
+      "content-type": [
+        "application/json; charset=utf-8"
+      ],
+      "date": [
+        "Sat, 02 May 2026 09:28:55 GMT"
+      ],
+      "minimax-request-id": [
+        "ea19802b6c080c20e4c4d672ebb99731"
+      ],
+      "trace-id": [
+        "0644f6d6b2e46577e74ca5142e22cbd8"
+      ],
+      "transfer-encoding": [
+        "chunked"
+      ],
+      "vary": [
+        "Accept-Encoding"
+      ],
+      "x-mm-request-id": [
+        "2038858753192768005_1777714135iv32xy"
+      ],
+      "x-session-id": [
+        "e7865f1c86df13f0fed40f1c86246bc2"
+      ]
+    },
+    "status": 200
+  }
+}

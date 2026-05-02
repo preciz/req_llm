@@ -1,0 +1,122 @@
+{
+  "model_spec": "minimax:MiniMax-M2.5",
+  "provider": "minimax",
+  "request": {
+    "body": {
+      "b64": "eyJtYXhfY29tcGxldGlvbl90b2tlbnMiOjMwMDAsIm1lc3NhZ2VzIjpbeyJjb250ZW50IjoiV3JpdGUgYSB2ZXJ5IGxvbmcgc3RvcnkgYWJvdXQgZHJhZ29ucyBhbmQgYWR2ZW50dXJlcyIsInJvbGUiOiJ1c2VyIn1dLCJtb2RlbCI6Ik1pbmlNYXgtTTIuNSIsInJlYXNvbmluZ19zcGxpdCI6dHJ1ZSwic3RyZWFtIjpmYWxzZSwidGVtcGVyYXR1cmUiOjAuNX0="
+    },
+    "canonical_json": {
+      "max_completion_tokens": 3000,
+      "messages": [
+        {
+          "content": "Write a very long story about dragons and adventures",
+          "role": "user"
+        }
+      ],
+      "model": "MiniMax-M2.5",
+      "reasoning_split": true,
+      "stream": false,
+      "temperature": 0.5
+    },
+    "headers": {
+      "accept-encoding": [
+        "gzip"
+      ],
+      "authorization": "[REDACTED:authorization]",
+      "content-type": [
+        "application/json"
+      ],
+      "user-agent": [
+        "req/0.5.17"
+      ]
+    },
+    "method": "post",
+    "url": "https://api.minimax.io/v1/chat/completions"
+  },
+  "response": {
+    "body": {
+      "base_resp": {
+        "status_code": 0,
+        "status_msg": ""
+      },
+      "choices": [
+        {
+          "finish_reason": "length",
+          "index": 0,
+          "message": {
+            "audio_content": "",
+            "content": "# THE LAST DRAGONRIDER\n\n## Part One: The Awakening\n\n### Chapter 1: The Boy Who Heard Dragons\n\nIn the village of Thornwick, nestled between the craggy peaks of the Greyspine Mountains and the vast forests of the Elderwood, there lived a boy named Kiraen. He was fifteen summers old, with hair the color of weathered copper and eyes that shifted between green and gold depending on the light. His parents were simple folk—a blacksmith and a weaver—and there was nothing particularly remarkable about him. Or so everyone believed.\n\nBut Kiraen had a secret.\n\nSince he was old enough to remember, he had heard them. In the wind that blew through the mountain passes, in the crackle of fires in the hearth, in the silence of midnight when the world held its breath, he heard their voices. Great and ancient, terrible and beautiful, speaking in a language that was not words but something deeper—a vibration in his soul that he could not ignore.\n\nThe dragons of the Greyspine were legendary in these lands. Farmers spoke of them in whispers, trading stories of beasts that could incinerate a man with a single breath or freeze a river with the gust of their wings. Heroes had gone into the mountains seeking fame and fortune, and few had returned. The dragons were creatures to be feared, to be avoided, to be left alone.\n\nBut Kiraen did not fear them.\n\nHe remembered the first time he had truly *heard* one. He was seven years old, wandering too close to the mountain's edge during a winter so harsh that the snow came up to his waist. A blizzard had closed around him, blinding white and screaming wind, and he had been certain that he would die there, alone in the frozen dark.\n\nThen the heat had come.\n\nA great wingspan had blotted out the storm, and a voice like rolling thunder had filled his mind. *Little warm thing,* the voice had said, amused and ancient. *What are you doing in my sky?*\n\nThe dragon had carried him back to the village, depositing him in the town square as if he were a dropped mitten. The villagers had been terrified, falling to their knees and cowering in their homes. But Kiraen had only laughed, waving up at the great beast as it rose into the clouds.\n\nThat had been the beginning.\n\nOver the years, Kiraen had learned to distinguish between the dragons. There was Azurath, the eldest of the Greyspine, who slept in the highest peak and dreamed of worlds that had existed before humanity. There was the twins, Flame and Frost, who played eternal games across the valley and caused the strange weather that made the springs sometimes warm and sometimes cold. There was Grimjaw, the stern guardian of the western pass, who had not spoken to a human in three hundred years.\n\nAnd there were others, dozens of others, each with their own personalities and powers.\n\nBut it was not until the night of the red moon that Kiraen understood why he could hear them.\n\n---\n\nThe moon had turned the color of blood, hanging low and heavy in the sky like an omen. Kiraen had been awake, unable to sleep, when he felt it—a wrongness in the air, a tearing sensation as if the world itself had been cut.\n\nHe had run outside, his bare feet icy on the frozen ground, and looked up toward the mountains.\n\nThe Greyspine were burning.\n\nNot with fire, but with something worse. A darkness was spreading across the peaks like ink in water, consuming everything it touched. The dragons' voices screamed in his mind, a cacophony of pain and rage and fear, and Kiraen fell to his knees, clutching his head.\n\n*What is happening?* he cried internally, reaching out with all his might.\n\nAnd then he heard it. A new voice. Deep and vast, older even than Azurath. It came from somewhere far beneath the mountains, from a place where no dragon had flown for millennia.\n\n*Wake, little listener,* the voice said. *The Hollow God stirs. The chains that bound him have broken. Only the Dragonriders can stop him now—but there have been no riders for a thousand years. You must find them. You must bring them back.*\n\n*Who are you?* Kiraen asked.\n\n*I am the first. I am the last. I am the keeper of the seal,* the voice replied. *My name is Valdrath the Undying. And you, child of man, are the only one who can hear us. The only one who can carry our message.*\n\n*But I'm no one,* Kiraen protested. *I'm just a blacksmith's son. I can't—*\n\n*You can,* Valdrath said, and even through the terrible pain of the attack, the ancient dragon's voice was gentle. *Listen to me, Kiraen of Thornwick. The Hollow God was once a great sorcerer who sought immortality. He found it, but at a terrible cost—he tore his soul from his body and bound it into a vessel of darkness. For three thousand years, we dragons bound him in the Place of Chains, deep beneath the earth. But he has been feeding on hate and despair, growing stronger while we grew weaker. Now the chains are broken. Now he seeks to consume the world and remake it in his image.*\n\n*How do I stop him?* Kiraen asked.\n\n*You must find the Dragonriders,* Valdrath said. *There were twelve of them, the greatest heroes of the age. They were scattered across the world when the dragons retreated from men, their memories erased so that they could live normal lives. But the blood calls to the blood. You must find them, awaken them, and bring them together. Only the bond between dragon and rider can defeat the Hollow God.*\n\n*Where do I start?* Kiraen said, his heart pounding with fear and exhilaration.\n\n*You start by leaving everything you know,* Valdrath replied. *You start by becoming what you were always meant to be. The age of the Dragonrider is not over, Kiraen. It is only beginning.*\n\nThe red moon hung overhead, and somewhere in the deep places of the world, the Hollow God laughed.\n\n---\n\n### Chapter 2: The First Rider\n\nKiraen did not sleep that night. He sat in his small room, staring at the wall, trying to process everything he had heard.\n\nA world-threatening evil. Dragons that could talk to him. And a quest—to find twelve people scattered across the face of the world, whose existence he couldn't even prove.\n\n*This is insane,* he thought. *I'm fifteen years old. I'm a blacksmith's apprentice. I can't—just—*\n\nBut then he remembered the voices in his head, the screaming pain of the dragons as the darkness consumed them. He remembered the words of Valdrath, the ancient dragon's certainty that he was the only one who could do this.\n\n*Who am I to argue with a dragon?* he thought bitterly.\n\nMorning came pale and cold, with frost on the windows and a silence in the air that felt wrong. Kiraen rose and dressed, moving through the motions of his daily life, but his mind was elsewhere.\n\nHe had to tell his parents. He had to explain, somehow, that he could hear dragons and that the world was ending and that he needed to leave.\n\nHe found them in the kitchen, his mother kneading bread and his father examining a horseshoe that had come out of the forge too brittle. They looked up at him with the casual affection of everyday life, and Kiraen felt his heart clench.\n\n*How do I tell them?* he thought. *How do I explain?*\n\nBut the words came out anyway, flowing like water from a broken dam. He told them about the voices, about the red moon, about Valdrath. He told them about the Hollow God and the quest. He told them everything.\n\nHis parents stared at him.\n\nThen his mother crossed the room and put her hand on his forehead. \"You're not feverish,\" she said. \"You're not... Kiraen, sweetling, you've been working too hard. The stories have gotten to you. There are no dragons that speak to people. There haven't been Dragonriders in a thousand years.\"\n\n\"But I *heard* them, Mother,\" Kiraen said desperately. \"I heard them screaming. The darkness is coming—\"\n\n\"Kiraen.\" His father's voice was gentle but firm. \"You've had an imagination since you were small. Remember when you told us about the dragon that carried you home? We humour you, son, but this has gone too far. You can't just abandon your life because of a dream.\"\n\n\"It's not a dream!\" Kiraen shouted, and his voice cracked with frustration. \"Why won't you believe me?\"\n\n\"Because there's nothing to believe,\" his father said. \"Now come, help me at the forge. We've work to do, and dreaming won't feed the family.\"\n\nKiraen looked at them, his mother with her flour-dusted hands and his father with his reasonable, loving expression, and felt something break inside him.\n\nThey would never believe him. He knew that now. He was just a kid with a fantasy problem, a boy who couldn't separate stories from reality.\n\nBut the dragons knew. And Valdrath knew. And somewhere, somehow, the Hollow God was rising.\n\nKiraen turned and walked out of the house.\n\nHe didn't say goodbye. He didn't take anything except the clothes on his back and the small knife his grandfather had given him. He walked out of Thornwick as the sun crested the mountains, and he didn't look back.\n\nBehind him, somewhere in the deep places of the world, Valdrath smiled.\n\n---\n\nThe Greyspine Mountains were treacherous, even in summer. Kiraen climbed for three days, following the path that Valdrath had etched into his mind. He encountered snow that came up to his waist, cliffs that demanded impossible leaps, and winds that tried to push him off the mountain.\n\nBut he also heard the dragons encouraging him, their voices like compasses pointing the way.\n\n*Higher, little listener,* Flame said, her voice warm like summer. *The cold doesn't touch you—you carry our fire in your heart.*\n\n*Careful of the eastern ledge,* Grimjaw cautioned. *Those stones are loose. Step where I tell you.*\n\nAnd finally, on the third day, he reached the peak.\n\nThe cave was hidden behind a curtain of ice, a crack in the mountain that seemed too small to contain anything. But when Kiraen approached, the ice parted for him, and he stepped through into fire.\n\nThe dragon before him was vast beyond comprehension.\n\nValdrath the Undying was older than mountains. His scales were the colour of deep water, blue-black and rippling like the surface of a lake. His wings, folded against his flanks, seemed to fill the entire cave. His eyes were the size of wagon wheels, ancient and knowing, and they fixed on Kiraen with unmistakable intelligence.\n\n*You came,* Valdrath said, and his voice was like the deep rumble of the earth itself. *I wondered if you would.*\n\n\"You asked me to,\" Kiraen said, his voice shaking despite himself. \"You said I was the only one who could—\"\n\n*I said you were the only one who could hear us,* Valdrath corrected. *That does not make you special, child. It makes you necessary. There is a difference.*\n\n\"I don't understand.\"\n\nValdrath's great head lowered, bringing his eye closer to Kiraen. The boy fought the urge to flinch, to run, to cower before the ancient power before him.\n\n*Do you know why dragons stopped talking to humans?* Valdrath asked.\n\nKiraen shook his head.\n\n*Because humans forgot how to listen,* Valdrath said. *A thousand years ago, we were partners. The Dragonriders and us, we were one. When we fought together, we were unstoppable. But humans grew fearful. They began to see us as monsters, as beasts to be slain or controlled. They forgot the bond, the trust, the love. So we withdrew. We let them forget us entirely.*\n\n\"But why now?\" Kiraen asked. \"Why reveal yourselves again?\"\n\nValdrath's eyes narrowed. *Because the alternative is extinction,* he said. *The Hollow God does not distinguish between dragon and human. He seeks to unmake everything, to return the world to darkness. And we are too few, too scattered, to stop him alone.*\n\n\"How many dragons are left?\"\n\n*Fewer than there once were. The great wyrms have died, or gone into the long sleep from which they may not wake. Those who remain are scattered across the world, hiding in places where humans do not go. But we are not enough.*\n\n\"Then how can twelve Dragonriders make a difference?\"\n\nValdrath drew himself up, and for a moment, Kiraen saw the dragon as he must have been in the ancient days—vast and terrible and beautiful, a god of the sky.\n\n*A Dragonrider is not simply a human on a dragon's back,* Valdrath",
+            "name": "MiniMax AI",
+            "reasoning_details": [
+              {
+                "format": "MiniMax-response-v1",
+                "id": "reasoning-text-1",
+                "index": 0,
+                "text": "This is a very open-ended request. The user wants a \"very long story\" about dragons and adventures. This gives me the liberty to write a substantial, epic-length narrative. I should aim for something that feels like a complete, self-contained novel rather than just a short anecdote.\n\nKey elements to include:\n1. A compelling protagonist - perhaps a young person who discovers they have a connection to dragons\n2. A rich, detailed world - maybe a medieval fantasy setting with multiple types of dragons\n3. A clear quest/adventure - saving something, finding something, or stopping some threat\n4. Supporting characters - companions, mentors, antagonists\n5. Multiple challenges and obstacles\n6. Dragons as central beings with their own culture, intelligence, and importance\n7. A satisfying resolution\n\nI'll structure this as a multi-chapter story, but since the user wants one continuous narrative, I'll make it flow as chapters within a longer piece. I should aim for substantial length - probably several thousand words to really give them that \"very long\" experience.\n\nLet me create an epic tale involving:\n- A protagonist who can communicate with dragons (a rare gift)\n- An ancient evil awakening\n- A journey across diverse lands\n- Multiple dragon types with different abilities\n- Companions from different backgrounds\n- Hidden history about dragons and humans\n- A final confrontation\n\nI'll write this in flowing prose, divided into chapters for readability, but as one continuous epic story.\n",
+                "type": "reasoning.text"
+              }
+            ],
+            "role": "assistant"
+          }
+        }
+      ],
+      "created": 1777714099,
+      "id": "0644f6b302d9939d305754faef6ec3c9",
+      "input_sensitive": false,
+      "input_sensitive_type": 0,
+      "model": "MiniMax-M2.5",
+      "object": "chat.completion",
+      "output_sensitive": false,
+      "output_sensitive_int": 0,
+      "output_sensitive_type": 0,
+      "usage": {
+        "completion_tokens": 3000,
+        "completion_tokens_details": {
+          "reasoning_tokens": 391
+        },
+        "prompt_tokens": 47,
+        "prompt_tokens_details": {
+          "cached_tokens": 16
+        },
+        "total_characters": 0,
+        "total_tokens": 3047
+      }
+    },
+    "headers": {
+      "alb_receive_time": [
+        "1777714099.522"
+      ],
+      "alb_request_id": [
+        "36f53796d3b95396635643f5827be9b8f4d9a4da"
+      ],
+      "connection": [
+        "keep-alive"
+      ],
+      "content-type": [
+        "application/json; charset=utf-8"
+      ],
+      "date": [
+        "Sat, 02 May 2026 09:28:40 GMT"
+      ],
+      "minimax-request-id": [
+        "dc6e9995a31ed7218f160c24b2c444dd"
+      ],
+      "trace-id": [
+        "0644f6b302d9939d305754faef6ec3c9"
+      ],
+      "transfer-encoding": [
+        "chunked"
+      ],
+      "vary": [
+        "Accept-Encoding"
+      ],
+      "x-mm-request-id": [
+        "2038858753192768005_1777714120x6279c"
+      ],
+      "x-session-id": [
+        "ea0309f1b296c44dbf46847ede6df711"
+      ]
+    },
+    "status": 200
+  }
+}

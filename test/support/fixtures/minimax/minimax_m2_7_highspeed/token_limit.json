@@ -1,0 +1,120 @@
+{
+  "model_spec": "minimax:MiniMax-M2.7-highspeed",
+  "provider": "minimax",
+  "request": {
+    "body": {
+      "b64": "eyJtYXhfY29tcGxldGlvbl90b2tlbnMiOjMwMDAsIm1lc3NhZ2VzIjpbeyJjb250ZW50IjoiV3JpdGUgYSB2ZXJ5IGxvbmcgc3RvcnkgYWJvdXQgZHJhZ29ucyBhbmQgYWR2ZW50dXJlcyIsInJvbGUiOiJ1c2VyIn1dLCJtb2RlbCI6Ik1pbmlNYXgtTTIuNy1oaWdoc3BlZWQiLCJyZWFzb25pbmdfc3BsaXQiOnRydWUsInN0cmVhbSI6ZmFsc2UsInRlbXBlcmF0dXJlIjowLjV9"
+    },
+    "canonical_json": {
+      "max_completion_tokens": 3000,
+      "messages": [
+        {
+          "content": "Write a very long story about dragons and adventures",
+          "role": "user"
+        }
+      ],
+      "model": "MiniMax-M2.7-highspeed",
+      "reasoning_split": true,
+      "stream": false,
+      "temperature": 0.5
+    },
+    "headers": {
+      "accept-encoding": [
+        "gzip"
+      ],
+      "authorization": "[REDACTED:authorization]",
+      "content-type": [
+        "application/json"
+      ],
+      "user-agent": [
+        "req/0.5.17"
+      ]
+    },
+    "method": "post",
+    "url": "https://api.minimax.io/v1/chat/completions"
+  },
+  "response": {
+    "body": {
+      "base_resp": {
+        "status_code": 0,
+        "status_msg": ""
+      },
+      "choices": [
+        {
+          "finish_reason": "length",
+          "index": 0,
+          "message": {
+            "audio_content": "",
+            "content": "**The Chronicles of Aethoria – A Tale of Dragons and Adventures**  \n\n---\n\n### Prologue – The Age of Ember and Ice  \n\nIn the first age of the world, when the sky was still scarred by the breath of newborn suns, dragons ruled the heavens and the deep places of the earth. Their scales shone like molten gold, their wings blotted out the stars, and their roars could shake mountains. In those days, a fragile pact was forged between the great wyrms and the peoples of Aethoria: the dragons would share the gifts of fire, wind, and wisdom, and in turn, mortals would guard the nests and protect the dragon‑kine from the hunger of lesser beasts.\n\nCenturies passed. The pact frayed as greed seeped into the hearts of men. Dragonhunters, lured by the promise of power, began to hunt the great beasts, carving their bones into weapons and their hearts into trophies. The great wyrms retreated to the high peaks of the Obsidian Mountains, to the frozen caverns of the North‑Sea, to the ember‑filled valleys of the Emberlands. The world forgot the soft lullaby of dragon song, and the skies fell silent.\n\nYet the old fires never truly died. Somewhere, in a hidden crevasse beneath the Whispering Forest, an egg lay waiting, cradled by the roots of an ancient oak that had witnessed the rise and fall of kingdoms. The egg pulsed with a faint, amber light, a promise that the age of dragons would one day be reborn.\n\n---\n\n## Chapter 1 – The Storm That Began the Journey  \n\nThe night the egg cracked was the night a storm raged over the village of Willowmere. Rain lashed the thatched roofs, and thunder rolled like the drums of an ancient war. In a small, weather‑worn cottage at the edge of the forest, a boy named **Aric** stared out of his window, his breath forming tiny clouds in the cold air.\n\nHe was fourteen, a child of the soil and the sky. His parents had perished when a dragon—later known as a *Rift‑wing*—had crashed into the village during a storm, an event that had left him an orphan. The village elders had whispered that the Rift‑wing’s heart had turned to stone in its last breath, but Aric remembered the gentle fire in its eyes, a fire that had seemed more sorrowful than malicious. He had never forgotten the warmth of that glow, nor the way it had brushed against his cheek before it fell.\n\nWhen the storm reached its crescendo, a blinding flash of lightning illuminated the forest, and a thunderous crack split the earth. From the fissure, a faint amber glow seeped out, casting long shadows that danced like living things. Aric’s heart hammered. He grabbed a lantern and a rusted iron sword—the only relics of his parents—and ran into the tempest.\n\nThe forest greeted him with the whisper of leaves and the scent of damp moss. He followed the glow, his boots sinking into the soft earth. Branches clawed at his sleeves, and rain plastered his hair to his forehead. He felt an inexplicable pull, as if the light itself was calling his name. He pushed aside a tangle of vines and found himself before a massive oak, its trunk split wide open, and there, nestled among the roots, lay a single, gleaming egg.\n\nThe egg was the size of a melon, its shell a swirl of deep obsidian and molten gold. It pulsed with a rhythm that matched his own heart. He fell to his knees, the lantern slipping from his grasp and sputtering out. He reached out, his fingers trembling, and brushed the shell. The surface was warm, almost alive, and a low, resonant hum vibrated through his palm.\n\nAric’s breath caught. He felt a sudden surge of emotion—joy, sorrow, hope, and an ancient, unspoken promise. He knew, in that moment, that this egg was the answer to a question he had never dared ask. He wrapped it carefully in his cloak, cradling it against his chest, and ran back toward the village, the storm raging as if the world itself were urging him forward.\n\nWhen he reached his cottage, the egg lay still, the glow dimming to a soft ember. He placed it on the hearth, coaxed a fire to life, and sat there, watching the flames. He whispered a prayer—an old one, taught to him by his mother—“May the wind carry you, may the fire keep you, may the earth hold you.” The egg seemed to answer with a gentle pulse.\n\n---\n\n## Chapter 2 – The Ember’s Call  \n\nThe next morning broke with a golden hue, the storm having fled as quickly as it had come. Aric awoke to a soft, rhythmic tapping against the hearthstone. He stared, half‑dreaming, as the egg cracked, a fissure spreading like a river across its shell. A tiny, shimmering claw emerged, then a wing, translucent as morning mist. A burst of warm, fragrant air filled the room, carrying the scent of pine and distant mountains.\n\nFrom the shattered shell emerged **Sylara**, a dragon no larger than a housecat, her scales a blend of midnight blue and soft silver, each one catching the firelight like a tiny mirror. Her eyes, large and luminous, glowed a deep violet, and a crown of delicate, feather‑like frills framed her head. She blinked at Aric, her nostrils flaring, and let out a soft, melodious trill that seemed to say, *I’m here.*\n\nAric knelt, his hand outstretched. Sylara sniffed his palm, then nuzzled it, a sensation akin to a warm breeze. A feeling of kinship blossomed between them—a bond that transcended species, a thread of destiny that wove their fates together. He whispered, “You’re safe now,” and she answered with a gentle rumble that vibrated through the floorboards.\n\nNews of the hatchling spread quickly through Willowmere. The village elder, **Maester Orin**, a stoic man with a beard as white as snow, arrived, his eyes widening at the sight of the dragon. “An *Aurora Drake*,” he murmured, recalling old legends. “They are the keepers of dawn, the heralds of a new age.” He warned Aric that the world beyond the forest was fraught with danger, that dragonhunters would stop at nothing to capture such a being.\n\nAric listened, his heart heavy. He knew that keeping Sylara hidden would be impossible; her presence was a beacon. Yet, he also felt a fierce resolve. He would protect her, no matter the cost.\n\nThat night, under a sky ablaze with stars, Sylara perched on Aric’s shoulder, her wings fluttering in rhythm with his breath. She whispered a wordless promise: *Together, we will rise.*\n\n---\n\n## Chapter 3 – The Skywardens  \n\nA week later, a cloaked figure arrived at the village. She rode a great, storm‑grey horse, its mane braided with silver thread, and carried a staff crowned with a crystalline orb that pulsed with faint light. She introduced herself as **Lysandra**, a member of the **Skywardens**, an ancient order that had once tended to the dragons and taught humans the art of sky‑riding.\n\n“The Skywardens have kept the old ways alive, even as the world fell into darkness,” Lysandra explained, her voice like the rustle of leaves. “We have waited for a sign. The emergence of an Aurora Drake is that sign.”\n\nShe offered to take Aric and Sylara to the **Skywarden Sanctuary**, a hidden citadel perched on the cliffs of the **Aureate Peaks**, where the air was thin and the winds sang ancient songs. Aric hesitated, glancing at Sylara, who let out a soft, encouraging growl. He nodded.\n\nThe journey was arduous. They traversed the **Whispering Forest**, where the trees whispered forgotten lullabies, and the ground was carpeted with luminous fungi that glowed in response to the dragons’ breath. Lysandra taught Aric the basics of dragon‑bonding: the importance of breath, the rhythm of wingbeats, and the subtle language of scales.\n\nOn the third day, they encountered a **Rift‑wing**—a massive, fire‑breathing dragon whose scales were a dull, bruised purple, and whose eyes burned with a feral hunger. It descended from a cloud",
+            "name": "MiniMax AI",
+            "reasoning_content": "The user wants a very long story about dragons and adventures. We need to generate a detailed narrative with many characters, plot arcs, subplots, world building, multiple dragon types, perhaps a protagonist or group of heroes, an antagonist, etc. We need to produce a lengthy story, perhaps with several chapters or a single long text. The user request is straightforward: \"Write a very long story about dragons and adventures\". It's a creative request. There's no disallowed content. It's safe. We must output a story. It's allowed. Should ensure length (like several thousand words). The user didn't specify any constraints like restrictions. So we can provide a story with rich world-building, multiple characters, arcs, etc.\n\nWe need to produce a story. Probably a story in multiple parts, with chapters. Should be long. The story could be about a young protagonist, perhaps a dragon rider, a war, ancient prophecy, etc. Or we can combine multiple perspectives: a dragon, a human hero, a kingdom. The story can be epic in scale, with a long journey across continents, encountering various challenges, meeting allies, battling enemies. The story can have a climax where dragons and humans unite to defeat an ancient evil. Include details of dragon lore, societies, magic.\n\nWe should write it in an engaging narrative style. Use descriptive language. Include perhaps dialogues, internal thoughts, action sequences, world-building.\n\nWe need to produce a \"very long story\". Usually we can aim for at least several thousand words. But it's not strictly defined. We can produce maybe 3000-5000 words. Or maybe a long multi-chapter story. Provide it all in one block, maybe with chapter headings. Let's think about structure.\n\nStructure: Perhaps start with a prologue describing the world, the Age of Dragons. Then proceed to Chapter 1: The Hidden Egg. Chapter 2: The Orphan of the Wind. Chapter 3: The Dragon Riders of the West. Chapter 4: The Shadow of the Wyrm. Chapter 5: The Prophecy. Chapter 6: The Gathering Storm. Chapter 7: The Battle of the Crimson Peaks. Chapter 8: The Siege of the Obsidian Citadel. Chapter 9: The Final Stand. Epilogue.\n\nWe'll need to flesh out each chapter with multiple scenes. We'll need to develop characters: protagonist (maybe a boy named Aric, an orphan who discovers a dragon egg), a dragon (maybe a hatchling named Sylara). He gets trained by a secretive order called the Skywardens. He meets companions: a skilled archer named Lysandra, a dwarven smith named Thorin, a mage named Elara. They have a common enemy: a warlord named Malachar who wants to enslave dragons for war. Also a dragon elder, Valthor, who holds ancient knowledge.\n\nWe can also have a subplot about dragons being hunted by a secret society, the Dragonhunters.\n\nWe can incorporate various types of dragons: fire-breathing, ice, storm, shadow.\n\nThe story will involve traveling across continents: the Forest of Whispering, the Desert of Ember, the Frozen Tundra, the Obsidian Mountains, etc.\n\nThe hero may also have a secret lineage, maybe descendant of the first Dragon Rider.\n\nWe need to incorporate vivid descriptions of dragon abilities, flight, etc.\n\nWe should ensure a cohesive storyline with a satisfying resolution.\n\nWe also need to embed thematic elements: courage, friendship, sacrifice, harmony between humans and dragons.\n\nNow let's think about the actual text. Write a long narrative. Keep it immersive. Provide details of the world. Use a mixture of third-person narration, dialogues, internal monologue.\n\nThe length: we can aim for about 4-5k words. That may be quite long. Let's try to write about 5000 words. That will be very long.\n\nWrite something like:\n\n- Prologue: The world before the Age of Dragons ended, the ancient pact between dragons and humans.\n\n- Chapter 1: A Storm in the Nest (the protagonist discovers the dragon egg)\n\n- Chapter 2: The Ember's Call (the hatching and bond)\n\n- Chapter 3: The Skywardens (training, learning about dragon lore)\n\n- Chapter 4: The Whispering Forest (adventure and first battle)\n\n- Chapter 5: The Siege of the Iron Citadel (conflict with Dragonhunters)\n\n- Chapter 6: The Dragon Council (dragon politics, ancient prophecy)\n\n- Chapter 7: The Shadow of the Wyrm (the main antagonist's plan)\n\n- Chapter 8: The Last Flight (climactic battle)\n\n- Epilogue: A New Dawn (aftermath, new harmony)\n\nWe can also add interludes from the perspective of dragons. That would be interesting.\n\nWe'll try to keep each chapter fairly long (maybe 600-800 words). 8-9 chapters will give us ~5000-7000 words. That's a lot.\n\nLet's start writing.\n\nWrite it in present tense or past tense? Past tense is typical for fantasy.\n\nWrite using standard narrative style.\n\nWill include dialogues, maybe italicized for internal thoughts.\n\nAlright, let's begin.\n\nPrologue: ... Then Chapter 1.\n\nWe'll need to manage the length and flow.\n\nWe'll embed a lot of details: location names, the feel of the world, the culture of the Skywardens.\n\nWe can incorporate a mix of subplots: romance perhaps between Aric and Lysandra.\n\nAdd some twist: The main antagonist is not just a warlord but a dragon who has turned to darkness.\n\nNow start.\n\nWrite the story.\n\nWe'll include:\n\n- The world of Aethoria.\n\n- The Skywardens, an ancient order.\n\n- The Dragonhunters, a group.\n\n- The Black Flame, a warlord.\n\n- The Elder Dragon, Valthor.\n\n- The Prophecy of the Golden Wing.\n\n- The hero's journey.\n\n- The final battle at the Obsidian Citadel.\n\n- The union of dragons and humans.\n\nNow write the story.\n\nWill need to keep a consistent narrative.\n\nOk, start writing.\n\nWe need to make it \"very long\". So we need to fill many paragraphs.\n\nNow produce the story.",
+            "reasoning_details": [
+              {
+                "format": "MiniMax-response-v1",
+                "id": "reasoning-text-1",
+                "index": 0,
+                "text": "The user wants a very long story about dragons and adventures. We need to generate a detailed narrative with many characters, plot arcs, subplots, world building, multiple dragon types, perhaps a protagonist or group of heroes, an antagonist, etc. We need to produce a lengthy story, perhaps with several chapters or a single long text. The user request is straightforward: \"Write a very long story about dragons and adventures\". It's a creative request. There's no disallowed content. It's safe. We must output a story. It's allowed. Should ensure length (like several thousand words). The user didn't specify any constraints like restrictions. So we can provide a story with rich world-building, multiple characters, arcs, etc.\n\nWe need to produce a story. Probably a story in multiple parts, with chapters. Should be long. The story could be about a young protagonist, perhaps a dragon rider, a war, ancient prophecy, etc. Or we can combine multiple perspectives: a dragon, a human hero, a kingdom. The story can be epic in scale, with a long journey across continents, encountering various challenges, meeting allies, battling enemies. The story can have a climax where dragons and humans unite to defeat an ancient evil. Include details of dragon lore, societies, magic.\n\nWe should write it in an engaging narrative style. Use descriptive language. Include perhaps dialogues, internal thoughts, action sequences, world-building.\n\nWe need to produce a \"very long story\". Usually we can aim for at least several thousand words. But it's not strictly defined. We can produce maybe 3000-5000 words. Or maybe a long multi-chapter story. Provide it all in one block, maybe with chapter headings. Let's think about structure.\n\nStructure: Perhaps start with a prologue describing the world, the Age of Dragons. Then proceed to Chapter 1: The Hidden Egg. Chapter 2: The Orphan of the Wind. Chapter 3: The Dragon Riders of the West. Chapter 4: The Shadow of the Wyrm. Chapter 5: The Prophecy. Chapter 6: The Gathering Storm. Chapter 7: The Battle of the Crimson Peaks. Chapter 8: The Siege of the Obsidian Citadel. Chapter 9: The Final Stand. Epilogue.\n\nWe'll need to flesh out each chapter with multiple scenes. We'll need to develop characters: protagonist (maybe a boy named Aric, an orphan who discovers a dragon egg), a dragon (maybe a hatchling named Sylara). He gets trained by a secretive order called the Skywardens. He meets companions: a skilled archer named Lysandra, a dwarven smith named Thorin, a mage named Elara. They have a common enemy: a warlord named Malachar who wants to enslave dragons for war. Also a dragon elder, Valthor, who holds ancient knowledge.\n\nWe can also have a subplot about dragons being hunted by a secret society, the Dragonhunters.\n\nWe can incorporate various types of dragons: fire-breathing, ice, storm, shadow.\n\nThe story will involve traveling across continents: the Forest of Whispering, the Desert of Ember, the Frozen Tundra, the Obsidian Mountains, etc.\n\nThe hero may also have a secret lineage, maybe descendant of the first Dragon Rider.\n\nWe need to incorporate vivid descriptions of dragon abilities, flight, etc.\n\nWe should ensure a cohesive storyline with a satisfying resolution.\n\nWe also need to embed thematic elements: courage, friendship, sacrifice, harmony between humans and dragons.\n\nNow let's think about the actual text. Write a long narrative. Keep it immersive. Provide details of the world. Use a mixture of third-person narration, dialogues, internal monologue.\n\nThe length: we can aim for about 4-5k words. That may be quite long. Let's try to write about 5000 words. That will be very long.\n\nWrite something like:\n\n- Prologue: The world before the Age of Dragons ended, the ancient pact between dragons and humans.\n\n- Chapter 1: A Storm in the Nest (the protagonist discovers the dragon egg)\n\n- Chapter 2: The Ember's Call (the hatching and bond)\n\n- Chapter 3: The Skywardens (training, learning about dragon lore)\n\n- Chapter 4: The Whispering Forest (adventure and first battle)\n\n- Chapter 5: The Siege of the Iron Citadel (conflict with Dragonhunters)\n\n- Chapter 6: The Dragon Council (dragon politics, ancient prophecy)\n\n- Chapter 7: The Shadow of the Wyrm (the main antagonist's plan)\n\n- Chapter 8: The Last Flight (climactic battle)\n\n- Epilogue: A New Dawn (aftermath, new harmony)\n\nWe can also add interludes from the perspective of dragons. That would be interesting.\n\nWe'll try to keep each chapter fairly long (maybe 600-800 words). 8-9 chapters will give us ~5000-7000 words. That's a lot.\n\nLet's start writing.\n\nWrite it in present tense or past tense? Past tense is typical for fantasy.\n\nWrite using standard narrative style.\n\nWill include dialogues, maybe italicized for internal thoughts.\n\nAlright, let's begin.\n\nPrologue: ... Then Chapter 1.\n\nWe'll need to manage the length and flow.\n\nWe'll embed a lot of details: location names, the feel of the world, the culture of the Skywardens.\n\nWe can incorporate a mix of subplots: romance perhaps between Aric and Lysandra.\n\nAdd some twist: The main antagonist is not just a warlord but a dragon who has turned to darkness.\n\nNow start.\n\nWrite the story.\n\nWe'll include:\n\n- The world of Aethoria.\n\n- The Skywardens, an ancient order.\n\n- The Dragonhunters, a group.\n\n- The Black Flame, a warlord.\n\n- The Elder Dragon, Valthor.\n\n- The Prophecy of the Golden Wing.\n\n- The hero's journey.\n\n- The final battle at the Obsidian Citadel.\n\n- The union of dragons and humans.\n\nNow write the story.\n\nWill need to keep a consistent narrative.\n\nOk, start writing.\n\nWe need to make it \"very long\". So we need to fill many paragraphs.\n\nNow produce the story.",
+                "type": "reasoning.text"
+              }
+            ],
+            "role": "assistant"
+          }
+        }
+      ],
+      "created": 1777714114,
+      "id": "0644f6c2581cf14aaa87140fbf7ad203",
+      "input_sensitive": false,
+      "input_sensitive_type": 0,
+      "model": "MiniMax-M2.7-highspeed",
+      "object": "chat.completion",
+      "output_sensitive": false,
+      "output_sensitive_int": 0,
+      "output_sensitive_type": 0,
+      "usage": {
+        "completion_tokens": 3000,
+        "completion_tokens_details": {
+          "reasoning_tokens": 1258
+        },
+        "prompt_tokens": 50,
+        "total_characters": 0,
+        "total_tokens": 3050
+      }
+    },
+    "headers": {
+      "alb_receive_time": [
+        "1777714114.858"
+      ],
+      "alb_request_id": [
+        "60f7c5805a92a9bdf0c9f9f78f489ccd29d0a270"
+      ],
+      "connection": [
+        "keep-alive"
+      ],
+      "content-type": [
+        "application/json; charset=utf-8"
+      ],
+      "date": [
+        "Sat, 02 May 2026 09:29:43 GMT"
+      ],
+      "minimax-request-id": [
+        "e62a4c397f1fa00a83a0c3921a7e1910"
+      ],
+      "trace-id": [
+        "0644f6c2581cf14aaa87140fbf7ad203"
+      ],
+      "transfer-encoding": [
+        "chunked"
+      ],
+      "vary": [
+        "Accept-Encoding"
+      ],
+      "x-mm-request-id": [
+        "2038858753192768005_1777714114dzhr05"
+      ],
+      "x-session-id": [
+        "fd2f40c0b3ef8bd0dccbd457022e0baf"
+      ]
+    },
+    "status": 200
+  }
+}

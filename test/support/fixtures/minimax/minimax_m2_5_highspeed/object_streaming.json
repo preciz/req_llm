@@ -1,0 +1,104 @@
+{
+  "captured_at": "2026-05-02T09:29:54.797410Z",
+  "chunks": [
+    {
+      "b64": "ZGF0YTogeyJpZCI6IjA2NDRmNzEwMDcwOWJjMDBiODkwODRmNzRiYWFkMTkyIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJuYW1lIjoiTWluaU1heCBBSSIsImF1ZGlvX2NvbnRlbnQiOiIiLCJyZWFzb25pbmdfY29udGVudCI6IlRoZSB1c2VyIiwicmVhc29uaW5nX2RldGFpbHMiOlt7InR5cGUiOiJyZWFzb25pbmcudGV4dCIsImlkIjoicmVhc29uaW5nLXRleHQtMSIsImZvcm1hdCI6Ik1pbmlNYXgtcmVzcG9uc2UtdjEiLCJpbmRleCI6MCwidGV4dCI6IlRoZSB1c2VyIn1dfX1dLCJjcmVhdGVkIjoxNzc3NzE0MTkyLCJtb2RlbCI6Ik1pbmlNYXgtTTIuNS1oaWdoc3BlZWQiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24uY2h1bmsiLCJ1c2FnZSI6bnVsbCwiaW5wdXRfc2Vuc2l0aXZlIjpmYWxzZSwib3V0cHV0X3NlbnNpdGl2ZSI6ZmFsc2UsImlucHV0X3NlbnNpdGl2ZV90eXBlIjowLCJvdXRwdXRfc2Vuc2l0aXZlX3R5cGUiOjAsIm91dHB1dF9zZW5zaXRpdmVfaW50IjowfQoK"
+    },
+    {
+      "b64": "ZGF0YTogeyJpZCI6IjA2NDRmNzEwMDcwOWJjMDBiODkwODRmNzRiYWFkMTkyIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJuYW1lIjoiTWluaU1heCBBSSIsImF1ZGlvX2NvbnRlbnQiOiIiLCJyZWFzb25pbmdfY29udGVudCI6IiBpcyBhc2tpbmcgbWUgdG8gZ2VuZXJhdGUgYSBzb2Z0d2FyZSBlbmdpbmVlciBwcm9maWxlLiBUaGlzIGlzIGEgc2ltcGxlIGNyZWF0aXZlIHJlcXVlc3QgdGhhdCBkb2Vzbid0IHJlcXVpcmUgYW55IHRvb2xzIC0gSSBjYW4gZ2VuZXJhdGUgdGhpcyBiYXNlZCBvbiBteSBrbm93bGVkZ2Ugb2YgdHlwaWNhbCBzb2Z0d2FyZSBlbmdpbmVlciBwcm9maWxlcy5cblxuSSBzaG91bGQiLCJyZWFzb25pbmdfZGV0YWlscyI6W3sidHlwZSI6InJlYXNvbmluZy50ZXh0IiwiaWQiOiJyZWFzb25pbmctdGV4dC0xIiwiZm9ybWF0IjoiTWluaU1heC1yZXNwb25zZS12MSIsImluZGV4IjowLCJ0ZXh0IjoiIGlzIGFza2luZyBtZSB0byBnZW5lcmF0ZSBhIHNvZnR3YXJlIGVuZ2luZWVyIHByb2ZpbGUuIFRoaXMgaXMgYSBzaW1wbGUgY3JlYXRpdmUgcmVxdWVzdCB0aGF0IGRvZXNuJ3QgcmVxdWlyZSBhbnkgdG9vbHMgLSBJIGNhbiBnZW5lcmF0ZSB0aGlzIGJhc2VkIG9uIG15IGtub3dsZWRnZSBvZiB0eXBpY2FsIHNvZnR3YXJlIGVuZ2luZWVyIHByb2ZpbGVzLlxuXG5JIHNob3VsZCJ9XX19XSwiY3JlYXRlZCI6MTc3NzcxNDE5MiwibW9kZWwiOiJNaW5pTWF4LU0yLjUtaGlnaHNwZWVkIiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwidXNhZ2UiOm51bGwsImlucHV0X3NlbnNpdGl2ZSI6ZmFsc2UsIm91dHB1dF9zZW5zaXRpdmUiOmZhbHNlLCJpbnB1dF9zZW5zaXRpdmVfdHlwZSI6MCwib3V0cHV0X3NlbnNpdGl2ZV90eXBlIjowLCJvdXRwdXRfc2Vuc2l0aXZlX2ludCI6MH0KCg=="
+    },
+    {
+      "b64": "ZGF0YTogeyJpZCI6IjA2NDRmNzEwMDcwOWJjMDBiODkwODRmNzRiYWFkMTkyIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7ImNvbnRlbnQiOiIiLCJyb2xlIjoiYXNzaXN0YW50IiwibmFtZSI6Ik1pbmlNYXggQUkiLCJhdWRpb19jb250ZW50IjoiIiwicmVhc29uaW5nX2NvbnRlbnQiOiIgY3JlYXRlIGEgcmVhbGlzdGljIHByb2ZpbGUgd2l0aCB0eXBpY2FsIGRldGFpbHMgZm9yIGEgc29mdHdhcmUgZW5naW5lZXIuIExldCBtZSBnZW5lcmF0ZSBzb21ldGhpbmcgcmVhc29uYWJsZS4iLCJyZWFzb25pbmdfZGV0YWlscyI6W3sidHlwZSI6InJlYXNvbmluZy50ZXh0IiwiaWQiOiJyZWFzb25pbmctdGV4dC0xIiwiZm9ybWF0IjoiTWluaU1heC1yZXNwb25zZS12MSIsImluZGV4IjowLCJ0ZXh0IjoiIGNyZWF0ZSBhIHJlYWxpc3RpYyBwcm9maWxlIHdpdGggdHlwaWNhbCBkZXRhaWxzIGZvciBhIHNvZnR3YXJlIGVuZ2luZWVyLiBMZXQgbWUgZ2VuZXJhdGUgc29tZXRoaW5nIHJlYXNvbmFibGUuIn1dfX1dLCJjcmVhdGVkIjoxNzc3NzE0MTkyLCJtb2RlbCI6Ik1pbmlNYXgtTTIuNS1oaWdoc3BlZWQiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24uY2h1bmsiLCJ1c2FnZSI6bnVsbCwiaW5wdXRfc2Vuc2l0aXZlIjpmYWxzZSwib3V0cHV0X3NlbnNpdGl2ZSI6ZmFsc2UsImlucHV0X3NlbnNpdGl2ZV90eXBlIjowLCJvdXRwdXRfc2Vuc2l0aXZlX3R5cGUiOjAsIm91dHB1dF9zZW5zaXRpdmVfaW50IjowfQoKZGF0YTogeyJpZCI6IjA2NDRmNzEwMDcwOWJjMDBiODkwODRmNzRiYWFkMTkyIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7ImNvbnRlbnQiOiJ7XG4iLCJyb2xlIjoiYXNzaXN0YW50IiwibmFtZSI6Ik1pbmlNYXggQUkiLCJhdWRpb19jb250ZW50IjoiIn19XSwiY3JlYXRlZCI6MTc3NzcxNDE5MiwibW9kZWwiOiJNaW5pTWF4LU0yLjUtaGlnaHNwZWVkIiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwidXNhZ2UiOm51bGwsImlucHV0X3NlbnNpdGl2ZSI6ZmFsc2UsIm91dHB1dF9zZW5zaXRpdmUiOmZhbHNlLCJpbnB1dF9zZW5zaXRpdmVfdHlwZSI6MCwib3V0cHV0X3NlbnNpdGl2ZV90eXBlIjowLCJvdXRwdXRfc2Vuc2l0aXZlX2ludCI6MH0KCg=="
+    },
+    {
+      "b64": "ZGF0YTogeyJpZCI6IjA2NDRmNzEwMDcwOWJjMDBiODkwODRmNzRiYWFkMTkyIiwiY2hvaWNlcyI6W3siZmluaXNoX3JlYXNvbiI6InN0b3AiLCJpbmRleCI6MCwiZGVsdGEiOnsiY29udGVudCI6IiAgXCJuYW1lXCI6IFwiQWxleCBDaGVuXCIsXG4gIFwiYWdlXCI6IDMyLFxuICBcIm9jY3VwYXRpb25cIjogXCJTb2Z0d2FyZSBFbmdpbmVlclwiXG59Iiwicm9sZSI6ImFzc2lzdGFudCIsIm5hbWUiOiJNaW5pTWF4IEFJIiwiYXVkaW9fY29udGVudCI6IiJ9fV0sImNyZWF0ZWQiOjE3Nzc3MTQxOTIsIm1vZGVsIjoiTWluaU1heC1NMi41LWhpZ2hzcGVlZCIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsInVzYWdlIjpudWxsLCJpbnB1dF9zZW5zaXRpdmUiOmZhbHNlLCJvdXRwdXRfc2Vuc2l0aXZlIjpmYWxzZSwiaW5wdXRfc2Vuc2l0aXZlX3R5cGUiOjAsIm91dHB1dF9zZW5zaXRpdmVfdHlwZSI6MCwib3V0cHV0X3NlbnNpdGl2ZV9pbnQiOjB9Cgo="
+    },
+    {
+      "b64": "ZGF0YTogeyJpZCI6IjA2NDRmNzEwMDcwOWJjMDBiODkwODRmNzRiYWFkMTkyIiwiY2hvaWNlcyI6W10sImNyZWF0ZWQiOjE3Nzc3MTQxOTIsIm1vZGVsIjoiTWluaU1heC1NMi41LWhpZ2hzcGVlZCIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsInVzYWdlIjp7InRvdGFsX3Rva2VucyI6MzQ0LCJ0b3RhbF9jaGFyYWN0ZXJzIjowLCJwcm9tcHRfdG9rZW5zIjoyNTcsImNvbXBsZXRpb25fdG9rZW5zIjo4NywiY29tcGxldGlvbl90b2tlbnNfZGV0YWlscyI6eyJyZWFzb25pbmdfdG9rZW5zIjo2MX19LCJiYXNlX3Jlc3AiOnsic3RhdHVzX2NvZGUiOjAsInN0YXR1c19tc2ciOiIifX0KCg=="
+    }
+  ],
+  "model_spec": "minimax:MiniMax-M2.5-highspeed",
+  "provider": "minimax",
+  "request": {
+    "body": {
+      "b64": "eyJtYXhfY29tcGxldGlvbl90b2tlbnMiOjUwMCwibWVzc2FnZXMiOlt7ImNvbnRlbnQiOiJHZW5lcmF0ZSBhIHNvZnR3YXJlIGVuZ2luZWVyIHByb2ZpbGUiLCJyb2xlIjoidXNlciJ9XSwibW9kZWwiOiJNaW5pTWF4LU0yLjUtaGlnaHNwZWVkIiwicmVhc29uaW5nX3NwbGl0Ijp0cnVlLCJzdHJlYW0iOnRydWUsInN0cmVhbV9vcHRpb25zIjp7ImluY2x1ZGVfdXNhZ2UiOnRydWV9LCJ0ZW1wZXJhdHVyZSI6MC4wLCJ0b29sX2Nob2ljZSI6eyJmdW5jdGlvbiI6eyJuYW1lIjoic3RydWN0dXJlZF9vdXRwdXQifSwidHlwZSI6ImZ1bmN0aW9uIn0sInRvb2xzIjpbeyJmdW5jdGlvbiI6eyJkZXNjcmlwdGlvbiI6IkdlbmVyYXRlIHN0cnVjdHVyZWQgb3V0cHV0IG1hdGNoaW5nIHRoZSBwcm92aWRlZCBzY2hlbWEiLCJuYW1lIjoic3RydWN0dXJlZF9vdXRwdXQiLCJwYXJhbWV0ZXJzIjp7ImFkZGl0aW9uYWxQcm9wZXJ0aWVzIjpmYWxzZSwicHJvcGVydGllcyI6eyJhZ2UiOnsiZGVzY3JpcHRpb24iOiJQZXJzb24ncyBhZ2UgaW4geWVhcnMiLCJtaW5pbXVtIjoxLCJ0eXBlIjoiaW50ZWdlciJ9LCJuYW1lIjp7ImRlc2NyaXB0aW9uIjoiUGVyc29uJ3MgZnVsbCBuYW1lIiwidHlwZSI6InN0cmluZyJ9LCJvY2N1cGF0aW9uIjp7ImRlc2NyaXB0aW9uIjoiUGVyc29uJ3Mgam9iIG9yIHByb2Zlc3Npb24iLCJ0eXBlIjoic3RyaW5nIn19LCJyZXF1aXJlZCI6WyJuYW1lIiwiYWdlIl0sInR5cGUiOiJvYmplY3QifX0sInR5cGUiOiJmdW5jdGlvbiJ9XX0="
+    },
+    "canonical_json": {
+      "max_completion_tokens": 500,
+      "messages": [
+        {
+          "content": "Generate a software engineer profile",
+          "role": "user"
+        }
+      ],
+      "model": "MiniMax-M2.5-highspeed",
+      "reasoning_split": true,
+      "stream": true,
+      "stream_options": {
+        "include_usage": true
+      },
+      "temperature": 0.0,
+      "tool_choice": {
+        "function": {
+          "name": "structured_output"
+        },
+        "type": "function"
+      },
+      "tools": [
+        {
+          "function": {
+            "description": "Generate structured output matching the provided schema",
+            "name": "structured_output",
+            "parameters": {
+              "additionalProperties": false,
+              "properties": {
+                "age": {
+                  "description": "Person's age in years",
+                  "minimum": 1,
+                  "type": "integer"
+                },
+                "name": {
+                  "description": "Person's full name",
+                  "type": "string"
+                },
+                "occupation": {
+                  "description": "Person's job or profession",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "age"
+              ],
+              "type": "object"
+            }
+          },
+          "type": "function"
+        }
+      ]
+    },
+    "headers": {
+      "accept": "text/event-stream",
+      "authorization": "[REDACTED:authorization]",
+      "content-type": "application/json"
+    },
+    "method": "POST",
+    "url": "https://api.minimax.io/v1/chat/completions"
+  },
+  "response": {
+    "body": null,
+    "headers": {
+      "alb_receive_time": "1777714192.778",
+      "alb_request_id": "85ed261fc4cda1036c8bbf45048fb3ecaa2236b9",
+      "connection": "keep-alive",
+      "content-type": "text/event-stream; charset=utf-8",
+      "date": "Sat, 02 May 2026 09:29:53 GMT",
+      "minimax-request-id": "6c443e93d630a499fd80f2a6d0273d9e",
+      "trace-id": "0644f7100709bc00b89084f74baad192",
+      "transfer-encoding": "chunked",
+      "x-mm-request-id": "2038858753192768005_1777714192hprtjy",
+      "x-session-id": "5b78ff55fa2120241ed2e045d81a44d5"
+    },
+    "status": 200
+  }
+}

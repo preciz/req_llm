@@ -919,6 +919,30 @@
     "status": "pass",
     "last_checked": "2025-11-14T20:51:00Z"
   },
+  "minimax:MiniMax-M2": {
+    "status": "pass",
+    "last_checked": "2026-05-02T09:30:31Z"
+  },
+  "minimax:MiniMax-M2.1": {
+    "status": "pass",
+    "last_checked": "2026-05-02T09:30:31Z"
+  },
+  "minimax:MiniMax-M2.5": {
+    "status": "pass",
+    "last_checked": "2026-05-02T09:30:31Z"
+  },
+  "minimax:MiniMax-M2.5-highspeed": {
+    "status": "pass",
+    "last_checked": "2026-05-02T09:30:31Z"
+  },
+  "minimax:MiniMax-M2.7": {
+    "status": "pass",
+    "last_checked": "2026-05-02T09:30:31Z"
+  },
+  "minimax:MiniMax-M2.7-highspeed": {
+    "status": "pass",
+    "last_checked": "2026-05-02T09:30:31Z"
+  },
   "openai:chatgpt-4o-latest": {
     "status": "fail",
     "last_checked": "2025-11-14T20:41:35Z"

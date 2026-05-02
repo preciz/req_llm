@@ -1,0 +1,68 @@
+{
+  "captured_at": "2026-05-02T09:28:45.760668Z",
+  "chunks": [
+    {
+      "b64": "ZGF0YTogeyJpZCI6IjA2NDRmNmNjMDEwN2M1ZWY4NmQ5OGEwMmM4ZjU3Y2IyIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7ImNvbnRlbnQiOiIiLCJyb2xlIjoiYXNzaXN0YW50IiwicmVhc29uaW5nX2RldGFpbHMiOlt7InR5cGUiOiJyZWFzb25pbmcudGV4dCIsImlkIjoicmVhc29uaW5nLXRleHQtMSIsImZvcm1hdCI6Ik1pbmlNYXgtcmVzcG9uc2UtdjEiLCJpbmRleCI6MCwidGV4dCI6IlRoZSB1c2VyIHdhbnRzIG1lIHRvIGJyaWVmbHkgdGhpbmsgdGhyb3VnaCBteSBhcHByb2FjaCwgdGhlbiBhbnN3ZXIgYSBzaW1wbGUgbXVsdGlwbGljYXRpb24gcXVlc3Rpb24uXG5cbjE1ICogMyA9IDQ1XG5cblRoYXQncyBzdHJhaWdodGZvcndhcmQ6IDEwKjMgPSAzMCwgcGx1cyA1KjMgPSAxNSwgdG90YWwgNDUuXG4ifV19fV0sImNyZWF0ZWQiOjE3Nzc3MTQxMjQsIm1vZGVsIjoiTWluaU1heC1NMi41Iiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwidXNhZ2UiOm51bGx9Cgo="
+    },
+    {
+      "b64": "ZGF0YTogeyJpZCI6IjA2NDRmNmNjMDEwN2M1ZWY4NmQ5OGEwMmM4ZjU3Y2IyIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7ImNvbnRlbnQiOiJNeSBhcHByb2FjaDogTXVsdGlwbHkgMTUgYnkgMy4gMTAgw5cgMyA9IDMwLCBwbHVzIDUgw5cgMyA9IDE1LiAzMCArIDE1ID0gKio0NSoqLiIsInJvbGUiOiJhc3Npc3RhbnQifX1dLCJjcmVhdGVkIjoxNzc3NzE0MTI0LCJtb2RlbCI6Ik1pbmlNYXgtTTIuNSIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsInVzYWdlIjpudWxsfQoK"
+    },
+    {
+      "b64": "ZGF0YTogeyJpZCI6IjA2NDRmNmNjMDEwN2M1ZWY4NmQ5OGEwMmM4ZjU3Y2IyIiwiY2hvaWNlcyI6W3siZmluaXNoX3JlYXNvbiI6InN0b3AiLCJpbmRleCI6MCwiZGVsdGEiOnsiY29udGVudCI6IiIsInJvbGUiOiJhc3Npc3RhbnQifX1dLCJjcmVhdGVkIjoxNzc3NzE0MTI0LCJtb2RlbCI6Ik1pbmlNYXgtTTIuNSIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsInVzYWdlIjpudWxsfQoK"
+    },
+    {
+      "b64": "ZGF0YTogeyJpZCI6IjA2NDRmNmNjMDEwN2M1ZWY4NmQ5OGEwMmM4ZjU3Y2IyIiwiY2hvaWNlcyI6W3siZmluaXNoX3JlYXNvbiI6InN0b3AiLCJpbmRleCI6MCwiZGVsdGEiOnsiY29udGVudCI6IiIsInJvbGUiOiJhc3Npc3RhbnQifX1dLCJjcmVhdGVkIjoxNzc3NzE0MTI0LCJtb2RlbCI6Ik1pbmlNYXgtTTIuNSIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsInVzYWdlIjp7InRvdGFsX3Rva2VucyI6MTM1LCJ0b3RhbF9jaGFyYWN0ZXJzIjowLCJwcm9tcHRfdG9rZW5zIjo0NCwiY29tcGxldGlvbl90b2tlbnMiOjkxLCJjb21wbGV0aW9uX3Rva2Vuc19kZXRhaWxzIjp7InJlYXNvbmluZ190b2tlbnMiOjQ4fSwicHJvbXB0X3Rva2Vuc19kZXRhaWxzIjp7ImNhY2hlZF90b2tlbnMiOjMyfX19Cgo="
+    }
+  ],
+  "model_spec": "minimax:MiniMax-M2.5",
+  "provider": "minimax",
+  "request": {
+    "body": {
+      "b64": "eyJtYXhfY29tcGxldGlvbl90b2tlbnMiOjUwMDAsIm1lc3NhZ2VzIjpbeyJjb250ZW50IjoiWW91IGFyZSBhIGNhcmVmdWwsIHN0ZXAtYnktc3RlcCByZWFzb25lci4iLCJyb2xlIjoic3lzdGVtIn0seyJjb250ZW50IjoiQnJpZWZseSB0aGluayB0aHJvdWdoIHlvdXIgYXBwcm9hY2gsIHRoZW4gYW5zd2VyOiBXaGF0IGlzIDE1KjM/Iiwicm9sZSI6InVzZXIifV0sIm1vZGVsIjoiTWluaU1heC1NMi41IiwicmVhc29uaW5nX3NwbGl0Ijp0cnVlLCJzdHJlYW0iOnRydWUsInN0cmVhbV9vcHRpb25zIjp7ImluY2x1ZGVfdXNhZ2UiOnRydWV9LCJ0ZW1wZXJhdHVyZSI6MS4wLCJ0b3BfcCI6MC44fQ=="
+    },
+    "canonical_json": {
+      "max_completion_tokens": 5000,
+      "messages": [
+        {
+          "content": "You are a careful, step-by-step reasoner.",
+          "role": "system"
+        },
+        {
+          "content": "Briefly think through your approach, then answer: What is 15*3?",
+          "role": "user"
+        }
+      ],
+      "model": "MiniMax-M2.5",
+      "reasoning_split": true,
+      "stream": true,
+      "stream_options": {
+        "include_usage": true
+      },
+      "temperature": 1.0,
+      "top_p": 0.8
+    },
+    "headers": {
+      "accept": "text/event-stream",
+      "authorization": "[REDACTED:authorization]",
+      "content-type": "application/json"
+    },
+    "method": "POST",
+    "url": "https://api.minimax.io/v1/chat/completions"
+  },
+  "response": {
+    "body": null,
+    "headers": {
+      "alb_receive_time": "1777714124.796",
+      "alb_request_id": "afefdab6f39960910bcfd29ef27cd05c4c8d67b9",
+      "connection": "keep-alive",
+      "content-type": "text/event-stream; charset=utf-8",
+      "date": "Sat, 02 May 2026 09:28:45 GMT",
+      "minimax-request-id": "a3b16627082a2dc1b2bdffa6f1885355",
+      "trace-id": "0644f6cc0107c5ef86d98a02c8f57cb2",
+      "transfer-encoding": "chunked",
+      "x-mm-request-id": "2038858753192768005_17777141250j2x5z",
+      "x-session-id": "77c7119ac0d10feeb800032a2b556711"
+    },
+    "status": 200
+  }
+}

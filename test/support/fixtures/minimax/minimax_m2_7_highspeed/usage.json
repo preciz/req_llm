@@ -1,0 +1,114 @@
+{
+  "model_spec": "minimax:MiniMax-M2.7-highspeed",
+  "provider": "minimax",
+  "request": {
+    "body": {
+      "b64": "eyJtYXhfY29tcGxldGlvbl90b2tlbnMiOjEwLCJtZXNzYWdlcyI6W3siY29udGVudCI6IkhpIHRoZXJlISIsInJvbGUiOiJ1c2VyIn1dLCJtb2RlbCI6Ik1pbmlNYXgtTTIuNy1oaWdoc3BlZWQiLCJyZWFzb25pbmdfc3BsaXQiOnRydWUsInN0cmVhbSI6ZmFsc2UsInRlbXBlcmF0dXJlIjowLjB9"
+    },
+    "canonical_json": {
+      "max_completion_tokens": 10,
+      "messages": [
+        {
+          "content": "Hi there!",
+          "role": "user"
+        }
+      ],
+      "model": "MiniMax-M2.7-highspeed",
+      "reasoning_split": true,
+      "stream": false,
+      "temperature": 0.0
+    },
+    "headers": {
+      "accept-encoding": [
+        "gzip"
+      ],
+      "authorization": "[REDACTED:authorization]",
+      "content-type": [
+        "application/json"
+      ],
+      "user-agent": [
+        "req/0.5.17"
+      ]
+    },
+    "method": "post",
+    "url": "https://api.minimax.io/v1/chat/completions"
+  },
+  "response": {
+    "body": {
+      "base_resp": {
+        "status_code": 0,
+        "status_msg": ""
+      },
+      "choices": [
+        {
+          "finish_reason": "length",
+          "index": 0,
+          "message": {
+            "audio_content": "",
+            "content": "",
+            "name": "MiniMax AI",
+            "reasoning_content": "The user says \"Hi there!\" which",
+            "reasoning_details": [
+              {
+                "format": "MiniMax-response-v1",
+                "id": "reasoning-text-1",
+                "index": 0,
+                "text": "The user says \"Hi there!\" which",
+                "type": "reasoning.text"
+              }
+            ],
+            "role": "assistant"
+          }
+        }
+      ],
+      "created": 1777714103,
+      "id": "0644f6b73fe2c9c9ba8456fa840523ec",
+      "input_sensitive": false,
+      "input_sensitive_type": 0,
+      "model": "MiniMax-M2.7-highspeed",
+      "object": "chat.completion",
+      "output_sensitive": false,
+      "output_sensitive_int": 0,
+      "output_sensitive_type": 0,
+      "usage": {
+        "completion_tokens": 10,
+        "completion_tokens_details": {
+          "reasoning_tokens": 10
+        },
+        "prompt_tokens": 44,
+        "total_characters": 0,
+        "total_tokens": 54
+      }
+    },
+    "headers": {
+      "alb_receive_time": [
+        "1777714103.958"
+      ],
+      "alb_request_id": [
+        "eb1fdf0dde4a61f2efe778947a79080cd9801697"
+      ],
+      "connection": [
+        "keep-alive"
+      ],
+      "content-type": [
+        "application/json; charset=utf-8"
+      ],
+      "date": [
+        "Sat, 02 May 2026 09:28:25 GMT"
+      ],
+      "minimax-request-id": [
+        "8850d36560421069dba33ed980a2dd63"
+      ],
+      "trace-id": [
+        "0644f6b73fe2c9c9ba8456fa840523ec"
+      ],
+      "x-mm-request-id": [
+        "2038858753192768005_17777141033ui5o3"
+      ],
+      "x-session-id": [
+        "3a0d3272692f7bc23a0aa4ae643c2a4a"
+      ]
+    },
+    "status": 200
+  }
+}

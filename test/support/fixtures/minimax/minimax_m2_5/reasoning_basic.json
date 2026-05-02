@@ -1,0 +1,122 @@
+{
+  "model_spec": "minimax:MiniMax-M2.5",
+  "provider": "minimax",
+  "request": {
+    "body": {
+      "b64": "eyJtYXhfY29tcGxldGlvbl90b2tlbnMiOjUwMDAsIm1lc3NhZ2VzIjpbeyJjb250ZW50IjoiU29sdmUgMTIqNyBhbmQgc2hvdyB5b3VyIGludGVybmFsIHRoaW5raW5nIChicmllZikuIiwicm9sZSI6InVzZXIifV0sIm1vZGVsIjoiTWluaU1heC1NMi41IiwicmVhc29uaW5nX3NwbGl0Ijp0cnVlLCJzdHJlYW0iOmZhbHNlLCJ0ZW1wZXJhdHVyZSI6MS4wfQ=="
+    },
+    "canonical_json": {
+      "max_completion_tokens": 5000,
+      "messages": [
+        {
+          "content": "Solve 12*7 and show your internal thinking (brief).",
+          "role": "user"
+        }
+      ],
+      "model": "MiniMax-M2.5",
+      "reasoning_split": true,
+      "stream": false,
+      "temperature": 1.0
+    },
+    "headers": {
+      "accept-encoding": [
+        "gzip"
+      ],
+      "authorization": "[REDACTED:authorization]",
+      "content-type": [
+        "application/json"
+      ],
+      "user-agent": [
+        "req/0.5.17"
+      ]
+    },
+    "method": "post",
+    "url": "https://api.minimax.io/v1/chat/completions"
+  },
+  "response": {
+    "body": {
+      "base_resp": {
+        "status_code": 0,
+        "status_msg": ""
+      },
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "audio_content": "",
+            "content": "**12 × 7 = 84**  \n\n*Brief reasoning:*  \n- Multiply 12 by 7 as 7 × 12.  \n- Split 12 into 10 + 2: (7 × 10) + (7 × 2) = 70 + 14 = 84.",
+            "name": "MiniMax AI",
+            "reasoning_details": [
+              {
+                "format": "MiniMax-response-v1",
+                "id": "reasoning-text-1",
+                "index": 0,
+                "text": "We need to respond to the user's request: \"Solve 12*7 and show your internal thinking (brief).\"\n\nWe can compute 12 * 7 = 84.\n\nThen show internal thinking. The user says \"show your internal thinking (brief)\". So they want a brief explanation of how we reason about multiplication.\n\nThus: \"I multiply 12 by 7: 12*7 = 7 times 12 = (7*10)+(7*2)=70+14=84.\" That's a brief internal reasoning.\n\nWe should include that the answer is 84.\n\nWe comply.\n\nWe need to be concise. Provide answer: 84, brief reasoning.\n\nWe can include that we used the standard method. Or we can do repeated addition.\n\nIn final answer: 84, short explanation.\n\nThus answer.\n\nWe should also reflect that there is no safety issue. The request is easy.\n\nThus final: 84. Then \"12×7 = 7×12 = 7*10 + 7*2 = 70+14 = 84\". That is brief.\n\nWe can add a short step: break down.\n\nNow answer in plain text.\n\n\n",
+                "type": "reasoning.text"
+              }
+            ],
+            "role": "assistant"
+          }
+        }
+      ],
+      "created": 1777714122,
+      "id": "0644f6ca80fdef79782c026e4b9802c9",
+      "input_sensitive": false,
+      "input_sensitive_type": 0,
+      "model": "MiniMax-M2.5",
+      "object": "chat.completion",
+      "output_sensitive": false,
+      "output_sensitive_int": 0,
+      "output_sensitive_type": 0,
+      "usage": {
+        "completion_tokens": 312,
+        "completion_tokens_details": {
+          "reasoning_tokens": 239
+        },
+        "prompt_tokens": 51,
+        "prompt_tokens_details": {
+          "cached_tokens": 16
+        },
+        "total_characters": 0,
+        "total_tokens": 363
+      }
+    },
+    "headers": {
+      "alb_receive_time": [
+        "1777714122.394"
+      ],
+      "alb_request_id": [
+        "17b5f03ac8093c7d57d23060d3a2ee296e45a68d"
+      ],
+      "connection": [
+        "keep-alive"
+      ],
+      "content-type": [
+        "application/json; charset=utf-8"
+      ],
+      "date": [
+        "Sat, 02 May 2026 09:28:44 GMT"
+      ],
+      "minimax-request-id": [
+        "505206cc71aa22623cd96436b659ce3c"
+      ],
+      "trace-id": [
+        "0644f6ca80fdef79782c026e4b9802c9"
+      ],
+      "transfer-encoding": [
+        "chunked"
+      ],
+      "vary": [
+        "Accept-Encoding"
+      ],
+      "x-mm-request-id": [
+        "2038858753192768005_1777714124ix0juk"
+      ],
+      "x-session-id": [
+        "e345bc0a6f8b46e1afcb7caebcd41ec6"
+      ]
+    },
+    "status": 200
+  }
+}

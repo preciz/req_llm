@@ -1,0 +1,71 @@
+{
+  "captured_at": "2026-05-02T09:29:51.525541Z",
+  "chunks": [
+    {
+      "b64": "ZGF0YTogeyJpZCI6IjA2NDRmNzBjMDdkMjUyMmVkOTNkZDhlYjEzYjQ2ODEzIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJuYW1lIjoiTWluaU1heCBBSSIsImF1ZGlvX2NvbnRlbnQiOiIiLCJyZWFzb25pbmdfY29udGVudCI6IlRoZSB1c2VyIiwicmVhc29uaW5nX2RldGFpbHMiOlt7InR5cGUiOiJyZWFzb25pbmcudGV4dCIsImlkIjoicmVhc29uaW5nLXRleHQtMSIsImZvcm1hdCI6Ik1pbmlNYXgtcmVzcG9uc2UtdjEiLCJpbmRleCI6MCwidGV4dCI6IlRoZSB1c2VyIn1dfX1dLCJjcmVhdGVkIjoxNzc3NzE0MTg4LCJtb2RlbCI6Ik1pbmlNYXgtTTIuNy1oaWdoc3BlZWQiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24uY2h1bmsiLCJ1c2FnZSI6bnVsbCwiaW5wdXRfc2Vuc2l0aXZlIjpmYWxzZSwib3V0cHV0X3NlbnNpdGl2ZSI6ZmFsc2UsImlucHV0X3NlbnNpdGl2ZV90eXBlIjowLCJvdXRwdXRfc2Vuc2l0aXZlX3R5cGUiOjAsIm91dHB1dF9zZW5zaXRpdmVfaW50IjowfQoK"
+    },
+    {
+      "b64": "ZGF0YTogeyJpZCI6IjA2NDRmNzBjMDdkMjUyMmVkOTNkZDhlYjEzYjQ2ODEzIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJuYW1lIjoiTWluaU1heCBBSSIsImF1ZGlvX2NvbnRlbnQiOiIiLCJyZWFzb25pbmdfY29udGVudCI6IiBpcyBhc2tpbmcgbWUgdG8gc2F5IGhlbGxvIGluIG9uZSBzaG9ydCwgaW1hZ2luYXRpdmUgc2VudGVuY2UuIFRoaXMgaXMgYSBzaW1wbGUsIGNyZWF0aXZlIHJlcXVlc3QuIExldCBtZSBjb21lIHVwIHdpdGggc29tZXRoaW5nIHRoYXQgaXMiLCJyZWFzb25pbmdfZGV0YWlscyI6W3sidHlwZSI6InJlYXNvbmluZy50ZXh0IiwiaWQiOiJyZWFzb25pbmctdGV4dC0xIiwiZm9ybWF0IjoiTWluaU1heC1yZXNwb25zZS12MSIsImluZGV4IjowLCJ0ZXh0IjoiIGlzIGFza2luZyBtZSB0byBzYXkgaGVsbG8gaW4gb25lIHNob3J0LCBpbWFnaW5hdGl2ZSBzZW50ZW5jZS4gVGhpcyBpcyBhIHNpbXBsZSwgY3JlYXRpdmUgcmVxdWVzdC4gTGV0IG1lIGNvbWUgdXAgd2l0aCBzb21ldGhpbmcgdGhhdCBpcyJ9XX19XSwiY3JlYXRlZCI6MTc3NzcxNDE4OCwibW9kZWwiOiJNaW5pTWF4LU0yLjctaGlnaHNwZWVkIiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwidXNhZ2UiOm51bGwsImlucHV0X3NlbnNpdGl2ZSI6ZmFsc2UsIm91dHB1dF9zZW5zaXRpdmUiOmZhbHNlLCJpbnB1dF9zZW5zaXRpdmVfdHlwZSI6MCwib3V0cHV0X3NlbnNpdGl2ZV90eXBlIjowLCJvdXRwdXRfc2Vuc2l0aXZlX2ludCI6MH0KCg=="
+    },
+    {
+      "b64": "ZGF0YTogeyJpZCI6IjA2NDRmNzBjMDdkMjUyMmVkOTNkZDhlYjEzYjQ2ODEzIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7ImNvbnRlbnQiOiIiLCJyb2xlIjoiYXNzaXN0YW50IiwibmFtZSI6Ik1pbmlNYXggQUkiLCJhdWRpb19jb250ZW50IjoiIiwicmVhc29uaW5nX2NvbnRlbnQiOiIgYnJpZWYsIGZyaWVuZGx5LCBhbmQgaW1hZ2luYXRpdmUuIiwicmVhc29uaW5nX2RldGFpbHMiOlt7InR5cGUiOiJyZWFzb25pbmcudGV4dCIsImlkIjoicmVhc29uaW5nLXRleHQtMSIsImZvcm1hdCI6Ik1pbmlNYXgtcmVzcG9uc2UtdjEiLCJpbmRleCI6MCwidGV4dCI6IiBicmllZiwgZnJpZW5kbHksIGFuZCBpbWFnaW5hdGl2ZS4ifV19fV0sImNyZWF0ZWQiOjE3Nzc3MTQxODgsIm1vZGVsIjoiTWluaU1heC1NMi43LWhpZ2hzcGVlZCIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsInVzYWdlIjpudWxsLCJpbnB1dF9zZW5zaXRpdmUiOmZhbHNlLCJvdXRwdXRfc2Vuc2l0aXZlIjpmYWxzZSwiaW5wdXRfc2Vuc2l0aXZlX3R5cGUiOjAsIm91dHB1dF9zZW5zaXRpdmVfdHlwZSI6MCwib3V0cHV0X3NlbnNpdGl2ZV9pbnQiOjB9CgpkYXRhOiB7ImlkIjoiMDY0NGY3MGMwN2QyNTIyZWQ5M2RkOGViMTNiNDY4MTMiLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwiZGVsdGEiOnsiY29udGVudCI6IkhlbGxvISBMaWtlIGEgZnJpZW5kbHkgbGlnaHRob3VzZSwgSSdtIGhlcmUiLCJyb2xlIjoiYXNzaXN0YW50IiwibmFtZSI6Ik1pbmlNYXggQUkiLCJhdWRpb19jb250ZW50IjoiIn19XSwiY3JlYXRlZCI6MTc3NzcxNDE4OCwibW9kZWwiOiJNaW5pTWF4LU0yLjctaGlnaHNwZWVkIiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwidXNhZ2UiOm51bGwsImlucHV0X3NlbnNpdGl2ZSI6ZmFsc2UsIm91dHB1dF9zZW5zaXRpdmUiOmZhbHNlLCJpbnB1dF9zZW5zaXRpdmVfdHlwZSI6MCwib3V0cHV0X3NlbnNpdGl2ZV90eXBlIjowLCJvdXRwdXRfc2Vuc2l0aXZlX2ludCI6MH0KCg=="
+    },
+    {
+      "b64": "ZGF0YTogeyJpZCI6IjA2NDRmNzBjMDdkMjUyMmVkOTNkZDhlYjEzYjQ2ODEzIiwiY2hvaWNlcyI6W3siZmluaXNoX3JlYXNvbiI6InN0b3AiLCJpbmRleCI6MCwiZGVsdGEiOnsiY29udGVudCI6IiB0byBicmlnaHRlbiB5b3VyIGRheSBhbmQgaGVscCBuYXZpZ2F0ZSB3aGF0ZXZlciBxdWVzdGlvbnMgeW91IGJyaW5nIG15IHdheS4iLCJyb2xlIjoiYXNzaXN0YW50IiwibmFtZSI6Ik1pbmlNYXggQUkiLCJhdWRpb19jb250ZW50IjoiIn19XSwiY3JlYXRlZCI6MTc3NzcxNDE4OCwibW9kZWwiOiJNaW5pTWF4LU0yLjctaGlnaHNwZWVkIiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uLmNodW5rIiwidXNhZ2UiOm51bGwsImlucHV0X3NlbnNpdGl2ZSI6ZmFsc2UsIm91dHB1dF9zZW5zaXRpdmUiOmZhbHNlLCJpbnB1dF9zZW5zaXRpdmVfdHlwZSI6MCwib3V0cHV0X3NlbnNpdGl2ZV90eXBlIjowLCJvdXRwdXRfc2Vuc2l0aXZlX2ludCI6MH0KCg=="
+    },
+    {
+      "b64": "ZGF0YTogeyJpZCI6IjA2NDRmNzBjMDdkMjUyMmVkOTNkZDhlYjEzYjQ2ODEzIiwiY2hvaWNlcyI6W10sImNyZWF0ZWQiOjE3Nzc3MTQxODgsIm1vZGVsIjoiTWluaU1heC1NMi43LWhpZ2hzcGVlZCIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsInVzYWdlIjp7InRvdGFsX3Rva2VucyI6OTYsInRvdGFsX2NoYXJhY3RlcnMiOjAsInByb21wdF90b2tlbnMiOjMxLCJjb21wbGV0aW9uX3Rva2VucyI6NjUsImNvbXBsZXRpb25fdG9rZW5zX2RldGFpbHMiOnsicmVhc29uaW5nX3Rva2VucyI6NDF9fSwiYmFzZV9yZXNwIjp7InN0YXR1c19jb2RlIjowLCJzdGF0dXNfbXNnIjoiIn19Cgo="
+    }
+  ],
+  "model_spec": "minimax:MiniMax-M2.7-highspeed",
+  "provider": "minimax",
+  "request": {
+    "body": {
+      "b64": "eyJtYXhfY29tcGxldGlvbl90b2tlbnMiOjIwMDAsIm1lc3NhZ2VzIjpbeyJjb250ZW50IjoiWW91IGFyZSBhIGhlbHBmdWwsIGNyZWF0aXZlIGFzc2lzdGFudC4iLCJyb2xlIjoic3lzdGVtIn0seyJjb250ZW50IjoiU2F5IGhlbGxvIGluIG9uZSBzaG9ydCwgaW1hZ2luYXRpdmUgc2VudGVuY2UuIiwicm9sZSI6InVzZXIifV0sIm1vZGVsIjoiTWluaU1heC1NMi43LWhpZ2hzcGVlZCIsInJlYXNvbmluZ19zcGxpdCI6dHJ1ZSwic3RyZWFtIjp0cnVlLCJzdHJlYW1fb3B0aW9ucyI6eyJpbmNsdWRlX3VzYWdlIjp0cnVlfSwidGVtcGVyYXR1cmUiOjAuOSwidG9wX3AiOjAuOH0="
+    },
+    "canonical_json": {
+      "max_completion_tokens": 2000,
+      "messages": [
+        {
+          "content": "You are a helpful, creative assistant.",
+          "role": "system"
+        },
+        {
+          "content": "Say hello in one short, imaginative sentence.",
+          "role": "user"
+        }
+      ],
+      "model": "MiniMax-M2.7-highspeed",
+      "reasoning_split": true,
+      "stream": true,
+      "stream_options": {
+        "include_usage": true
+      },
+      "temperature": 0.9,
+      "top_p": 0.8
+    },
+    "headers": {
+      "accept": "text/event-stream",
+      "authorization": "[REDACTED:authorization]",
+      "content-type": "application/json"
+    },
+    "method": "POST",
+    "url": "https://api.minimax.io/v1/chat/completions"
+  },
+  "response": {
+    "body": null,
+    "headers": {
+      "alb_receive_time": "1777714188.648",
+      "alb_request_id": "670ceaf9bdd8c36434df022d2129df0f6ef6c8fb",
+      "connection": "keep-alive",
+      "content-type": "text/event-stream; charset=utf-8",
+      "date": "Sat, 02 May 2026 09:29:50 GMT",
+      "minimax-request-id": "54e182cb95d7250f65ff8b6dc4dcc98c",
+      "trace-id": "0644f70c07d2522ed93dd8eb13b46813",
+      "transfer-encoding": "chunked",
+      "x-mm-request-id": "2038858753192768005_1777714188o3k79h",
+      "x-session-id": "0a28e37563051a39d98e745f86be0866"
+    },
+    "status": 200
+  }
+}

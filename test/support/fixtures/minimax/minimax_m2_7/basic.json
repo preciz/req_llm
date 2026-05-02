@@ -1,0 +1,122 @@
+{
+  "model_spec": "minimax:MiniMax-M2.7",
+  "provider": "minimax",
+  "request": {
+    "body": {
+      "b64": "eyJtYXhfY29tcGxldGlvbl90b2tlbnMiOjIwMDAsIm1lc3NhZ2VzIjpbeyJjb250ZW50IjoiSGVsbG8gd29ybGQhIiwicm9sZSI6InVzZXIifV0sIm1vZGVsIjoiTWluaU1heC1NMi43IiwicmVhc29uaW5nX3NwbGl0Ijp0cnVlLCJzdHJlYW0iOmZhbHNlLCJ0ZW1wZXJhdHVyZSI6MC4wfQ=="
+    },
+    "canonical_json": {
+      "max_completion_tokens": 2000,
+      "messages": [
+        {
+          "content": "Hello world!",
+          "role": "user"
+        }
+      ],
+      "model": "MiniMax-M2.7",
+      "reasoning_split": true,
+      "stream": false,
+      "temperature": 0.0
+    },
+    "headers": {
+      "accept-encoding": [
+        "gzip"
+      ],
+      "authorization": "[REDACTED:authorization]",
+      "content-type": [
+        "application/json"
+      ],
+      "user-agent": [
+        "req/0.5.17"
+      ]
+    },
+    "method": "post",
+    "url": "https://api.minimax.io/v1/chat/completions"
+  },
+  "response": {
+    "body": {
+      "base_resp": {
+        "status_code": 0,
+        "status_msg": ""
+      },
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "audio_content": "",
+            "content": "Hello! How can I help you today?",
+            "name": "MiniMax AI",
+            "reasoning_details": [
+              {
+                "format": "MiniMax-response-v1",
+                "id": "reasoning-text-1",
+                "index": 0,
+                "text": "The user says \"Hello world!\"\n\nWe must respond as a helpful assistant. The user likely just wants a greeting. So respond with a friendly greeting, maybe ask how we can help. There's no disallowed content. So we can respond.\n\nWe could ask about what they'd like to do. Or give some typical responses. Perhaps a friendly \"Hello! How can I assist you today?\".\n\nMake it short.\n\nGiven instructions: we can answer normally. Should follow policies. There's no problematic content. Use friendly tone.\n\nThus answer: \"Hello! How can I help you today?\"\n",
+                "type": "reasoning.text"
+              }
+            ],
+            "role": "assistant"
+          }
+        }
+      ],
+      "created": 1777714188,
+      "id": "0644f70c54479dae915be9fb38e112f3",
+      "input_sensitive": false,
+      "input_sensitive_type": 0,
+      "model": "MiniMax-M2.7",
+      "object": "chat.completion",
+      "output_sensitive": false,
+      "output_sensitive_int": 0,
+      "output_sensitive_type": 0,
+      "usage": {
+        "completion_tokens": 127,
+        "completion_tokens_details": {
+          "reasoning_tokens": 144
+        },
+        "prompt_tokens": 41,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_characters": 0,
+        "total_tokens": 168
+      }
+    },
+    "headers": {
+      "alb_receive_time": [
+        "1777714188.864"
+      ],
+      "alb_request_id": [
+        "6c981f4b21d28f2eb285860e28277d2867385289"
+      ],
+      "connection": [
+        "keep-alive"
+      ],
+      "content-type": [
+        "application/json; charset=utf-8"
+      ],
+      "date": [
+        "Sat, 02 May 2026 09:29:52 GMT"
+      ],
+      "minimax-request-id": [
+        "bb9bc382c40a1836aed00af6ad4fa43f"
+      ],
+      "trace-id": [
+        "0644f70c54479dae915be9fb38e112f3"
+      ],
+      "transfer-encoding": [
+        "chunked"
+      ],
+      "vary": [
+        "Accept-Encoding"
+      ],
+      "x-mm-request-id": [
+        "2038858753192768005_1777714192zl4wax"
+      ],
+      "x-session-id": [
+        "c3ef0f90eb9fa21d0161c086dc414447"
+      ]
+    },
+    "status": 200
+  }
+}

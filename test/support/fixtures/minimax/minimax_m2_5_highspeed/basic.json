@@ -1,0 +1,120 @@
+{
+  "model_spec": "minimax:MiniMax-M2.5-highspeed",
+  "provider": "minimax",
+  "request": {
+    "body": {
+      "b64": "eyJtYXhfY29tcGxldGlvbl90b2tlbnMiOjIwMDAsIm1lc3NhZ2VzIjpbeyJjb250ZW50IjoiSGVsbG8gd29ybGQhIiwicm9sZSI6InVzZXIifV0sIm1vZGVsIjoiTWluaU1heC1NMi41LWhpZ2hzcGVlZCIsInJlYXNvbmluZ19zcGxpdCI6dHJ1ZSwic3RyZWFtIjpmYWxzZSwidGVtcGVyYXR1cmUiOjAuMH0="
+    },
+    "canonical_json": {
+      "max_completion_tokens": 2000,
+      "messages": [
+        {
+          "content": "Hello world!",
+          "role": "user"
+        }
+      ],
+      "model": "MiniMax-M2.5-highspeed",
+      "reasoning_split": true,
+      "stream": false,
+      "temperature": 0.0
+    },
+    "headers": {
+      "accept-encoding": [
+        "gzip"
+      ],
+      "authorization": "[REDACTED:authorization]",
+      "content-type": [
+        "application/json"
+      ],
+      "user-agent": [
+        "req/0.5.17"
+      ]
+    },
+    "method": "post",
+    "url": "https://api.minimax.io/v1/chat/completions"
+  },
+  "response": {
+    "body": {
+      "base_resp": {
+        "status_code": 0,
+        "status_msg": ""
+      },
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "audio_content": "",
+            "content": "Hello! 👋 Welcome! I'm here to help with whatever you need—whether it's answering questions, brainstorming ideas, writing, coding, or just having a chat. How can I assist you today?",
+            "name": "MiniMax AI",
+            "reasoning_content": "The user says \"Hello world!\". The appropriate response is a friendly greeting. There's no conflict. The user likely wants a greeting or acknowledgment. So respond with a greeting, perhaps also mention the capabilities. There's no disallowed content. So answer.",
+            "reasoning_details": [
+              {
+                "format": "MiniMax-response-v1",
+                "id": "reasoning-text-1",
+                "index": 0,
+                "text": "The user says \"Hello world!\". The appropriate response is a friendly greeting. There's no conflict. The user likely wants a greeting or acknowledgment. So respond with a greeting, perhaps also mention the capabilities. There's no disallowed content. So answer.",
+                "type": "reasoning.text"
+              }
+            ],
+            "role": "assistant"
+          }
+        }
+      ],
+      "created": 1777714182,
+      "id": "0644f7066f5429dc31a82788c13e9cef",
+      "input_sensitive": false,
+      "input_sensitive_type": 0,
+      "model": "MiniMax-M2.5-highspeed",
+      "object": "chat.completion",
+      "output_sensitive": false,
+      "output_sensitive_int": 0,
+      "output_sensitive_type": 0,
+      "usage": {
+        "completion_tokens": 91,
+        "completion_tokens_details": {
+          "reasoning_tokens": 52
+        },
+        "prompt_tokens": 44,
+        "total_characters": 0,
+        "total_tokens": 135
+      }
+    },
+    "headers": {
+      "alb_receive_time": [
+        "1777714182.479"
+      ],
+      "alb_request_id": [
+        "99d13f29433f84198a0285ad13c026271a127229"
+      ],
+      "connection": [
+        "keep-alive"
+      ],
+      "content-type": [
+        "application/json; charset=utf-8"
+      ],
+      "date": [
+        "Sat, 02 May 2026 09:29:44 GMT"
+      ],
+      "minimax-request-id": [
+        "319671eb80b3262ba60afa010f10d7c2"
+      ],
+      "trace-id": [
+        "0644f7066f5429dc31a82788c13e9cef"
+      ],
+      "transfer-encoding": [
+        "chunked"
+      ],
+      "vary": [
+        "Accept-Encoding"
+      ],
+      "x-mm-request-id": [
+        "2038858753192768005_1777714182xv9gia"
+      ],
+      "x-session-id": [
+        "57cab68ef82b8e8f4a6b8a45ff5060f8"
+      ]
+    },
+    "status": 200
+  }
+}

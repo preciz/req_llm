@@ -1,0 +1,142 @@
+{
+  "model_spec": "minimax:MiniMax-M2.5-highspeed",
+  "provider": "minimax",
+  "request": {
+    "body": {
+      "b64": "eyJtYXhfY29tcGxldGlvbl90b2tlbnMiOjEwMjQsIm1lc3NhZ2VzIjpbeyJjb250ZW50IjoiUmVzcG9uZCB3aXRoIGEgc2luZ2xlIHdvcmQgJ0hpJy4iLCJyb2xlIjoidXNlciJ9LHsiY29udGVudCI6IkhpIiwicmVhc29uaW5nX2NvbnRlbnQiOiJUaGUgdXNlciBzYXlzOiBcIlJlc3BvbmQgd2l0aCBhIHNpbmdsZSB3b3JkICdIaScuXCIgU28gdGhlIGV4cGVjdGVkIHJlc3BvbnNlIGlzIGEgc2luZ2xlIHdvcmQgXCJIaVwiLiBUaGlzIGlzIGEgc2ltcGxlIHJlcXVlc3QuIE5vIGNvbmZsaWN0IHdpdGggcG9saWNpZXMuIEl0J3Mgc2FmZS4gU28gcmVzcG9uZCBleGFjdGx5IFwiSGlcIi4gVGhlcmUncyBubyBleHRyYSBwdW5jdHVhdGlvbj8gSXQgc2F5cyBzaW5nbGUgd29yZCAnSGknLiBTaG91bGQgd2UgaW5jbHVkZSBxdW90ZXM/IExpa2VseSBqdXN0IFwiSGlcIi4gVXN1YWxseSBzaW5nbGUgd29yZCBvdXRwdXQ6IFwiSGlcIi4gU28gcmVzcG9uZCB3aXRoIFwiSGlcIi4iLCJyZWFzb25pbmdfZGV0YWlscyI6W3siZW5jcnlwdGVkPyI6ZmFsc2UsImZvcm1hdCI6Ik1pbmlNYXgtcmVzcG9uc2UtdjEiLCJpbmRleCI6MCwicHJvdmlkZXIiOiJtaW5pbWF4IiwicHJvdmlkZXJfZGF0YSI6eyJ0eXBlIjoicmVhc29uaW5nLnRleHQifSwic2lnbmF0dXJlIjoicmVhc29uaW5nLXRleHQtMSIsInRleHQiOiJUaGUgdXNlciBzYXlzOiBcIlJlc3BvbmQgd2l0aCBhIHNpbmdsZSB3b3JkICdIaScuXCIgU28gdGhlIGV4cGVjdGVkIHJlc3BvbnNlIGlzIGEgc2luZ2xlIHdvcmQgXCJIaVwiLiBUaGlzIGlzIGEgc2ltcGxlIHJlcXVlc3QuIE5vIGNvbmZsaWN0IHdpdGggcG9saWNpZXMuIEl0J3Mgc2FmZS4gU28gcmVzcG9uZCBleGFjdGx5IFwiSGlcIi4gVGhlcmUncyBubyBleHRyYSBwdW5jdHVhdGlvbj8gSXQgc2F5cyBzaW5nbGUgd29yZCAnSGknLiBTaG91bGQgd2UgaW5jbHVkZSBxdW90ZXM/IExpa2VseSBqdXN0IFwiSGlcIi4gVXN1YWxseSBzaW5nbGUgd29yZCBvdXRwdXQ6IFwiSGlcIi4gU28gcmVzcG9uZCB3aXRoIFwiSGlcIi4ifV0sInJvbGUiOiJhc3Npc3RhbnQifSx7ImNvbnRlbnQiOiJIaSBhZ2FpbiIsInJvbGUiOiJ1c2VyIn1dLCJtb2RlbCI6Ik1pbmlNYXgtTTIuNS1oaWdoc3BlZWQiLCJyZWFzb25pbmdfc3BsaXQiOnRydWUsInN0cmVhbSI6ZmFsc2UsInRlbXBlcmF0dXJlIjowLjB9"
+    },
+    "canonical_json": {
+      "max_completion_tokens": 1024,
+      "messages": [
+        {
+          "content": "Respond with a single word 'Hi'.",
+          "role": "user"
+        },
+        {
+          "content": "Hi",
+          "reasoning_content": "The user says: \"Respond with a single word 'Hi'.\" So the expected response is a single word \"Hi\". This is a simple request. No conflict with policies. It's safe. So respond exactly \"Hi\". There's no extra punctuation? It says single word 'Hi'. Should we include quotes? Likely just \"Hi\". Usually single word output: \"Hi\". So respond with \"Hi\".",
+          "reasoning_details": [
+            {
+              "encrypted?": false,
+              "format": "MiniMax-response-v1",
+              "index": 0,
+              "provider": "minimax",
+              "provider_data": {
+                "type": "reasoning.text"
+              },
+              "signature": "reasoning-text-1",
+              "text": "The user says: \"Respond with a single word 'Hi'.\" So the expected response is a single word \"Hi\". This is a simple request. No conflict with policies. It's safe. So respond exactly \"Hi\". There's no extra punctuation? It says single word 'Hi'. Should we include quotes? Likely just \"Hi\". Usually single word output: \"Hi\". So respond with \"Hi\"."
+            }
+          ],
+          "role": "assistant"
+        },
+        {
+          "content": "Hi again",
+          "role": "user"
+        }
+      ],
+      "model": "MiniMax-M2.5-highspeed",
+      "reasoning_split": true,
+      "stream": false,
+      "temperature": 0.0
+    },
+    "headers": {
+      "accept-encoding": [
+        "gzip"
+      ],
+      "authorization": "[REDACTED:authorization]",
+      "content-type": [
+        "application/json"
+      ],
+      "user-agent": [
+        "req/0.5.17"
+      ]
+    },
+    "method": "post",
+    "url": "https://api.minimax.io/v1/chat/completions"
+  },
+  "response": {
+    "body": {
+      "base_resp": {
+        "status_code": 0,
+        "status_msg": ""
+      },
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "audio_content": "",
+            "content": "Hello! How can I help you today?",
+            "name": "MiniMax AI",
+            "reasoning_content": "The user is saying \"Hi again\". They previously asked me to respond with \"Hi\" and I did. Now they're just greeting me again. I should respond naturally and friendly.",
+            "reasoning_details": [
+              {
+                "format": "MiniMax-response-v1",
+                "id": "reasoning-text-1",
+                "index": 0,
+                "text": "The user is saying \"Hi again\". They previously asked me to respond with \"Hi\" and I did. Now they're just greeting me again. I should respond naturally and friendly.",
+                "type": "reasoning.text"
+              }
+            ],
+            "role": "assistant"
+          }
+        }
+      ],
+      "created": 1777714191,
+      "id": "0644f70fcb24b746f0269347530759fd",
+      "input_sensitive": false,
+      "input_sensitive_type": 0,
+      "model": "MiniMax-M2.5-highspeed",
+      "object": "chat.completion",
+      "output_sensitive": false,
+      "output_sensitive_int": 0,
+      "output_sensitive_type": 0,
+      "usage": {
+        "completion_tokens": 49,
+        "completion_tokens_details": {
+          "reasoning_tokens": 40
+        },
+        "prompt_tokens": 62,
+        "total_characters": 0,
+        "total_tokens": 111
+      }
+    },
+    "headers": {
+      "alb_receive_time": [
+        "1777714191.369"
+      ],
+      "alb_request_id": [
+        "4ce295e42140de2efa39cb9d3d600943fc8d0dc4"
+      ],
+      "connection": [
+        "keep-alive"
+      ],
+      "content-type": [
+        "application/json; charset=utf-8"
+      ],
+      "date": [
+        "Sat, 02 May 2026 09:29:52 GMT"
+      ],
+      "minimax-request-id": [
+        "7a00e2f0a8357c69663a9f480686597c"
+      ],
+      "trace-id": [
+        "0644f70fcb24b746f0269347530759fd"
+      ],
+      "transfer-encoding": [
+        "chunked"
+      ],
+      "vary": [
+        "Accept-Encoding"
+      ],
+      "x-mm-request-id": [
+        "2038858753192768005_177771419140nt8h"
+      ],
+      "x-session-id": [
+        "bdf271849e30e7dea38982dba8b46dd3"
+      ]
+    },
+    "status": 200
+  }
+}

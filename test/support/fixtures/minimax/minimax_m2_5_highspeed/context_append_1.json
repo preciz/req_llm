@@ -1,0 +1,120 @@
+{
+  "model_spec": "minimax:MiniMax-M2.5-highspeed",
+  "provider": "minimax",
+  "request": {
+    "body": {
+      "b64": "eyJtYXhfY29tcGxldGlvbl90b2tlbnMiOjEwMjQsIm1lc3NhZ2VzIjpbeyJjb250ZW50IjoiUmVzcG9uZCB3aXRoIGEgc2luZ2xlIHdvcmQgJ0hpJy4iLCJyb2xlIjoidXNlciJ9XSwibW9kZWwiOiJNaW5pTWF4LU0yLjUtaGlnaHNwZWVkIiwicmVhc29uaW5nX3NwbGl0Ijp0cnVlLCJzdHJlYW0iOmZhbHNlLCJ0ZW1wZXJhdHVyZSI6MC4wfQ=="
+    },
+    "canonical_json": {
+      "max_completion_tokens": 1024,
+      "messages": [
+        {
+          "content": "Respond with a single word 'Hi'.",
+          "role": "user"
+        }
+      ],
+      "model": "MiniMax-M2.5-highspeed",
+      "reasoning_split": true,
+      "stream": false,
+      "temperature": 0.0
+    },
+    "headers": {
+      "accept-encoding": [
+        "gzip"
+      ],
+      "authorization": "[REDACTED:authorization]",
+      "content-type": [
+        "application/json"
+      ],
+      "user-agent": [
+        "req/0.5.17"
+      ]
+    },
+    "method": "post",
+    "url": "https://api.minimax.io/v1/chat/completions"
+  },
+  "response": {
+    "body": {
+      "base_resp": {
+        "status_code": 0,
+        "status_msg": ""
+      },
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "audio_content": "",
+            "content": "Hi",
+            "name": "MiniMax AI",
+            "reasoning_content": "The user says: \"Respond with a single word 'Hi'.\" So the expected response is a single word \"Hi\". This is a simple request. No conflict with policies. It's safe. So respond exactly \"Hi\". There's no extra punctuation? It says single word 'Hi'. Should we include quotes? Likely just \"Hi\". Usually single word output: \"Hi\". So respond with \"Hi\".",
+            "reasoning_details": [
+              {
+                "format": "MiniMax-response-v1",
+                "id": "reasoning-text-1",
+                "index": 0,
+                "text": "The user says: \"Respond with a single word 'Hi'.\" So the expected response is a single word \"Hi\". This is a simple request. No conflict with policies. It's safe. So respond exactly \"Hi\". There's no extra punctuation? It says single word 'Hi'. Should we include quotes? Likely just \"Hi\". Usually single word output: \"Hi\". So respond with \"Hi\".",
+                "type": "reasoning.text"
+              }
+            ],
+            "role": "assistant"
+          }
+        }
+      ],
+      "created": 1777714188,
+      "id": "0644f70c204ec91aeca40f0110e21d20",
+      "input_sensitive": false,
+      "input_sensitive_type": 0,
+      "model": "MiniMax-M2.5-highspeed",
+      "object": "chat.completion",
+      "output_sensitive": false,
+      "output_sensitive_int": 0,
+      "output_sensitive_type": 0,
+      "usage": {
+        "completion_tokens": 86,
+        "completion_tokens_details": {
+          "reasoning_tokens": 85
+        },
+        "prompt_tokens": 49,
+        "total_characters": 0,
+        "total_tokens": 135
+      }
+    },
+    "headers": {
+      "alb_receive_time": [
+        "1777714188.344"
+      ],
+      "alb_request_id": [
+        "2e919af96a84e0871c761af8f8959fb5f152cbe6"
+      ],
+      "connection": [
+        "keep-alive"
+      ],
+      "content-type": [
+        "application/json; charset=utf-8"
+      ],
+      "date": [
+        "Sat, 02 May 2026 09:29:51 GMT"
+      ],
+      "minimax-request-id": [
+        "a43e7e01b14fc393846330507437e205"
+      ],
+      "trace-id": [
+        "0644f70c204ec91aeca40f0110e21d20"
+      ],
+      "transfer-encoding": [
+        "chunked"
+      ],
+      "vary": [
+        "Accept-Encoding"
+      ],
+      "x-mm-request-id": [
+        "2038858753192768005_1777714188bd4uui"
+      ],
+      "x-session-id": [
+        "bdf271849e30e7dea38982dba8b46dd3"
+      ]
+    },
+    "status": 200
+  }
+}

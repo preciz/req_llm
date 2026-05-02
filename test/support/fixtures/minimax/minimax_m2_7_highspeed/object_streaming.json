@@ -1,0 +1,101 @@
+{
+  "captured_at": "2026-05-02T09:30:05.558183Z",
+  "chunks": [
+    {
+      "b64": "ZGF0YTogeyJpZCI6IjA2NDRmNzE5MmJjYmNmMTM4MjA3M2ZiMWVmOWY3OTcxIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJuYW1lIjoiTWluaU1heCBBSSIsImF1ZGlvX2NvbnRlbnQiOiIiLCJyZWFzb25pbmdfY29udGVudCI6IlRoZSB1c2VyIiwicmVhc29uaW5nX2RldGFpbHMiOlt7InR5cGUiOiJyZWFzb25pbmcudGV4dCIsImlkIjoicmVhc29uaW5nLXRleHQtMSIsImZvcm1hdCI6Ik1pbmlNYXgtcmVzcG9uc2UtdjEiLCJpbmRleCI6MCwidGV4dCI6IlRoZSB1c2VyIn1dfX1dLCJjcmVhdGVkIjoxNzc3NzE0MjAxLCJtb2RlbCI6Ik1pbmlNYXgtTTIuNy1oaWdoc3BlZWQiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24uY2h1bmsiLCJ1c2FnZSI6bnVsbCwiaW5wdXRfc2Vuc2l0aXZlIjpmYWxzZSwib3V0cHV0X3NlbnNpdGl2ZSI6ZmFsc2UsImlucHV0X3NlbnNpdGl2ZV90eXBlIjowLCJvdXRwdXRfc2Vuc2l0aXZlX3R5cGUiOjAsIm91dHB1dF9zZW5zaXRpdmVfaW50IjowfQoK"
+    },
+    {
+      "b64": "ZGF0YTogeyJpZCI6IjA2NDRmNzE5MmJjYmNmMTM4MjA3M2ZiMWVmOWY3OTcxIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsImRlbHRhIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJuYW1lIjoiTWluaU1heCBBSSIsImF1ZGlvX2NvbnRlbnQiOiIiLCJyZWFzb25pbmdfY29udGVudCI6IiB3YW50cyBtZSB0byBnZW5lcmF0ZSBhIHNvZnR3YXJlIGVuZ2luZWVyIHByb2ZpbGUuIEknbGwgY3JlYXRlIGEgcmVhbGlzdGljIHByb2ZpbGUgd2l0aCBhcHByb3ByaWF0ZSBkZXRhaWxzIGZvciBhIHNvZnR3YXJlIGVuZ2luZWVyLiIsInJlYXNvbmluZ19kZXRhaWxzIjpbeyJ0eXBlIjoicmVhc29uaW5nLnRleHQiLCJpZCI6InJlYXNvbmluZy10ZXh0LTEiLCJmb3JtYXQiOiJNaW5pTWF4LXJlc3BvbnNlLXYxIiwiaW5kZXgiOjAsInRleHQiOiIgd2FudHMgbWUgdG8gZ2VuZXJhdGUgYSBzb2Z0d2FyZSBlbmdpbmVlciBwcm9maWxlLiBJJ2xsIGNyZWF0ZSBhIHJlYWxpc3RpYyBwcm9maWxlIHdpdGggYXBwcm9wcmlhdGUgZGV0YWlscyBmb3IgYSBzb2Z0d2FyZSBlbmdpbmVlci4ifV19fV0sImNyZWF0ZWQiOjE3Nzc3MTQyMDEsIm1vZGVsIjoiTWluaU1heC1NMi43LWhpZ2hzcGVlZCIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsInVzYWdlIjpudWxsLCJpbnB1dF9zZW5zaXRpdmUiOmZhbHNlLCJvdXRwdXRfc2Vuc2l0aXZlIjpmYWxzZSwiaW5wdXRfc2Vuc2l0aXZlX3R5cGUiOjAsIm91dHB1dF9zZW5zaXRpdmVfdHlwZSI6MCwib3V0cHV0X3NlbnNpdGl2ZV9pbnQiOjB9Cgo="
+    },
+    {
+      "b64": "ZGF0YTogeyJpZCI6IjA2NDRmNzE5MmJjYmNmMTM4MjA3M2ZiMWVmOWY3OTcxIiwiY2hvaWNlcyI6W3siZmluaXNoX3JlYXNvbiI6InRvb2xfY2FsbHMiLCJpbmRleCI6MCwiZGVsdGEiOnsicm9sZSI6ImFzc2lzdGFudCIsIm5hbWUiOiJNaW5pTWF4IEFJIiwidG9vbF9jYWxscyI6W3siaWQiOiJjYWxsX2Z1bmN0aW9uX2hua3NxeXNqMWE2NV8xIiwidHlwZSI6ImZ1bmN0aW9uIiwiZnVuY3Rpb24iOnsibmFtZSI6InN0cnVjdHVyZWRfb3V0cHV0IiwiYXJndW1lbnRzIjoie1wibmFtZVwiOiBcIkFsZXggQ2hlblwiLCBcImFnZVwiOiAzMiwgXCJvY2N1cGF0aW9uXCI6IFwiU29mdHdhcmUgRW5naW5lZXJcIn0ifSwiaW5kZXgiOjB9XSwiYXVkaW9fY29udGVudCI6IiJ9fV0sImNyZWF0ZWQiOjE3Nzc3MTQyMDEsIm1vZGVsIjoiTWluaU1heC1NMi43LWhpZ2hzcGVlZCIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsInVzYWdlIjpudWxsLCJpbnB1dF9zZW5zaXRpdmUiOmZhbHNlLCJvdXRwdXRfc2Vuc2l0aXZlIjpmYWxzZSwiaW5wdXRfc2Vuc2l0aXZlX3R5cGUiOjAsIm91dHB1dF9zZW5zaXRpdmVfdHlwZSI6MCwib3V0cHV0X3NlbnNpdGl2ZV9pbnQiOjB9Cgo="
+    },
+    {
+      "b64": "ZGF0YTogeyJpZCI6IjA2NDRmNzE5MmJjYmNmMTM4MjA3M2ZiMWVmOWY3OTcxIiwiY2hvaWNlcyI6W10sImNyZWF0ZWQiOjE3Nzc3MTQyMDEsIm1vZGVsIjoiTWluaU1heC1NMi43LWhpZ2hzcGVlZCIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbi5jaHVuayIsInVzYWdlIjp7InRvdGFsX3Rva2VucyI6MzMwLCJ0b3RhbF9jaGFyYWN0ZXJzIjowLCJwcm9tcHRfdG9rZW5zIjoyNTcsImNvbXBsZXRpb25fdG9rZW5zIjo3MywiY29tcGxldGlvbl90b2tlbnNfZGV0YWlscyI6eyJyZWFzb25pbmdfdG9rZW5zIjoyN319LCJiYXNlX3Jlc3AiOnsic3RhdHVzX2NvZGUiOjAsInN0YXR1c19tc2ciOiIifX0KCg=="
+    }
+  ],
+  "model_spec": "minimax:MiniMax-M2.7-highspeed",
+  "provider": "minimax",
+  "request": {
+    "body": {
+      "b64": "eyJtYXhfY29tcGxldGlvbl90b2tlbnMiOjUwMCwibWVzc2FnZXMiOlt7ImNvbnRlbnQiOiJHZW5lcmF0ZSBhIHNvZnR3YXJlIGVuZ2luZWVyIHByb2ZpbGUiLCJyb2xlIjoidXNlciJ9XSwibW9kZWwiOiJNaW5pTWF4LU0yLjctaGlnaHNwZWVkIiwicmVhc29uaW5nX3NwbGl0Ijp0cnVlLCJzdHJlYW0iOnRydWUsInN0cmVhbV9vcHRpb25zIjp7ImluY2x1ZGVfdXNhZ2UiOnRydWV9LCJ0ZW1wZXJhdHVyZSI6MC4wLCJ0b29sX2Nob2ljZSI6eyJmdW5jdGlvbiI6eyJuYW1lIjoic3RydWN0dXJlZF9vdXRwdXQifSwidHlwZSI6ImZ1bmN0aW9uIn0sInRvb2xzIjpbeyJmdW5jdGlvbiI6eyJkZXNjcmlwdGlvbiI6IkdlbmVyYXRlIHN0cnVjdHVyZWQgb3V0cHV0IG1hdGNoaW5nIHRoZSBwcm92aWRlZCBzY2hlbWEiLCJuYW1lIjoic3RydWN0dXJlZF9vdXRwdXQiLCJwYXJhbWV0ZXJzIjp7ImFkZGl0aW9uYWxQcm9wZXJ0aWVzIjpmYWxzZSwicHJvcGVydGllcyI6eyJhZ2UiOnsiZGVzY3JpcHRpb24iOiJQZXJzb24ncyBhZ2UgaW4geWVhcnMiLCJtaW5pbXVtIjoxLCJ0eXBlIjoiaW50ZWdlciJ9LCJuYW1lIjp7ImRlc2NyaXB0aW9uIjoiUGVyc29uJ3MgZnVsbCBuYW1lIiwidHlwZSI6InN0cmluZyJ9LCJvY2N1cGF0aW9uIjp7ImRlc2NyaXB0aW9uIjoiUGVyc29uJ3Mgam9iIG9yIHByb2Zlc3Npb24iLCJ0eXBlIjoic3RyaW5nIn19LCJyZXF1aXJlZCI6WyJuYW1lIiwiYWdlIl0sInR5cGUiOiJvYmplY3QifX0sInR5cGUiOiJmdW5jdGlvbiJ9XX0="
+    },
+    "canonical_json": {
+      "max_completion_tokens": 500,
+      "messages": [
+        {
+          "content": "Generate a software engineer profile",
+          "role": "user"
+        }
+      ],
+      "model": "MiniMax-M2.7-highspeed",
+      "reasoning_split": true,
+      "stream": true,
+      "stream_options": {
+        "include_usage": true
+      },
+      "temperature": 0.0,
+      "tool_choice": {
+        "function": {
+          "name": "structured_output"
+        },
+        "type": "function"
+      },
+      "tools": [
+        {
+          "function": {
+            "description": "Generate structured output matching the provided schema",
+            "name": "structured_output",
+            "parameters": {
+              "additionalProperties": false,
+              "properties": {
+                "age": {
+                  "description": "Person's age in years",
+                  "minimum": 1,
+                  "type": "integer"
+                },
+                "name": {
+                  "description": "Person's full name",
+                  "type": "string"
+                },
+                "occupation": {
+                  "description": "Person's job or profession",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "age"
+              ],
+              "type": "object"
+            }
+          },
+          "type": "function"
+        }
+      ]
+    },
+    "headers": {
+      "accept": "text/event-stream",
+      "authorization": "[REDACTED:authorization]",
+      "content-type": "application/json"
+    },
+    "method": "POST",
+    "url": "https://api.minimax.io/v1/chat/completions"
+  },
+  "response": {
+    "body": null,
+    "headers": {
+      "alb_receive_time": "1777714201.506",
+      "alb_request_id": "ed6c684e8dead1d59a1e829473e13adbdca875ee",
+      "connection": "keep-alive",
+      "content-type": "text/event-stream; charset=utf-8",
+      "date": "Sat, 02 May 2026 09:30:04 GMT",
+      "minimax-request-id": "c57262d5728a2036e8fa6f7fdc6c9029",
+      "trace-id": "0644f7192bcbcf1382073fb1ef9f7971",
+      "transfer-encoding": "chunked",
+      "x-mm-request-id": "2038858753192768005_1777714201wamxy7",
+      "x-session-id": "b7178817c99805c8d6000203f02a7286"
+    },
+    "status": 200
+  }
+}

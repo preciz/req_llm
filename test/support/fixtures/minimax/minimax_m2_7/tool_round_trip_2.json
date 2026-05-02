@@ -1,0 +1,152 @@
+{
+  "model_spec": "minimax:MiniMax-M2.7",
+  "provider": "minimax",
+  "request": {
+    "body": {
+      "b64": "eyJtYXhfY29tcGxldGlvbl90b2tlbnMiOjEzMTA3LCJtZXNzYWdlcyI6W3siY29udGVudCI6IlVzZSB0aGUgYWRkIHRvb2wgdG8gY29tcHV0ZSAyICsgMy4gQWZ0ZXIgdGhlIHRvb2wgcmVzdWx0IGFycml2ZXMsIHJlc3BvbmQgd2l0aCAnc3VtPTx2YWx1ZT4nLiIsInJvbGUiOiJ1c2VyIn0seyJjb250ZW50IjoiIiwicmVhc29uaW5nX2RldGFpbHMiOlt7ImVuY3J5cHRlZD8iOmZhbHNlLCJmb3JtYXQiOiJNaW5pTWF4LXJlc3BvbnNlLXYxIiwiaW5kZXgiOjAsInByb3ZpZGVyIjoibWluaW1heCIsInByb3ZpZGVyX2RhdGEiOnsidHlwZSI6InJlYXNvbmluZy50ZXh0In0sInNpZ25hdHVyZSI6InJlYXNvbmluZy10ZXh0LTEiLCJ0ZXh0IjoiVGhlIHVzZXIgd2FudHMgbWUgdG8gdXNlIHRoZSBhZGQgdG9vbCB0byBjb21wdXRlIDIgKyAzLCBhbmQgdGhlbiByZXNwb25kIHdpdGggJ3N1bT08dmFsdWU+JyBhZnRlciBnZXR0aW5nIHRoZSByZXN1bHQuXG4ifV0sInJvbGUiOiJhc3Npc3RhbnQiLCJ0b29sX2NhbGxzIjpbeyJmdW5jdGlvbiI6eyJhcmd1bWVudHMiOiJ7XCJhXCI6MixcImJcIjozfSIsIm5hbWUiOiJhZGQifSwiaWQiOiJjYWxsX2Z1bmN0aW9uXzVicHVodGxjOTFwc18xIiwidHlwZSI6ImZ1bmN0aW9uIn1dfSx7ImNvbnRlbnQiOiI1IiwibWV0YWRhdGEiOnsidG9vbF9vdXRwdXQiOjV9LCJuYW1lIjoiYWRkIiwicm9sZSI6InRvb2wiLCJ0b29sX2NhbGxfaWQiOiJjYWxsX2Z1bmN0aW9uXzVicHVodGxjOTFwc18xIn1dLCJtb2RlbCI6Ik1pbmlNYXgtTTIuNyIsInJlYXNvbmluZ19zcGxpdCI6dHJ1ZSwic3RyZWFtIjpmYWxzZSwidGVtcGVyYXR1cmUiOjAuMH0="
+    },
+    "canonical_json": {
+      "max_completion_tokens": 13107,
+      "messages": [
+        {
+          "content": "Use the add tool to compute 2 + 3. After the tool result arrives, respond with 'sum=<value>'.",
+          "role": "user"
+        },
+        {
+          "content": "",
+          "reasoning_details": [
+            {
+              "encrypted?": false,
+              "format": "MiniMax-response-v1",
+              "index": 0,
+              "provider": "minimax",
+              "provider_data": {
+                "type": "reasoning.text"
+              },
+              "signature": "reasoning-text-1",
+              "text": "The user wants me to use the add tool to compute 2 + 3, and then respond with 'sum=<value>' after getting the result.\n"
+            }
+          ],
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"a\":2,\"b\":3}",
+                "name": "add"
+              },
+              "id": "call_function_5bpuhtlc91ps_1",
+              "type": "function"
+            }
+          ]
+        },
+        {
+          "content": "5",
+          "metadata": {
+            "tool_output": 5
+          },
+          "name": "add",
+          "role": "tool",
+          "tool_call_id": "call_function_5bpuhtlc91ps_1"
+        }
+      ],
+      "model": "MiniMax-M2.7",
+      "reasoning_split": true,
+      "stream": false,
+      "temperature": 0.0
+    },
+    "headers": {
+      "accept-encoding": [
+        "gzip"
+      ],
+      "authorization": "[REDACTED:authorization]",
+      "content-type": [
+        "application/json"
+      ],
+      "user-agent": [
+        "req/0.5.17"
+      ]
+    },
+    "method": "post",
+    "url": "https://api.minimax.io/v1/chat/completions"
+  },
+  "response": {
+    "body": {
+      "base_resp": {
+        "status_code": 0,
+        "status_msg": ""
+      },
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "audio_content": "",
+            "content": "sum=5",
+            "name": "MiniMax AI",
+            "reasoning_details": [
+              {
+                "format": "MiniMax-response-v1",
+                "id": "reasoning-text-1",
+                "index": 0,
+                "text": "The user wants me to use the add tool to compute 2 + 3, and then respond with 'sum=<value>'.\n\nFrom the tool result, I can see that the add tool returned the value 5.\n\nSo the sum is 5, and I should respond with 'sum=5'.\n",
+                "type": "reasoning.text"
+              }
+            ],
+            "role": "assistant"
+          }
+        }
+      ],
+      "created": 1777714104,
+      "id": "0644f6b721a23eb15a37dd8205f9502b",
+      "input_sensitive": false,
+      "input_sensitive_type": 0,
+      "model": "MiniMax-M2.7",
+      "object": "chat.completion",
+      "output_sensitive": false,
+      "output_sensitive_int": 0,
+      "output_sensitive_type": 0,
+      "usage": {
+        "completion_tokens": 68,
+        "completion_tokens_details": {
+          "reasoning_tokens": 59
+        },
+        "prompt_tokens": 96,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "total_characters": 0,
+        "total_tokens": 164
+      }
+    },
+    "headers": {
+      "alb_receive_time": [
+        "1777714103.976"
+      ],
+      "alb_request_id": [
+        "c18fc876f43e05b0e85ee5e8994806e9553b631d"
+      ],
+      "connection": [
+        "keep-alive"
+      ],
+      "content-type": [
+        "application/json; charset=utf-8"
+      ],
+      "date": [
+        "Sat, 02 May 2026 09:28:30 GMT"
+      ],
+      "minimax-request-id": [
+        "49a1a429999b3763adb2ae008e2ad1bd"
+      ],
+      "trace-id": [
+        "0644f6b721a23eb15a37dd8205f9502b"
+      ],
+      "x-mm-request-id": [
+        "2038858753192768005_1777714110023jb5"
+      ],
+      "x-session-id": [
+        "b767a02e8f6532ab38605a59b34ae1cb"
+      ]
+    },
+    "status": 200
+  }
+}
