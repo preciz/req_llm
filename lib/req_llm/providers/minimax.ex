@@ -243,41 +243,55 @@ defmodule ReqLLM.Providers.Minimax do
   end
 
   defp encode_minimax_reasoning_detail(%ReqLLM.Message.ReasoningDetails{} = detail) do
-    detail.provider_data
-    |> normalize_provider_data()
-    |> Map.put_new("type", "reasoning.text")
-    |> maybe_put_wire_field("id", detail.signature)
-    |> Map.put("format", detail.format || "minimax-response-v1")
-    |> Map.put("index", detail.index)
-    |> maybe_put_wire_field("text", detail.text)
-    |> drop_nil_values()
+    detail
+    |> minimax_reasoning_detail_attrs()
+    |> minimax_reasoning_detail_to_wire()
   end
 
   defp encode_minimax_reasoning_detail(%{provider: :minimax} = detail) do
     detail
-    |> map_get(:provider_data, "provider_data", %{})
-    |> normalize_provider_data()
-    |> Map.put_new("type", "reasoning.text")
-    |> maybe_put_wire_field("id", map_get(detail, :signature, "signature", nil))
-    |> Map.put("format", map_get(detail, :format, "format", "minimax-response-v1"))
-    |> Map.put("index", map_get(detail, :index, "index", 0))
-    |> maybe_put_wire_field("text", map_get(detail, :text, "text", nil))
-    |> drop_nil_values()
+    |> minimax_reasoning_detail_attrs()
+    |> minimax_reasoning_detail_to_wire()
   end
 
   defp encode_minimax_reasoning_detail(%{"provider" => "minimax"} = detail) do
     detail
-    |> map_get(:provider_data, "provider_data", %{})
-    |> normalize_provider_data()
-    |> Map.put_new("type", "reasoning.text")
-    |> maybe_put_wire_field("id", map_get(detail, :signature, "signature", nil))
-    |> Map.put("format", map_get(detail, :format, "format", "minimax-response-v1"))
-    |> Map.put("index", map_get(detail, :index, "index", 0))
-    |> maybe_put_wire_field("text", map_get(detail, :text, "text", nil))
-    |> drop_nil_values()
+    |> minimax_reasoning_detail_attrs()
+    |> minimax_reasoning_detail_to_wire()
   end
 
   defp encode_minimax_reasoning_detail(detail), do: detail
+
+  defp minimax_reasoning_detail_attrs(%ReqLLM.Message.ReasoningDetails{} = detail) do
+    %{
+      provider_data: detail.provider_data,
+      signature: detail.signature,
+      format: detail.format || "minimax-response-v1",
+      index: detail.index,
+      text: detail.text
+    }
+  end
+
+  defp minimax_reasoning_detail_attrs(detail) do
+    %{
+      provider_data: map_get(detail, :provider_data, "provider_data", %{}),
+      signature: map_get(detail, :signature, "signature", nil),
+      format: map_get(detail, :format, "format", "minimax-response-v1"),
+      index: map_get(detail, :index, "index", 0),
+      text: map_get(detail, :text, "text", nil)
+    }
+  end
+
+  defp minimax_reasoning_detail_to_wire(attrs) do
+    attrs.provider_data
+    |> normalize_provider_data()
+    |> Map.put_new("type", "reasoning.text")
+    |> maybe_put_wire_field("id", attrs.signature)
+    |> Map.put("format", attrs.format)
+    |> Map.put("index", attrs.index)
+    |> maybe_put_wire_field("text", attrs.text)
+    |> drop_nil_values()
+  end
 
   defp normalize_provider_data(data) when is_map(data) do
     Map.new(data, fn {key, value} -> {to_string(key), value} end)
