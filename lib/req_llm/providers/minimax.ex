@@ -101,6 +101,7 @@ defmodule ReqLLM.Providers.Minimax do
 
     request
     |> ReqLLM.Provider.Defaults.default_build_body()
+    |> encode_minimax_reasoning_history()
     |> Map.delete(:max_tokens)
     |> Map.delete("max_tokens")
     |> maybe_put(:max_completion_tokens, request.options[:max_completion_tokens])
@@ -213,6 +214,87 @@ defmodule ReqLLM.Providers.Minimax do
   end
 
   defp normalize_stream_chunk(chunk), do: chunk
+
+  defp encode_minimax_reasoning_history(%{messages: messages} = body) when is_list(messages) do
+    %{body | messages: Enum.map(messages, &encode_minimax_message_reasoning/1)}
+  end
+
+  defp encode_minimax_reasoning_history(%{"messages" => messages} = body)
+       when is_list(messages) do
+    %{body | "messages" => Enum.map(messages, &encode_minimax_message_reasoning/1)}
+  end
+
+  defp encode_minimax_reasoning_history(body), do: body
+
+  defp encode_minimax_message_reasoning(%{reasoning_details: details} = message)
+       when is_list(details) do
+    %{message | reasoning_details: encode_minimax_reasoning_details(details)}
+  end
+
+  defp encode_minimax_message_reasoning(%{"reasoning_details" => details} = message)
+       when is_list(details) do
+    %{message | "reasoning_details" => encode_minimax_reasoning_details(details)}
+  end
+
+  defp encode_minimax_message_reasoning(message), do: message
+
+  defp encode_minimax_reasoning_details(details) do
+    Enum.map(details, &encode_minimax_reasoning_detail/1)
+  end
+
+  defp encode_minimax_reasoning_detail(%ReqLLM.Message.ReasoningDetails{} = detail) do
+    detail.provider_data
+    |> normalize_provider_data()
+    |> Map.put_new("type", "reasoning.text")
+    |> maybe_put_wire_field("id", detail.signature)
+    |> Map.put("format", detail.format || "minimax-response-v1")
+    |> Map.put("index", detail.index)
+    |> maybe_put_wire_field("text", detail.text)
+    |> drop_nil_values()
+  end
+
+  defp encode_minimax_reasoning_detail(%{provider: :minimax} = detail) do
+    detail
+    |> map_get(:provider_data, "provider_data", %{})
+    |> normalize_provider_data()
+    |> Map.put_new("type", "reasoning.text")
+    |> maybe_put_wire_field("id", map_get(detail, :signature, "signature", nil))
+    |> Map.put("format", map_get(detail, :format, "format", "minimax-response-v1"))
+    |> Map.put("index", map_get(detail, :index, "index", 0))
+    |> maybe_put_wire_field("text", map_get(detail, :text, "text", nil))
+    |> drop_nil_values()
+  end
+
+  defp encode_minimax_reasoning_detail(%{"provider" => "minimax"} = detail) do
+    detail
+    |> map_get(:provider_data, "provider_data", %{})
+    |> normalize_provider_data()
+    |> Map.put_new("type", "reasoning.text")
+    |> maybe_put_wire_field("id", map_get(detail, :signature, "signature", nil))
+    |> Map.put("format", map_get(detail, :format, "format", "minimax-response-v1"))
+    |> Map.put("index", map_get(detail, :index, "index", 0))
+    |> maybe_put_wire_field("text", map_get(detail, :text, "text", nil))
+    |> drop_nil_values()
+  end
+
+  defp encode_minimax_reasoning_detail(detail), do: detail
+
+  defp normalize_provider_data(data) when is_map(data) do
+    Map.new(data, fn {key, value} -> {to_string(key), value} end)
+  end
+
+  defp normalize_provider_data(_), do: %{}
+
+  defp map_get(map, atom_key, string_key, default) do
+    Map.get(map, atom_key, Map.get(map, string_key, default))
+  end
+
+  defp maybe_put_wire_field(map, _key, nil), do: map
+  defp maybe_put_wire_field(map, key, value), do: Map.put(map, key, value)
+
+  defp drop_nil_values(map) do
+    Map.reject(map, fn {_key, value} -> is_nil(value) end)
+  end
 
   defp normalize_reasoning_details(details) do
     details

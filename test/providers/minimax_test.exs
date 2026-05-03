@@ -1,7 +1,12 @@
 defmodule ReqLLM.Providers.MinimaxTest do
   use ReqLLM.ProviderCase, provider: ReqLLM.Providers.Minimax
 
+  alias ReqLLM.Context
+  alias ReqLLM.Message.ReasoningDetails
+  alias ReqLLM.Provider.ResponseBuilder
   alias ReqLLM.Providers.Minimax
+  alias ReqLLM.StreamChunk
+  alias ReqLLM.ToolCall
 
   defp minimax_model(model_id \\ "MiniMax-M2.7") do
     %LLMDB.Model{
@@ -148,6 +153,57 @@ defmodule ReqLLM.Providers.MinimaxTest do
 
       assert decoded["reasoning_split"] == false
     end
+
+    test "encode_body converts normalized MiniMax reasoning_details back to provider wire shape" do
+      reasoning_details = [
+        %ReasoningDetails{
+          text: "I should call the tool.\n",
+          signature: "reasoning-text-1",
+          encrypted?: false,
+          provider: :minimax,
+          format: "MiniMax-response-v1",
+          index: 0,
+          provider_data: %{"type" => "reasoning.text"}
+        }
+      ]
+
+      context =
+        Context.new([
+          Context.user("Use the add tool."),
+          Context.assistant("",
+            tool_calls: [ToolCall.new("call_1", "add", ~s({"a":2,"b":3}))]
+          )
+          |> Map.put(:reasoning_details, reasoning_details)
+        ])
+
+      request = %Req.Request{
+        options: [
+          context: context,
+          model: "MiniMax-M2.7",
+          stream: false,
+          reasoning_split: true
+        ]
+      }
+
+      encoded_request = Minimax.encode_body(request)
+      decoded = Jason.decode!(encoded_request.body)
+      assistant = Enum.at(decoded["messages"], 1)
+
+      assert [
+               %{
+                 "type" => "reasoning.text",
+                 "id" => "reasoning-text-1",
+                 "format" => "MiniMax-response-v1",
+                 "index" => 0,
+                 "text" => "I should call the tool.\n"
+               }
+             ] = assistant["reasoning_details"]
+
+      refute Map.has_key?(hd(assistant["reasoning_details"]), "signature")
+      refute Map.has_key?(hd(assistant["reasoning_details"]), "provider")
+      refute Map.has_key?(hd(assistant["reasoning_details"]), "provider_data")
+      refute Map.has_key?(hd(assistant["reasoning_details"]), "encrypted?")
+    end
   end
 
   describe "response decoding" do
@@ -229,6 +285,65 @@ defmodule ReqLLM.Providers.MinimaxTest do
       assert decoded["max_completion_tokens"] == 128
       refute Map.has_key?(decoded, "max_tokens")
       refute Map.has_key?(decoded, "presence_penalty")
+    end
+
+    test "stream response builder assembles MiniMax reasoning fragments" do
+      model = minimax_model("MiniMax-M2.7")
+      context = Context.new([Context.user("Think briefly.")])
+
+      chunks = [
+        StreamChunk.meta(%{
+          reasoning_details: [
+            %ReasoningDetails{
+              text: "First ",
+              signature: "reasoning-text-1",
+              encrypted?: false,
+              provider: :minimax,
+              format: "MiniMax-response-v1",
+              index: 0,
+              provider_data: %{"type" => "reasoning.text"}
+            }
+          ]
+        }),
+        StreamChunk.meta(%{
+          reasoning_details: [
+            %ReasoningDetails{
+              text: "second.",
+              signature: "reasoning-text-1",
+              encrypted?: false,
+              provider: :minimax,
+              format: "MiniMax-response-v1",
+              index: 0,
+              provider_data: %{"type" => "reasoning.text"}
+            }
+          ]
+        }),
+        StreamChunk.text("Done")
+      ]
+
+      builder = ResponseBuilder.for_model(model)
+
+      assert ReqLLM.Providers.Minimax.ResponseBuilder = builder
+
+      assert {:ok, response} =
+               builder.build_response(chunks, %{finish_reason: :stop},
+                 context: context,
+                 model: model
+               )
+
+      assert [
+               %ReasoningDetails{
+                 text: "First second.",
+                 signature: "reasoning-text-1",
+                 provider: :minimax,
+                 format: "MiniMax-response-v1",
+                 index: 0,
+                 provider_data: %{"type" => "reasoning.text"}
+               }
+             ] = response.message.reasoning_details
+
+      assert List.last(response.context.messages).reasoning_details ==
+               response.message.reasoning_details
     end
   end
 end
